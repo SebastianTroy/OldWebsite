@@ -1,24 +1,31 @@
 ul.nav_menu_buttons {
 	list-style: none;
+	left: 0;
+	height: 2em;
 	overflow: hidden;
 }
 ul.nav_menu_buttons li {
 	float: left;
-	width: 10em;
-	height: 10em;
+	width: 9.5em;
+	height: 2em;
 	position: relative;
 }
 
-/* Starburst 7 */
 .nav_button {
 	text-align: center;
 	text-decoration: none;
 	color: black;
 	font-family: Arial, sans-serif;
 }
+
+.nav_button a {
+	text-decoration: none;
+	color: black;
+}
+
 .nav_button span {
 	display: block;
-	width: 8em;
+	width: 9em;
 	height: 2em;
 	line-height: 2em;
 	background: #00cd00;
