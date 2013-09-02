@@ -1,16 +1,16 @@
-#container {
+#master_container {
 	min-height: 100%;
-	position: relative;
+	position: absolute;
 }
 
-#header {
+#header_container {
 }
 
-#main_content {
+#page_container {
 	padding-bottom: 60px; /* Height of the footer */
 }
 
-#footer {
+#footer_container {
 	position: absolute;
 	bottom: 0;
 	width: 100%;

@@ -11,4 +11,5 @@ font-size: 4em;
 .enlarged_font
 {
 	font-size: 1.5em;
+	text-align: justify;
 }
