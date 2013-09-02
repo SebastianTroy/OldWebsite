@@ -1,0 +1,14 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+h1 {
+font-size: 4em;
+}
+
+.enlarged_font
+{
+	font-size: 1.5em;
+}

@@ -1,0 +1,35 @@
+ul.nav_menu_buttons {
+	list-style: none;
+	overflow: hidden;
+}
+ul.nav_menu_buttons li {
+	float: left;
+	width: 10em;
+	height: 10em;
+	position: relative;
+}
+
+/* Starburst 7 */
+.nav_button {
+	text-align: center;
+	text-decoration: none;
+	color: black;
+	font-family: Arial, sans-serif;
+}
+.nav_button span {
+	display: block;
+	width: 8em;
+	height: 2em;
+	background: #00cd00;
+	-moz-transition: all 0.8s ease-out;
+	-webkit-transition: all 0.8s ease-out;	transition: all 0.8s ease-out;
+	-moz-border-radius: 2em;
+	-webkit-border-radius: 2em;	border-radius: 2em;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.nav_button:hover span {
+
+	-webkit-transform: translate(0.5em, 0);
+	-moz-transform: translate(1em, 0);translate(1em, 0);
+}
