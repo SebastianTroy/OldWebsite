@@ -10,6 +10,7 @@ $(window).scroll(
 	     */
 	    if ($(this).scrollTop() >= scroller_anchor
 		    && $('.nav_menu').css('position') != 'fixed') {
+		
 		// Change the CSS of the scroller to highlight it and fix it at
 		// the top of the screen.
 		$('.nav_menu').css({
@@ -23,8 +24,8 @@ $(window).scroll(
 		/*
 		 * 
 		 */
-		$('.nav_menu_anchor').css('height', $('.nav_menu').height());
-	    } else if ($(this).scrollTop() < scroller_anchor
+		$('.nav_menu_anchor').css('height', 1.5 * $('.nav_menu').height());
+	    } else if ($(this).scrollTop() < scroller_anchor + 0.5 * $('.nav_menu').height()
 		    && $('.nav_menu').css('position') != 'relative') {
 		// If the user has scrolled back to the location above the
 		// scroller anchor place it back into the content.
