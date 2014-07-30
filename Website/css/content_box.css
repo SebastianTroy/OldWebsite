@@ -1,6 +1,14 @@
+table.content_box_container {
+	width: 100%;
+}
+
+td.image_cell {
+	text-align: center;
+	vertical-align: middle;
+}
+
 div.box {
 	border: 2px solid #007275;
-	margin: 2%;
 	margin-bottom: 0px;
 	padding-bottom: 5px;
 }
@@ -18,14 +26,4 @@ div.box p {
 	margin-bottom: 0.4em;
 	margin-top: 0;
 	padding: 4px;
-}
-
-div.floatleft {
-	display: inline-block;
-	width: 45%;
-}
-
-div.floatright {
-	display: inline-block;
-	width: 45%;
 }

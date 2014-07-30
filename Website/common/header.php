@@ -86,3 +86,4 @@
 					</div><!-- close nav_menu -->
 				</div><!-- close nav_menu_container -->
 			</div><!-- close header_container -->
+			<div id ="page_container">
