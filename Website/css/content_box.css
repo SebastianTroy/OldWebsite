@@ -16,7 +16,7 @@ div.box {
 div.box h1 {
 	background-color: #007275;
 	color: #FFFFFF;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	font-weight: bold;
 	padding: 0 0 2px 4px;
 	margin: 0;
@@ -25,5 +25,6 @@ div.box h1 {
 div.box p {
 	margin-bottom: 0.4em;
 	margin-top: 0;
+	font-size: 1.1em;
 	padding: 4px;
 }
