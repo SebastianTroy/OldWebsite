@@ -4,7 +4,7 @@ $PageTitle = "Help running Java projects";
 
 function customPageHeader(){
 ?>
-<!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
+<link rel="stylesheet" type="text/css" href="css/code.css">
 <?php }
 
 	include_once ('common/header.php');

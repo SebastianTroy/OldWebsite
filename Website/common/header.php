@@ -37,7 +37,7 @@
 
 <!-- stylesheets common throughought the website -->
 <link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
-<link rel="stylesheet" type="text/css" href="common/css/reactive_layout.css">
+<link rel="stylesheet" type="text/css" href="common/css/responsive_layout.css">
 <link rel="stylesheet" type="text/css" href="common/css/content_box.css">
 
 <!-- link libraries used in header -->
