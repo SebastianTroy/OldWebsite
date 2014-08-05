@@ -1,0 +1,37 @@
+div.row {
+	wodth: 100%;
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+	zoom: 1;
+}
+
+div.row:before, div.row:after {
+	content: "";
+	display: table;
+}
+
+div.row:after {
+	clear: both;
+}
+
+div.column {
+	display: block;
+	float: left;
+	width: 50%;
+	margin: 0% 0% 0% 0%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.page_break {
+	width: 99%;
+	border: 0.1em dashed black;
+	margin: 0.2em
+}
+
+@media only screen and (max-width: 1000px) {
+	div.column { 
+		width: 100%;
+	}
+}

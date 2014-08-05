@@ -36,7 +36,12 @@
 
 		<!-- link libraries used in header -->
 		<script src="common/js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
-
+		
+		<!-- link libraries used for lightboxes -->
+		<script src="common/js/libs/lightbox.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
+		
+		
 		<!-- javascript file required for floating menu -->
 		<script src="common/js/sticky_div.js" type="text/javascript"></script>
 

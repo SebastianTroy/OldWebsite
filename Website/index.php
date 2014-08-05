@@ -9,7 +9,7 @@ function customPageHeader(){
 
 	include_once ('common/header.php');
 
-	include_once ('html/homepage.html');
+	include_once ('webpages/homepage.html');
 
 	include_once ('common/footer.php');
 ?>

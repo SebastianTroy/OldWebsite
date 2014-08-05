@@ -10,7 +10,7 @@ function customPageHeader(){
 
 	include_once ('common/header.php');
 
-	include_once ('html/contact.html');
+	include_once ('webpages/contact.php');
 
 	include_once ('common/footer.php');
 ?>
