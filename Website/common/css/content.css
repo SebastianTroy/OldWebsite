@@ -8,7 +8,7 @@ div.box h1 {
 	color: #FFFFFF;
 	font-size: 1.4em;
 	font-weight: bold;
-	padding: 0 0 2px 4px;
+	padding: 2px 0 4px;
 	margin: 0;
 	text-align: center;
 }
@@ -33,7 +33,7 @@ div.box ul {
 }
 
 div.box li {
-	list-style-image: url("../img/point.png");
+	list-style-image: url("../img/bullet_point.png");
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	padding-left: 14px;

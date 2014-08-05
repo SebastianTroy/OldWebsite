@@ -1,6 +1,6 @@
 <?php
 
-$PageTitle = "Contact";
+$PageTitle = "Help running Java projects";
 
 function customPageHeader(){
 ?>
@@ -9,7 +9,7 @@ function customPageHeader(){
 
 	include_once ('common/header.php');
 
-	include_once ('contact/contact.php');
+	include_once ('java_help/java_help.html');
 
 	include_once ('common/footer.php');
 ?>
