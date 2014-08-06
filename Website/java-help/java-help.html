@@ -1,0 +1,276 @@
+<div class="row">
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Running my java projects on Windows</h1>
+			<p>First check that you have a compatible version of java, press
+				start and search for "CMD" to open a command window, then type "java
+				-version" and press enter:</p>
+			<div class="code_winCMD">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/win_cmd.png" width="16" height="13" />
+					Command prompt
+				</h1>
+				<p>
+					Microsoft Windows [Version 6.1.7601]<br /> Copyright (c) 2009
+					Microsoft Corporation. All rights reserved.<br /> <br />
+					C:\Users\TrojanDev>java -version<span class="caret">_</span>
+				</p>
+			</div>
+			<p>
+				You should get an output similar to that below. If you do not have
+				version 1.7 or higher (1.8 for new 2014 projects) or dont have java
+				installed you should get the latest version from <a
+					href="http://java.com/en/download/index.jsp">here</a>.
+			</p>
+			<div class="code_winCMD">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/win_cmd.png" width="16" height="13" />
+					Command prompt
+				</h1>
+				<p>
+					Microsoft Windows [Version 6.1.7601]<br /> Copyright (c) 2009
+					Microsoft Corporation. All rights reserved.<br /> <br />
+					C:\Users\TrojanDev>java -version<br /> java version "1.8.0_11"<br />
+					Java(TM) SE Runtime Environment (build 1.8.0_11-b12)<br /> Java
+					HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)<br /> <br />
+					C:\Users\TrojanDev><span class="caret">_</span>
+				</p>
+			</div>
+			<p>
+				All of my java projects are .jar files which should run
+				automatically when you double click on them, if that isn't the case
+				you can try to set this to the default behaviour following <a
+					href="http://stackoverflow.com/questions/8511063/how-to-run-jar-file-by-double-click-on-windows-7-64">this
+					short guide</a>, or you can try to run the program using the steps
+				below:
+			</p>
+			<p>
+				You need to open the CMD at the location of the program you want to
+				run. For this example I'm going to use <a
+					href="https://github.com/SebastianTroy/Particle-Model-Java/raw/2D-only/Particle-Model-Java/FluidApp.jar">FluidApp.jar</a>
+				which is located on my desktop, Desktop is inside my User/TrojanDev
+				directory so all I need to type is "cd Desktop" where 'cd' means
+				open.
+			</p>
+			<div class="code_winCMD">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/win_cmd.png" width="16" height="13" />
+					Command prompt
+				</h1>
+				<p>
+					Microsoft Windows [Version 6.1.7601] <br /> Copyright (c) 2009
+					Microsoft Corporation. All rights reserved. <br /> <br />
+					C:\Users\TrojanDev>cd Desktop <br /> <br />
+					C:\Users\TrojanDev\Desktop><span class="caret">_</span>
+				</p>
+			</div>
+			<p>I only need to type 'Desktop' because it is in my
+				'Users\TrojanDev' folder, to open any folder you can start with
+				"C:\", for example:</p>
+			<div class="code_winCMD">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/win_cmd.png" width="16" height="13" />
+					Command prompt
+				</h1>
+				<p>
+					Microsoft Windows [Version 6.1.7601] <br /> Copyright (c) 2009
+					Microsoft Corporation. All rights reserved. <br /> <br />C:\Users\TrojanDev>cd
+					C:\Users\Public\Downloads <br /> <br />
+					C:\Users\Public\Downloads><span class="caret">_</span>
+				</p>
+			</div>
+			<p>Once you are in the correct directory type "java -jar
+				application.jar", if the name of the .jar has more than one word in
+				it, you should surround it with brackets:</p>
+			<div class="code_winCMD">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/win_cmd.png" width="16" height="13" />
+					Command prompt
+				</h1>
+				<p>
+					Microsoft Windows [Version 6.1.7601] <br /> Copyright (c) 2009
+					Microsoft Corporation. All rights reserved. <br /> <br />
+					C:\Users\TrojanDev\Desktop>java -jar FluidApp.jar<br /> <br />
+					C:\Users\TrojanDev\Desktop>java -jar "This program name uses
+					spaces.jar"<span class="caret">_</span>
+				</p>
+			</div>
+			<p>If the program does not run, an error message should be output
+				into the console, if this happens, googling the error may help.</p>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Running my java projects on Linux</h1>
+			<p>First you'll need to make sure you have a compatible version
+				of java installed, open up a terminal and type "java -version" and
+				press enter:</p>
+			<div class="code_linuxTerminal">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/linux_terminal.png" width="54"
+						height="18" /> trojandev@ubuntu: ~
+				</h1>
+				<p>
+					trojandev@ubuntu: ~$ java -version<span class="caret">_</span>
+				</p>
+			</div>
+			<p>
+				You should get an output similar to that below. If you do not have
+				version 1.7 or higher (1.8 for new 2014 projects) or dont have java
+				installed you should get the latest version from<a
+					href="http://java.com/en/download/index.jsp">here</a>.
+			</p>
+			<div class="code_linuxTerminal">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/linux_terminal.png" width="54"
+						height="18" /> trojandev@ubuntu: ~
+				</h1>
+				<p>
+					trojandev@ubuntu: ~$ java -version<br /> java version "1.7.0_15"<br />
+					Java(TM) SE Runtime Environment (build 1.7.0_05-b06)<br /> Java
+					HotSpot(TM) Client VM (build 23.1-b03, mixed mode, sharing)<br />
+					<br /> trojandev@ubuntu: ~$<span class="caret">_</span>
+				</p>
+			</div>
+			<p>You may run into problems if you are using an OpenJDK, in
+				which case you'd get the following output:</p>
+			<div class="code_linuxTerminal">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/linux_terminal.png" width="54"
+						height="18" /> trojandev@ubuntu: ~
+				</h1>
+				<p>
+					trojandev@ubuntu: ~$ java -version<br /> java version "1.6.0_36"<br />
+					OpenJDK Runtime Environment (IcedTea6 1.9.7) (6b20-1.9.7-0ubuntu1)<br />
+					OpenJDK Server VM (build 19.0-b09, mixed mode)<br /> <br />
+					trojandev@ubuntu: ~$<span class="caret">_</span>
+				</p>
+			</div>
+			<p>
+				All of my java projects are .jar files which should run
+				automatically when you double click on them, if that isn't the case
+				you can try to set this to the default behaviour following <a
+					href="http://askubuntu.com/a/192919/312719">this short guide</a>,
+				or you can try to run the program using the steps below:
+			</p>
+			<p>
+				You need to open the terminal at the location of the program you
+				want to run. For this example I'm going to use <a
+					href="https://github.com/SebastianTroy/Particle-Model-Java/raw/2D-only/Particle-Model-Java/FluidApp.jar">FluidApp.jar</a>
+				which is located on my desktop, Desktop is inside my home directory
+				so all I need to type is "cd Desktop" where 'cd' means open.
+			</p>
+			<div class="code_linuxTerminal">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/linux_terminal.png" width="54"
+						height="18" /> trojandev@ubuntu: ~
+				</h1>
+				<p>
+					trojandev@ubuntu: ~$ cd desktop<br /> <br /> trojandev@ubuntu:
+					~/desktop/$<span class="caret">_</span>
+				</p>
+			</div>
+			<p>Once you are in the correct directory type "java -jar
+				application.jar", if the name of the .jar has more than one word in
+				it, you should surround it with brackets:</p>
+			<div class="code_linuxTerminal">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/linux_terminal.png" width="54"
+						height="18" /> trojandev@ubuntu: ~
+				</h1>
+				<p>
+					trojandev@ubuntu: ~$ cd desktop<br /> <br /> trojandev@ubuntu:
+					~/desktop/$java -jar FluidApp.jar<br /> <br /> trojandev@ubuntu:
+					~/desktop/$java -jar "This program name uses spaces.jar"<span
+						class="caret">_</span>
+				</p>
+			</div>
+			<p>If the program does not run, an error message should be output
+				into the console, if this happens, googling the error may help.</p>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Running my java projects on MacOS</h1>
+			<p>First check that you have a compatible version of java,
+				Navigate to /Applications/Utilities and double-click on Terminal,
+				then type "java -version" and press enter:</p>
+			<div class="code_macOSTermianl">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/mac_terminal.png" width="56"
+						height="15" /> trojandev
+				</h1>
+				<p>
+					Last login: Wed Aug 6 20:34:16 on console<br /> macintosh:~
+					trojandev$ java -version <span class="caret">_</span>
+				</p>
+			</div>
+			<p>
+				You should get an output similar to that below. If you do not have
+				version 1.7 or higher (1.8 for new 2014 projects) or dont have java
+				installed you should get the latest version from <a
+					href="http://java.com/en/download/index.jsp">here</a>.
+			</p>
+			<div class="code_macOSTermianl">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/mac_terminal.png" width="56"
+						height="15" /> trojandev
+				</h1>
+				<p>
+					macintosh:~ trojandev$<br /> java version "1.8.0_11"<br />
+					Java(TM) SE Runtime Environment (build 1.8.0_11-b12)<br /> Java
+					HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)<br /> <br />
+					macintosh:~ trojandev$ <span class="caret">_</span>
+				</p>
+			</div>
+			<p>
+				Next, you need to open the CMD at the location of the program you want to
+				run. For this example I'm going to use <a
+					href="https://github.com/SebastianTroy/Particle-Model-Java/raw/2D-only/Particle-Model-Java/FluidApp.jar">FluidApp.jar</a>
+				which is located on my desktop, Desktop is inside my User/trojandev
+				directory so all I need to type is "cd ./Desktop" where 'cd' means
+				open and './' means I'm opening a folder that is inside my current location.
+			</p>
+			<div class="code_macOSTermianl">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/mac_terminal.png" width="56"
+						height="15" /> Desktop
+				</h1>
+				<p>
+					macintosh:~ trojandev$ cd ./Desktop<br />
+					macintosh:~ Desktop trojandev$ <span class="caret">_</span>
+				</p>
+			</div>
+			<p>I only need to type 'Desktop' because it is in my
+				'Users\trojandev' folder, to open any folder you can start with just
+				"/", for example:</p>
+			<div class="code_macOSTermianl">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/mac_terminal.png" width="56"
+						height="15" /> Desktop
+				</h1>
+				<p>
+					macintosh:~ trojandev$ cd /users/trojandev/Desktop<br />
+					macintosh:~ Desktop trojandev$ <span class="caret">_</span>
+				</p>
+			</div>
+			<p>Once you are in the correct directory type "java -jar
+				application.jar", if the name of the .jar has more than one word in
+				it, you should surround it with brackets:</p>
+			<div class="code_macOSTermianl">
+				<h1 class="titlebar">
+					<img alt="" src="java-help/img/mac_terminal.png" width="56"
+						height="15" /> Desktop
+				</h1>
+				<p>
+					macintosh:~ Desktop trojandev$ java -jar FluidApp.jar<br/><br/>
+					macintosh:~ Desktop trojandev$ java -jar "This program name uses spaces.jar"<span class="caret">_</span>
+				</p>
+			</div>
+			<p>If the program does not run, an error message should be output
+				into the console, if this happens, googling the error may help.</p>
+		</div>
+	</div>
+</div>

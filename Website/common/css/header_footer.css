@@ -5,10 +5,15 @@
 }
 
 #header_container {
+	border: 0;
+	margin: 0;
 	background: gray;
+	width: 100%;
+	/*position: fixed;*/
 }
 
 #page_container {
+	margin_top: 0.8em;
 	margin-bottom: 1.25em; /* Height of the footer */
 }
 
@@ -20,4 +25,31 @@
 	text-align: right;
 	color: black;
 	height: 1.25em; /* Height of the footer */
+}
+
+#header_container div.title {
+	color: white;
+	text-align: center;
+	font-size: 6em;
+	font-family: "Arial-Black" sans-serif;
+	cursor: default;
+}
+
+#header_container div.nav_menu {
+	background: gray;
+	z-index: 100;
+	width: 100%;
+	text-align: center;
+}
+
+#header_container div.nav_menu_button {
+	cursor: pointer;
+	border-left: 1px dashed white;
+	border-right: 1px dashed white;
+	width: 25%;
+	display: inline;
+	margin: 1em 1em;
+	font-size: 225%;
+	color: white;
+	font-family: "Arial" sans-serif;
 }

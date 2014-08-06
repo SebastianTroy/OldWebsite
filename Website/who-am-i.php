@@ -9,7 +9,7 @@ function customPageHeader(){
 
 	include_once ('common/header.php');
 
-	include_once ('who_am_i/who_am_i.html');
+	include_once ('who-am-i/who-am-i.html');
 
 	include_once ('common/footer.php');
 ?>

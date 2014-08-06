@@ -1,10 +1,13 @@
 div.box {
 	margin: 0.4em;
 	border: 2px solid #007275;
+	border-radius: 0.8cm;
 }
 
-div.box h1 {
+div.box h1.box_heading {
 	background-color: #007275;
+	border-top-left-radius: 0.7cm;
+	border-top-right-radius: 0.7cm;
 	color: #FFFFFF;
 	font-size: 1.4em;
 	font-weight: bold;
@@ -13,7 +16,7 @@ div.box h1 {
 	text-align: center;
 }
 
-div.box h2 {
+div.box h2.box_break {
 	border-top: 2px dashed #007275;
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;

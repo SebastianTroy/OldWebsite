@@ -16,40 +16,33 @@
 
 <meta name="description" content="text/html; charset=UTF-8">
 <meta name="author" content="Sebastian Troy">
-<meta name="viewport" content="width=device-width; initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Additional tags here -->
+<!-- icons for webpage -->
+<link rel="shortcut icon" href="common/img/logo.ico">
+<link rel="apple-touch-icon" href="common/img/logo.ico">
+
+<!-- js and css libraries used throughout the page -->
+<script src="common/js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="common/js/libs/lightbox.min.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
+
+<!-- ja and css libraries used for the header/footer -->
+<link rel="stylesheet" type="text/css" href="common/css/header_footer.css">
+<script src="common/js/header.js" type="text/javascript"></script>
+
+<!-- misc stylesheets common throughought the website -->
+<link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
+<link rel="stylesheet" type="text/css"
+	href="common/css/responsive_layout.css">
+<link rel="stylesheet" type="text/css" href="common/css/content_box.css">
+
+<!-- Additional tags here, if any of the web pages have custom javascript or css files, they will be included here -->
 		<?php
 		if (function_exists ( 'customPageHeader' )) {
 			customPageHeader ();
 		}
 		?>
-
-		<!-- icons for webpage -->
-<link rel="shortcut icon" href="common/img/logo.ico">
-<link rel="apple-touch-icon" href="common/img/logo.ico">
-
-<!-- stylesheets required for floating menu -->
-<link rel="stylesheet" type="text/css"
-	href="common/css/header_footer.css">
-<link rel="stylesheet" type="text/css" href="common/css/sticky_div.css">
-<link rel="stylesheet" type="text/css" href="common/css/nav_menu.css">
-
-<!-- stylesheets common throughought the website -->
-<link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
-<link rel="stylesheet" type="text/css" href="common/css/responsive_layout.css">
-<link rel="stylesheet" type="text/css" href="common/css/content_box.css">
-
-<!-- link libraries used in header -->
-<script src="common/js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
-
-<!-- link libraries used for lightboxes -->
-<script src="common/js/libs/lightbox.min.js" type="text/javascript"></script>
-<link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
-
-
-<!-- javascript file required for floating menu -->
-<script src="common/js/sticky_div.js" type="text/javascript"></script>
 
 <!-- Google analytics script -->
 <script>
@@ -74,32 +67,12 @@
 <body>
 	<div id="master_container">
 		<div id="header_container">
-			<div style="left: 50px">
-				<a href="index.php"><img src="common/img/banner.png"
-					title="Games and simulations by Sebastian Troy" border="0"
-					margin="0" /></a>
-			</div>
-			<div class="nav_menu_container">
-				<div class="nav_menu_anchor"></div>
-				<div class="nav_menu">
-					<ul class="nav_menu_buttons">
-						<li><span class="nav_button"><span class="left"><span
-									class="right"><a href="index.php"><span class="left">Home</span></a></span></span></span>
-						</li>
-						<li><span class="nav_button"><span class="left"><span
-									class="right"><a href="who_am_i.php"><span class="left">Who am
-												I?</span></a></span></span></span></li>
-						<li><span class="nav_button"><span class="left"><span
-									class="right"><a href="projects.php"><span class="left">Projects</span></a></span></span></span>
-						</li>
-						<li><span class="nav_button"><span class="left"><span
-									class="right"><a href="contact.php"><span class="left">Contact</span></a></span></span></span>
-						</li>
-					</ul>
-				</div>
-				<!-- close nav_menu -->
-			</div>
-			<!-- close nav_menu_container -->
-		</div>
-		<!-- close header_container -->
+			<div class="title">TrojanDev</div>
+			<div class="nav_menu">
+				<div class="nav_menu_button" data-link="index.php">Home</div>
+				<div class="nav_menu_button" data-link="who-am-i.php">Who am I?</div>
+				<div class="nav_menu_button" data-link="projects.php">Projects</div>
+				<div class="nav_menu_button" data-link="contact.php">Contact</div>
+			</div> <!-- close nav_menu -->
+			</div> <!-- close header_container -->
 		<div id="page_container">
