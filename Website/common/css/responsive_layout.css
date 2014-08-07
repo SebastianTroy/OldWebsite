@@ -1,21 +1,21 @@
-div.row {
-	wodth: 100%;
+.row {
+	width: 100%;
 	clear: both;
 	padding: 0px;
 	margin: 0px;
 	zoom: 1;
 }
 
-div.row:before, div.row:after {
+.row:before, .row:after {
 	content: "";
 	display: table;
 }
 
-div.row:after {
+.row:after {
 	clear: both;
 }
 
-div.column {
+.column {
 	display: block;
 	float: left;
 	width: 50%;
@@ -24,14 +24,44 @@ div.column {
 	vertical-align: middle;
 }
 
-div.page_break {
-	width: 99%;
-	border: 0.1em dashed black;
-	margin: 0.2em
+@media only screen and (max-width: 1100px) {
+	.column {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 1000px) {
-	div.column { 
-		width: 100%;
+	#header_container {
+		font-size: 90%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#header_container {
+		font-size: 80%;
+	}
+}
+
+@media only screen and (max-width: 800px) {
+	#header_container {
+		font-size: 70%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	#header_container {
+		font-size: 60%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#header_container {
+		font-size: 50%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	#header_container {
+		font-size: 40%;
 	}
 }

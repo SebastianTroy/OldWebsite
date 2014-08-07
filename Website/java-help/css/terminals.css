@@ -1,6 +1,6 @@
 /* CODE SNIPPETS */
 /* WINDOWS command prompt*/
-div.code_winCMD {
+.code_winCMD {
 	border: 2px solid #B0B0B0;
 	background-color: black;
 	margin: 1.5em 2em;
@@ -8,7 +8,7 @@ div.code_winCMD {
 	color: #C0C0C0;
 }
 
-div.code_winCMD h1.titlebar {
+.code_winCMD h1.titlebar {
 	padding-left: 0.2em;
 	margin: 0;
 	border-bottom: 2px solid #B0B0B0;
@@ -19,7 +19,7 @@ div.code_winCMD h1.titlebar {
 	font-size: 1.2em;
 }
 
-div.code_winCMD span.caret {
+.code_winCMD .caret {
 	-webkit-animation: win_caret 1.2s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
@@ -45,7 +45,7 @@ div.code_winCMD span.caret {
 	}
 
 /* LINUX command line*/
-div.code_linuxTerminal {
+.code_linuxTerminal {
 	border: 1px solid #464541;
 	background-color: black;
 	margin: 1.5em 2em;
@@ -53,7 +53,7 @@ div.code_linuxTerminal {
 	color: yellow;
 }
 
-div.code_linuxTerminal h1.titlebar {
+.code_linuxTerminal h1.titlebar {
 	padding-left: 0.2em;
 	margin: 0;
 	background-color: #464541;
@@ -63,7 +63,7 @@ div.code_linuxTerminal h1.titlebar {
 	font-size: 1.2em;
 }
 
-div.code_linuxTerminal span.caret {
+.code_linuxTerminal .caret {
 	-webkit-animation: linux_caret 1.2s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
@@ -88,7 +88,7 @@ div.code_linuxTerminal span.caret {
 }
 
 /* MacOS command line */
-div.code_macOSTermianl {
+.code_macOSTermianl {
 	border: 1px solid #dddddd;
 	background-color: white;
 	margin: 1.5em 2em;
@@ -96,7 +96,7 @@ div.code_macOSTermianl {
 	color: black;
 }
 
-div.code_macOSTermianl h1.titlebar {
+.code_macOSTermianl h1.titlebar {
 	padding-left: 0.2em;
 	margin: 0;
 	background-color: #bababa;
@@ -106,7 +106,7 @@ div.code_macOSTermianl h1.titlebar {
 	font-size: 1.2em;
 }
 
-div.code_macOSTermianl span.caret {
+.code_macOSTermianl .caret {
 	-webkit-animation: macos_caret 1.2s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;

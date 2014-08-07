@@ -1,39 +1,36 @@
-// Happens when document finishes loading
 $(document).ready(function() {
 	// This function sets the header to fixed position and adjusts the padding
-	// of the
+	// of the page container so they dont overlap
 	$('#header_container').css("position", "fixed");
 	$('#page_container').css("margin-top", function() {
-		return $('#header_container').height();
+		return $('#header_container').outerHeight();
 	});
-	// This function is called whenever a user clicks on a menu "button" which
-	// is a div
-	$('.nav_menu_button').on('click', function() {
-		var link = $(this).attr('data-link');
-		window.location = link;
-	});
-
+	// This function will be executed when the user resizes the page. (Not responding to changes in window size)
+	$(screen).on("resize", adjust_header);
 	// This function will be executed when the user scrolls the page.
-	$(window).scroll(function() {
-		// Once the user has scrolled down once, hide the header
+	$(window).on("scroll", adjust_header);
+
+	function adjust_header() {
+		// Once the user has scrolled down, hide the title of the header
 		if ($(window).scrollTop() > 0) {
-			$(".title").slideUp({
-				duration : 1000,
+			$('.title').slideUp({
+				duration : 500,
 				step : function() {
 					$('#page_container').css("margin-top", function() {
-						return $('#header_container').height();
+						return $('#header_container').outerHeight();
 					});
 				}
 			});
+			// If the user has scrolled back to the top, unhide the title
 		} else {
-			$(".title").slideDown({
-				duration : 1000,
+			$('.title').slideDown({
+				duration : 500,
 				step : function() {
 					$('#page_container').css("margin-top", function() {
-						return $('#header_container').height();
+						return $('#header_container').outerHeight();
 					});
 				}
 			});
 		}
-	});
+	}
 });

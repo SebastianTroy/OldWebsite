@@ -26,16 +26,20 @@
 <script src="common/js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="common/js/libs/lightbox.min.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="common/css/fonts.css">
 
-<!-- ja and css libraries used for the header/footer -->
-<link rel="stylesheet" type="text/css" href="common/css/header_footer.css">
+<!-- js and css libraries used for the header/footer -->
+<link rel="stylesheet" type="text/css"
+	href="common/css/header_footer.css">
 <script src="common/js/header.js" type="text/javascript"></script>
 
-<!-- misc stylesheets common throughought the website -->
+<!-- common js and css libraries used throughought the website -->
 <link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
 <link rel="stylesheet" type="text/css"
 	href="common/css/responsive_layout.css">
 <link rel="stylesheet" type="text/css" href="common/css/content_box.css">
+<script src="common/js/content_box.js" type="text/javascript"></script>
+
 
 <!-- Additional tags here, if any of the web pages have custom javascript or css files, they will be included here -->
 		<?php
@@ -67,12 +71,14 @@
 <body>
 	<div id="master_container">
 		<div id="header_container">
-			<div class="title">TrojanDev</div>
+			<div class="title">TrojanDev<img class="logo" src="common/img/helmet.svg"/></div>
 			<div class="nav_menu">
-				<div class="nav_menu_button" data-link="index.php">Home</div>
-				<div class="nav_menu_button" data-link="who-am-i.php">Who am I?</div>
-				<div class="nav_menu_button" data-link="projects.php">Projects</div>
-				<div class="nav_menu_button" data-link="contact.php">Contact</div>
-			</div> <!-- close nav_menu -->
-			</div> <!-- close header_container -->
+				<a class="nav_menu_button" href="index.php">Home</a> 
+				<a class="nav_menu_button" href="who-am-i.php">Who am I?</a> 
+				<a class="nav_menu_button" href="projects.php">Projects</a>
+				<a class="nav_menu_button" href="contact.php">Contact</a>
+			</div>
+			<!-- close nav_menu -->
+		</div>
+		<!-- close header_container -->
 		<div id="page_container">
