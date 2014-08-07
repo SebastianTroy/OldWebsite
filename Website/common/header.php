@@ -18,10 +18,6 @@
 <meta name="author" content="Sebastian Troy">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- icons for webpage -->
-<link rel="shortcut icon" href="common/img/logo.ico">
-<link rel="apple-touch-icon" href="common/img/logo.ico">
-
 <!-- js and css libraries used throughout the page -->
 <script src="common/js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
 <script src="common/js/libs/lightbox.min.js" type="text/javascript"></script>
@@ -29,8 +25,7 @@
 <link rel="stylesheet" type="text/css" href="common/css/fonts.css">
 
 <!-- js and css libraries used for the header/footer -->
-<link rel="stylesheet" type="text/css"
-	href="common/css/header_footer.css">
+<link rel="stylesheet" type="text/css" href="common/css/header_footer.css">
 <script src="common/js/header.js" type="text/javascript"></script>
 
 <!-- common js and css libraries used throughought the website -->
@@ -71,7 +66,7 @@
 <body>
 	<div id="master_container">
 		<div id="header_container">
-			<div class="title">TrojanDev<img class="logo" src="common/img/helmet.svg"/></div>
+			<div class="title">TrojanDev<img class="logo" src="common/img/logo.svg"/></div>
 			<div class="nav_menu">
 				<a class="nav_menu_button" href="index.php">Home</a> 
 				<a class="nav_menu_button" href="who-am-i.php">Who am I?</a> 

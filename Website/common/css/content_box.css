@@ -1,13 +1,13 @@
 .box {
 	margin: 0.4em;
 	border: 2px solid #007275;
-	/*border-radius: 0.4cm;*/
+	border-radius: 0.4cm;
 }
 
 .box .box_heading {
 	background-color: #007275;
-	/*border-top-left-radius: 0.3cm;
-	border-top-right-radius: 0.3cm;*/
+	border-top-left-radius: 0.3cm;
+	border-top-right-radius: 0.3cm;
 	color: #FFFFFF;
 	font-size: 1.4em;
 	font-weight: bold;
