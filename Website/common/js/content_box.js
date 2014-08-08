@@ -15,7 +15,7 @@ $(document).ready(function() {
 			$(this).parent().find('.box_heading').css("border-bottom-left-radius", 0);
 			$(this).parent().find('.box_heading').css("border-bottom-right-radius", 0);
 			// show the content
-			$(this).parent().find('.content').slideDown(1000, function() {
+			$(this).parent().find('.content').slideDown(800, function() {
 				// Once completely shown
 				// Make sure all content_boxes are floating the right way
 				column_align();
@@ -26,7 +26,7 @@ $(document).ready(function() {
 		// if the content box is currently maximised
 		else {
 			// emsmallen, hide the content
-			$(this).parent().find('.content').slideUp(1000, function() {
+			$(this).parent().find('.content').slideUp(800, function() {
 				// Once completely hidden
 				// round the header corners
 				$(this).parent().find('.box_heading').css("border-bottom-left-radius", "0.3cm");
