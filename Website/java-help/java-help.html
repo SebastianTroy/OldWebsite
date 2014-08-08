@@ -104,6 +104,93 @@
 	</div>
 	<div class="column">
 		<div class="box">
+			<h1 class="box_heading start_minimised">Running my java projects on MacOS</h1>
+			<div class="content">
+				<p>First check that you have a compatible version of java,
+					Navigate to /Applications/Utilities and double-click on Terminal,
+					then type "java -version" and press enter:</p>
+				<div class="code_macOSTermianl">
+					<h1 class="titlebar">
+						<img alt="" src="java-help/img/mac_terminal.png" width="56"
+							height="15" /> trojandev
+					</h1>
+					<p>
+						Last login: Wed Aug 6 20:34:16 on console<br /> macintosh:~
+						trojandev$ java -version <span class="caret">_</span>
+					</p>
+				</div>
+				<p>
+					You should get an output similar to that below. If you do not have
+					version 1.7 or higher (1.8 for new 2014 projects) or dont have java
+					installed you should get the latest version from <a
+						href="http://java.com/en/download/index.jsp">here</a>.
+				</p>
+				<div class="code_macOSTermianl">
+					<h1 class="titlebar">
+						<img alt="" src="java-help/img/mac_terminal.png" width="56"
+							height="15" /> trojandev
+					</h1>
+					<p>
+						macintosh:~ trojandev$<br /> java version "1.8.0_11"<br />
+						Java(TM) SE Runtime Environment (build 1.8.0_11-b12)<br /> Java
+						HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)<br />
+						<br /> macintosh:~ trojandev$ <span class="caret">_</span>
+					</p>
+				</div>
+				<p>
+					Next, you need to open the CMD at the location of the program you
+					want to run. For this example I'm going to use <a
+						href="https://github.com/SebastianTroy/Particle-Model-Java/raw/2D-only/Particle-Model-Java/FluidApp.jar">FluidApp.jar</a>
+					which is located on my desktop, Desktop is inside my User/trojandev
+					directory so all I need to type is "cd ./Desktop" where 'cd' means
+					open and './' means I'm opening a folder that is inside my current
+					location.
+				</p>
+				<div class="code_macOSTermianl">
+					<h1 class="titlebar">
+						<img alt="" src="java-help/img/mac_terminal.png" width="56"
+							height="15" /> Desktop
+					</h1>
+					<p>
+						macintosh:~ trojandev$ cd ./Desktop<br /> macintosh:~ Desktop
+						trojandev$ <span class="caret">_</span>
+					</p>
+				</div>
+				<p>I only need to type 'Desktop' because it is in my
+					'Users\trojandev' folder, to open any folder you can start with
+					just "/", for example:</p>
+				<div class="code_macOSTermianl">
+					<h1 class="titlebar">
+						<img alt="" src="java-help/img/mac_terminal.png" width="56"
+							height="15" /> Desktop
+					</h1>
+					<p>
+						macintosh:~ trojandev$ cd /users/trojandev/Desktop<br />
+						macintosh:~ Desktop trojandev$ <span class="caret">_</span>
+					</p>
+				</div>
+				<p>Once you are in the correct directory type "java -jar
+					application.jar", if the name of the .jar has more than one word in
+					it, you should surround it with brackets:</p>
+				<div class="code_macOSTermianl">
+					<h1 class="titlebar">
+						<img alt="" src="java-help/img/mac_terminal.png" width="56"
+							height="15" /> Desktop
+					</h1>
+					<p>
+						macintosh:~ Desktop trojandev$ java -jar FluidApp.jar<br /> <br />
+						macintosh:~ Desktop trojandev$ java -jar "This program name uses
+						spaces.jar"<span class="caret">_</span>
+					</p>
+				</div>
+				<p>If the program does not run, an error message should be
+					output into the console, if this happens, googling the error may
+					help.</p>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
 			<h1 class="box_heading">Running my java projects on Linux</h1>
 			<div class="content">
 				<p>First you'll need to make sure you have a compatible version
@@ -187,93 +274,6 @@
 						~/desktop/$java -jar FluidApp.jar<br /> <br /> trojandev@ubuntu:
 						~/desktop/$java -jar "This program name uses spaces.jar"<span
 							class="caret">_</span>
-					</p>
-				</div>
-				<p>If the program does not run, an error message should be
-					output into the console, if this happens, googling the error may
-					help.</p>
-			</div>
-		</div>
-	</div>
-	<div class="column">
-		<div class="box">
-			<h1 class="box_heading">Running my java projects on MacOS</h1>
-			<div class="content">
-				<p>First check that you have a compatible version of java,
-					Navigate to /Applications/Utilities and double-click on Terminal,
-					then type "java -version" and press enter:</p>
-				<div class="code_macOSTermianl">
-					<h1 class="titlebar">
-						<img alt="" src="java-help/img/mac_terminal.png" width="56"
-							height="15" /> trojandev
-					</h1>
-					<p>
-						Last login: Wed Aug 6 20:34:16 on console<br /> macintosh:~
-						trojandev$ java -version <span class="caret">_</span>
-					</p>
-				</div>
-				<p>
-					You should get an output similar to that below. If you do not have
-					version 1.7 or higher (1.8 for new 2014 projects) or dont have java
-					installed you should get the latest version from <a
-						href="http://java.com/en/download/index.jsp">here</a>.
-				</p>
-				<div class="code_macOSTermianl">
-					<h1 class="titlebar">
-						<img alt="" src="java-help/img/mac_terminal.png" width="56"
-							height="15" /> trojandev
-					</h1>
-					<p>
-						macintosh:~ trojandev$<br /> java version "1.8.0_11"<br />
-						Java(TM) SE Runtime Environment (build 1.8.0_11-b12)<br /> Java
-						HotSpot(TM) 64-Bit Server VM (build 25.11-b03, mixed mode)<br />
-						<br /> macintosh:~ trojandev$ <span class="caret">_</span>
-					</p>
-				</div>
-				<p>
-					Next, you need to open the CMD at the location of the program you
-					want to run. For this example I'm going to use <a
-						href="https://github.com/SebastianTroy/Particle-Model-Java/raw/2D-only/Particle-Model-Java/FluidApp.jar">FluidApp.jar</a>
-					which is located on my desktop, Desktop is inside my User/trojandev
-					directory so all I need to type is "cd ./Desktop" where 'cd' means
-					open and './' means I'm opening a folder that is inside my current
-					location.
-				</p>
-				<div class="code_macOSTermianl">
-					<h1 class="titlebar">
-						<img alt="" src="java-help/img/mac_terminal.png" width="56"
-							height="15" /> Desktop
-					</h1>
-					<p>
-						macintosh:~ trojandev$ cd ./Desktop<br /> macintosh:~ Desktop
-						trojandev$ <span class="caret">_</span>
-					</p>
-				</div>
-				<p>I only need to type 'Desktop' because it is in my
-					'Users\trojandev' folder, to open any folder you can start with
-					just "/", for example:</p>
-				<div class="code_macOSTermianl">
-					<h1 class="titlebar">
-						<img alt="" src="java-help/img/mac_terminal.png" width="56"
-							height="15" /> Desktop
-					</h1>
-					<p>
-						macintosh:~ trojandev$ cd /users/trojandev/Desktop<br />
-						macintosh:~ Desktop trojandev$ <span class="caret">_</span>
-					</p>
-				</div>
-				<p>Once you are in the correct directory type "java -jar
-					application.jar", if the name of the .jar has more than one word in
-					it, you should surround it with brackets:</p>
-				<div class="code_macOSTermianl">
-					<h1 class="titlebar">
-						<img alt="" src="java-help/img/mac_terminal.png" width="56"
-							height="15" /> Desktop
-					</h1>
-					<p>
-						macintosh:~ Desktop trojandev$ java -jar FluidApp.jar<br /> <br />
-						macintosh:~ Desktop trojandev$ java -jar "This program name uses
-						spaces.jar"<span class="caret">_</span>
 					</p>
 				</div>
 				<p>If the program does not run, an error message should be

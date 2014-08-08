@@ -7,9 +7,8 @@
 #header_container {
 	border: 0;
 	margin: 0;
-	background: gray;
+	background: #798287;
 	width: 100%;
-	/*position: fixed;*/
 }
 
 #page_container {
@@ -18,7 +17,7 @@
 }
 
 #footer_container {
-	background: gray;
+	background: #798287;
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -28,10 +27,11 @@
 }
 
 #header_container .title {
+	padding-top: 7px;
 	color: white;
 	text-align: center;
 	font-size: 6em;
-	font-family: "Arial" sans-serif;
+	font-family: "Ubuntu";
 }
 
 #header_container .logo {
@@ -40,19 +40,26 @@
 }
 
 #header_container .nav_menu {
-	background: gray;
+	background: #798287;
 	z-index: 100;
 	width: 100%;
+	font-size: 200%;
+	color: #798287;
+	font-family: "Ubuntu";
 	text-align: center;
 }
 
 #header_container .nav_menu_button {
-	border-left: 1px dashed white;
-	border-right: 1px dashed white;
-	width: 25%;
-	display: inline;
-	padding: 0em 1em;
-	font-size: 225%;
+	width: 18%;
+	border-top: 3px solid #798287;
+	border-bottom: 3px solid #798287;
+	border-left: 2px solid #798287;
+	border-right: 2px solid #798287;
+	display: inline-block;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	background-color: #83c5d1;
 	color: white;
-	font-family: "Arial" sans-serif;
+	text-decoration: none;
+	color: white;
 }

@@ -1,5 +1,4 @@
-<!-- This block allows our pages to be sent across the interwebs using compression -->
-<?php ob_start(“ob_gzhandler”);?>
+
 
 <!doctype html>
 <html lang="en">
@@ -13,7 +12,7 @@
 		if (! isset ( $PageTitle ))
 			$PageTitle = "TrojanDev";
 		?>
-		<!-- This block deals with page details -->
+<!-- This block deals with page details -->
 <title><?php echo $PageTitle; ?>
 		</title>
 
@@ -23,20 +22,21 @@
 
 <!-- All css files used throughout page -->
 <link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
-<link rel="stylesheet" type="text/css"
-	href="common/css/header_footer.css">
+<link rel="stylesheet" type="text/css" href="common/css/header_footer.css">
 <link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
-<link rel="stylesheet" type="text/css"
-	href="common/css/responsive_layout.css">
+<link rel="stylesheet" type="text/css" href="common/css/responsive_layout.css">
 <link rel="stylesheet" type="text/css" href="common/css/content_box.css">
 
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Ubuntu:bold'>
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
+
 <!-- Additional tags here, if any of the web pages have custom javascript or css files, they will be included here -->
-		<?php
-		if (function_exists ( 'customPageHeader' )) {
-			customPageHeader ();
-		}
-		?>
-		
+<?php
+if (function_exists ( 'customPageHeader' )) {
+	customPageHeader ();
+}
+?>
+
 <!-- All javascript files used throughout page -->
 <script type="text/javascript" src="common/js/libs/jquery-1.10.2.min.js"></script>
 <script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
@@ -70,9 +70,9 @@
 				TrojanDev<img class="logo" src="common/img/logo.svg" />
 			</div>
 			<div class="nav_menu">
-				<a class="nav_menu_button" href="index.php">Home</a> <a
-					class="nav_menu_button" href="who-am-i.php">Who am I?</a> <a
-					class="nav_menu_button" href="projects.php">Projects</a> <a
+				<a class="nav_menu_button" href="index.php">Home</a><a
+					class="nav_menu_button" href="who-am-i.php">Who am I?</a><a
+					class="nav_menu_button" href="projects.php">Projects</a><a
 					class="nav_menu_button" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->

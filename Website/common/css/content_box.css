@@ -1,14 +1,16 @@
 .box {
 	margin: 0.4em;
-	border: 2px solid #007275;
+	border: 3px solid #798287;
+	background-color: white;
 	border-radius: 0.4cm;
 }
 
 .box .box_heading {
-	background-color: #007275;
+	background-color: #83c5d1;
 	border-top-left-radius: 0.3cm;
 	border-top-right-radius: 0.3cm;
 	color: #FFFFFF;
+	font-family: "Ubuntu";
 	font-size: 1.4em;
 	font-weight: bold;
 	padding: 2px 0 4px;
@@ -17,19 +19,25 @@
 	cursor: pointer;
 }
 
+.box .box_heading img {
+	float: right;
+	padding-right: 1%;
+	padding-top: 0.1%;
+}
+
 .box .content {
 	overflow: hidden;
+	font-family: "Vollkorn";
+	border-top: 3px solid #798287;
 }
 
 .box .box_break {
-	border-top: 2px dashed #007275;
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	border-top: 1px solid #007275;
+	margin: 0.5em;
 }
 
 .box p {
-	margin-bottom: 0.4em;
-	margin-top: 0;
+	margin: 0.2em 0.5em;
 	font-size: 1.1em;
 	padding: 4px;
 	text-align: left;
