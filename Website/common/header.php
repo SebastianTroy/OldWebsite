@@ -1,3 +1,6 @@
+<!-- This block allows our pages to be sent across the interwebs using compression -->
+<?php ob_start(“ob_gzhandler”);?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,23 +21,14 @@
 <meta name="author" content="Sebastian Troy">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- js and css libraries used throughout the page -->
-<script src="common/js/libs/jquery-1.10.2.min.js" type="text/javascript"></script>
-<script src="common/js/libs/lightbox.min.js" type="text/javascript"></script>
+<!-- All css files used throughout page -->
 <link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
-<link rel="stylesheet" type="text/css" href="common/css/fonts.css">
-
-<!-- js and css libraries used for the header/footer -->
-<link rel="stylesheet" type="text/css" href="common/css/header_footer.css">
-<script src="common/js/header.js" type="text/javascript"></script>
-
-<!-- common js and css libraries used throughought the website -->
+<link rel="stylesheet" type="text/css"
+	href="common/css/header_footer.css">
 <link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
 <link rel="stylesheet" type="text/css"
 	href="common/css/responsive_layout.css">
 <link rel="stylesheet" type="text/css" href="common/css/content_box.css">
-<script src="common/js/content_box.js" type="text/javascript"></script>
-
 
 <!-- Additional tags here, if any of the web pages have custom javascript or css files, they will be included here -->
 		<?php
@@ -42,6 +36,12 @@
 			customPageHeader ();
 		}
 		?>
+		
+<!-- All javascript files used throughout page -->
+<script type="text/javascript" src="common/js/libs/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
+<script type="text/javascript" src="common/js/header.js"></script>
+<script type="text/javascript" src="common/js/content_box.js"></script>
 
 <!-- Google analytics script -->
 <script>
@@ -66,12 +66,14 @@
 <body>
 	<div id="master_container">
 		<div id="header_container">
-			<div class="title">TrojanDev<img class="logo" src="common/img/logo.svg"/></div>
+			<div class="title">
+				TrojanDev<img class="logo" src="common/img/logo.svg" />
+			</div>
 			<div class="nav_menu">
-				<a class="nav_menu_button" href="index.php">Home</a> 
-				<a class="nav_menu_button" href="who-am-i.php">Who am I?</a> 
-				<a class="nav_menu_button" href="projects.php">Projects</a>
-				<a class="nav_menu_button" href="contact.php">Contact</a>
+				<a class="nav_menu_button" href="index.php">Home</a> <a
+					class="nav_menu_button" href="who-am-i.php">Who am I?</a> <a
+					class="nav_menu_button" href="projects.php">Projects</a> <a
+					class="nav_menu_button" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
 		</div>
