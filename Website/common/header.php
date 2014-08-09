@@ -1,5 +1,3 @@
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -30,10 +28,10 @@
 <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Ubuntu:bold'>
 <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
 
-<!-- Additional tags here, if any of the web pages have custom javascript or css files, they will be included here -->
+<!-- If any of the web pages have custom css files, they will be included here -->
 <?php
-if (function_exists ( 'customPageHeader' )) {
-	customPageHeader ();
+if (function_exists ( 'customCSSHeader' )) {
+	customCSSHeader();
 }
 ?>
 
@@ -42,6 +40,13 @@ if (function_exists ( 'customPageHeader' )) {
 <script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
 <script type="text/javascript" src="common/js/header.js"></script>
 <script type="text/javascript" src="common/js/content_box.js"></script>
+
+<!-- If any of the web pages have custom javascript files, they will be included here -->
+<?php
+if (function_exists ( 'customJavascriptHeader' )) {
+	customJavascriptHeader();
+}
+?>
 
 <!-- Google analytics script -->
 <script>
@@ -70,9 +75,8 @@ if (function_exists ( 'customPageHeader' )) {
 				TrojanDev<img class="logo" src="common/img/logo.svg" />
 			</div>
 			<div class="nav_menu">
-				<a class="nav_menu_button" href="index.php">Home</a><a
-					class="nav_menu_button" href="who-am-i.php">Who am I?</a><a
-					class="nav_menu_button" href="projects.php">Projects</a><a
+				<a class="nav_menu_button" href="index.php">Home</a><a class="nav_menu_button"
+					href="who-am-i.php">Who am I?</a><a class="nav_menu_button" href="projects.php">Projects</a><a
 					class="nav_menu_button" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
