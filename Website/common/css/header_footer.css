@@ -2,6 +2,8 @@
 	width: 100%;
 	min-height: 100%;
 	position: absolute;
+	background-image: url("../img/hex_tile.png");
+	background-repeat: repeat;
 }
 
 #header_container {
@@ -31,7 +33,7 @@
 	color: white;
 	text-align: center;
 	font-size: 6em;
-	font-family: "Ubuntu";
+	font-family: 'Quattrocento', serif;
 }
 
 #header_container .logo {
@@ -45,7 +47,7 @@
 	width: 100%;
 	font-size: 200%;
 	color: #798287;
-	font-family: "Ubuntu";
+	font-family: "Quattrocento";
 	text-align: center;
 }
 

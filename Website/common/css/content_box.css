@@ -10,7 +10,7 @@
 	border-top-left-radius: 0.3cm;
 	border-top-right-radius: 0.3cm;
 	color: #FFFFFF;
-	font-family: "Ubuntu";
+	font-family: "Quattrocento";
 	font-size: 1.4em;
 	font-weight: bold;
 	padding: 2px 0 4px;
@@ -52,5 +52,6 @@
 	list-style-image: url("../img/bullet_point.png");
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
-	padding-left: 14px;
+	padding-left: 0.25%;
+	padding-right: 0.25%;
 }

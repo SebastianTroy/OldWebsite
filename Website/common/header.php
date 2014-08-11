@@ -25,8 +25,8 @@
 <link rel="stylesheet" type="text/css" href="common/css/responsive_layout.css">
 <link rel="stylesheet" type="text/css" href="common/css/content_box.css">
 
-<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Ubuntu:bold'>
 <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
+<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Quattrocento'>
 
 <!-- If any of the web pages have custom css files, they will be included here -->
 <?php
@@ -36,8 +36,9 @@ if (function_exists ( 'customCSSHeader' )) {
 ?>
 
 <!-- All javascript files used throughout page -->
-<script type="text/javascript" src="common/js/libs/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="common/js/libs/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
+<script type="text/javascript" src="common/js/libs/fontselector.js"></script>
 <script type="text/javascript" src="common/js/header.js"></script>
 <script type="text/javascript" src="common/js/content_box.js"></script>
 
@@ -49,22 +50,7 @@ if (function_exists ( 'customJavascriptHeader' )) {
 ?>
 
 <!-- Google analytics script -->
-<script>
-			(function(i, s, o, g, r, a, m) {
-				i['GoogleAnalyticsObject'] = r;
-				i[r] = i[r] ||
-				function() {
-					(i[r].q = i[r].q || []).push(arguments)
-				}, i[r].l = 1 * new Date();
-				a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-				a.async = 1;
-				a.src = g;
-				m.parentNode.insertBefore(a, m)
-			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-			ga('create', 'UA-43714244-1', 'proggle.net');
-			ga('send', 'pageview');
-		</script>
+<script type="text/javascript" src="common/js/libs/analytics.min.js"></script>
 </head>
 
 <!-- This block creates a floating/sticky menu bar at the top of the page -->

@@ -17,29 +17,37 @@ function min_max() {
 		$(this).parent().find('.box_heading').css("border-bottom-left-radius", 0);
 		$(this).parent().find('.box_heading').css("border-bottom-right-radius", 0);
 		// show the content
-		$(this).parent().find('.content').slideDown(800, function() {
-			// Once completely shown
+		$(this).parent().find('.content').slideDown({
+			duration : 500,
 			// Make sure all content_boxes are floating the right way
-			column_align();
+			step : function() {
+				column_align();
+				},
 			// change the icon in the header to minimise
-			$(this).parent().find('.box_heading').find('img').attr('src', 'common/img/min.png');
+			complete : function() {
+				$(this).parent().find('.box_heading').find('img').attr('src', 'common/img/min.png');
+				}
 		});
 	}
 	// if the content box is currently maximised
 	else {
 		// emsmallen, hide the content
-		$(this).parent().find('.content').slideUp(800, function() {
-			// Once completely hidden
-			// round the header corners
-			$(this).parent().find('.box_heading').css("border-bottom-left-radius", "0.3cm");
-			$(this).parent().find('.box_heading').css("border-bottom-right-radius", "0.3cm");
+		$(this).parent().find('.content').slideUp({
+			duration : 500,
 			// Make sure all content_boxes are floating the right way
-			column_align();
-			// change the icon in the header to mamimise
-			$(this).parent().find('.box_heading').find('img').attr('src', 'common/img/max.png');
+			step : function() {
+				column_align();
+				},
+			// change the icon in the header to maximise
+			complete : function() {
+				$(this).parent().find('.box_heading').css("border-bottom-left-radius", "0.3cm");
+				$(this).parent().find('.box_heading').css("border-bottom-right-radius", "0.3cm");
+				$(this).parent().find('.box_heading').find('img').attr('src', 'common/img/max.png');
+				}
 		});
 	}
 }
+
 // Prevents gaps between content
 function column_align() {
 	$('.column').each(function() {

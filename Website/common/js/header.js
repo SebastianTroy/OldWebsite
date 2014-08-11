@@ -30,21 +30,21 @@ $(document).ready(function() {
 		// Once the user has scrolled down, hide the title of the header
 		if ($(window).scrollTop() > 0) {
 			$('.title').slideUp({
-				duration : 1000,
+				duration : 200,
+				step : function() {
+					adjust_page_padding();
+				}		
+			});
+			// If the user has scrolled back to the top, and the page is still
+			// taller than the screen
+		}
+		else if ($('#master_container').height() > $(window).height()) {
+			$('.title').slideDown({
+				duration : 200,
 				step : function() {
 					adjust_page_padding();
 				}
 			});
-			// If the user has scrolled back to the top, and the page is still
-			// taller than the screen
-		} 
-		// else if ($('#master_container').height() > $(window).height()) {
-		// $('.title').slideDown({
-		// duration : 500,
-		// step : function() {
-		// adjust_page_padding();
-		// }
-		// });
-		//		}
+		}
 	}
 });
