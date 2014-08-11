@@ -14,8 +14,8 @@ function min_max() {
 	// if the content box is currently minimised
 	if ($(this).parent().find('.content').css('display') == 'none') {
 		// embiggen, remove rounded corners at bottom of header
-		$(this).parent().find('.box_heading').css("border-bottom-left-radius", 0);
-		$(this).parent().find('.box_heading').css("border-bottom-right-radius", 0);
+		$(this).css("border-bottom-left-radius", 0);
+		$(this).css("border-bottom-right-radius", 0);
 		// show the content
 		$(this).parent().find('.content').slideDown({
 			duration : 500,

@@ -38,7 +38,6 @@ if (function_exists ( 'customCSSHeader' )) {
 <!-- All javascript files used throughout page -->
 <script type="text/javascript" src="common/js/libs/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
-<script type="text/javascript" src="common/js/libs/fontselector.js"></script>
 <script type="text/javascript" src="common/js/header.js"></script>
 <script type="text/javascript" src="common/js/content_box.js"></script>
 
