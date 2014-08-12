@@ -12,44 +12,47 @@ $(document).ready(function() {
 // Toggle the state of a content box
 function min_max() {
 	// if the content box is currently minimised
-	if ($(this).parent().find('.content').css('display') == 'none') {
+	if ($(this).siblings('.content').css('display') == 'none') {
 		// embiggen, remove rounded corners at bottom of header
 		$(this).css("border-bottom-left-radius", 0);
 		$(this).css("border-bottom-right-radius", 0);
 		// show the content
-		$(this).parent().find('.content').slideDown({
+		$(this).siblings('.content').slideDown({
 			duration : 500,
 			// Make sure all content_boxes are floating the right way
 			step : function() {
 				column_align();
-				},
+			},
 			// change the icon in the header to minimise
 			complete : function() {
-				$(this).parent().find('.box_heading').find('img').attr('src', 'common/img/min.png');
-				}
+				$(this).siblings('.box_heading').find('img').attr('src', 'common/img/min.png');
+			}
 		});
 	}
 	// if the content box is currently maximised
 	else {
 		// emsmallen, hide the content
-		$(this).parent().find('.content').slideUp({
+		$(this).siblings('.content').slideUp({
 			duration : 500,
 			// Make sure all content_boxes are floating the right way
 			step : function() {
 				column_align();
-				},
+			},
 			// change the icon in the header to maximise
 			complete : function() {
-				$(this).parent().find('.box_heading').css("border-bottom-left-radius", "0.3cm");
-				$(this).parent().find('.box_heading').css("border-bottom-right-radius", "0.3cm");
-				$(this).parent().find('.box_heading').find('img').attr('src', 'common/img/max.png');
-				}
+				$(this).siblings('.box_heading').css("border-bottom-left-radius", "0.3cm");
+				$(this).siblings('.box_heading').css("border-bottom-right-radius", "0.3cm");
+				$(this).siblings('.box_heading').find('img').attr('src', 'common/img/max.png');
+			}
 		});
 	}
 }
 
 // Prevents gaps between content
 function column_align() {
+	if ($(window).width() < 1100) {
+		return;
+	}
 	$('.column').each(function() {
 		if ($(this).offset().left < 50) {
 			$(this).css("float", "left");

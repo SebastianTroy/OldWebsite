@@ -57,7 +57,7 @@ if (function_exists ( 'customJavascriptHeader' )) {
 	<div id="master_container">
 		<div id="header_container">
 			<div class="title">
-				TrojanDev<img class="logo" src="common/img/logo.svg" />
+				TrojanDev <img class="logo" src="common/img/logo.svg" />
 			</div>
 			<div class="nav_menu">
 				<a class="nav_menu_button" href="index.php">Home</a><a class="nav_menu_button"
