@@ -31,9 +31,8 @@
 
 .box .box_heading img {
 	display: inline;
-	float: right;
-	padding-right: 1%;
-	padding-top: 0.1%;
+	width: 60px;
+	height: 60px;
 }
 
 .box .content {

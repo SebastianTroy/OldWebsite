@@ -3,15 +3,16 @@
 		<div class="box">
 			<h1 class="box_heading">Get in touch</h1>
 			<div class="content">
-				<div class="form_container">
-					<div class="form_box">
-						<label>Email:</label> <input id="email" type="text" /><br /> <label>Subject:</label> <input
-							id="subject" type="text" /><br /> <label>Message:</label>
-						<textarea id="message"></textarea>
-						<br /> <label></label>
-						<div id="submit">Send Message</div>
-						<br />
-					</div>
+				<div class="form_box">
+					<label>Email:</label><input id="email" type="text" />
+					<div class="error email"></div>
+					<label>Subject:</label><input id="subject" type="text" />
+					<div class="error subject"></div>
+					<label>Message:</label>
+					<textarea id="message"></textarea>
+					<div class="error message"></div>
+					<div id="submit">Send Message</div>
+					<br />
 				</div>
 			</div>
 		</div>
