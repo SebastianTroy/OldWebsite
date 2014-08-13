@@ -34,6 +34,10 @@ $(document).ready(function() {
 				message : $("#message").val()
 			},
 		});
-		// TODO something to show message has been sent
+		
+		$("#email").val('');
+		$("#subject").val('');
+		$("#message").val('');
+		alert("sent");
 	});
 });

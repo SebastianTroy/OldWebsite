@@ -1,5 +1,5 @@
 .content {
-	padding: 2% 10% 3%;
+	padding: 0% 10%;
 	background-color: #f3f3f3;
 	border-bottom-left-radius: 0.4cm;
 	border-bottom-right-radius: 0.4cm;
@@ -40,11 +40,11 @@
 	cursor: pointer;
 }
 
-.form_box #submit:FOCUS {
+.form_box #submit:ACTIVE {
 	background-color: #59b1c1;
 }
 
-.form_box .error {
+.form_box .error{
 	display: block;
 	width: 60%;
 	max-width: 60%;
