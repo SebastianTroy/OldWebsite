@@ -50,7 +50,7 @@ function min_max() {
 
 // Prevents gaps between content
 function column_align() {
-	if ($(window).width() < 1100) {
+	if ($(window).width() <= 1100) {
 		return;
 	}
 	$('.column').each(function() {

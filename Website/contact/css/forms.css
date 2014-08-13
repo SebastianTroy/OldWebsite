@@ -1,0 +1,49 @@
+.form_container {
+	padding: 2% 10% 3%;
+}
+
+.form_box {
+	width: 100%;
+	padding: 5% 0% 0%;
+	background-color: #f3f3f3;
+	border: 2px solid #798287;;
+	font-size: 1.2em;
+	border-radius: 0.4cm;
+}
+
+.form_box input, .form_box textarea, .form_box #submit {
+	display: block;
+	width: 60%;
+	max-width: 60%;
+	margin-bottom: 5%;
+	float: left;
+}
+
+.form_box label {
+	text-align: right;
+	padding-right: 20px;
+	display: block;
+	width: 20%;
+	max-width: 20%;
+	margin-bottom: 5%;
+	float: left;
+}
+
+.form_box textarea {
+	min-height: 50px;
+}
+
+.form_box #submit {
+	padding: 0.1em;
+	background-color: #83c5d1;
+	border: 2px solid #798287;
+	cursor: pointer;
+}
+
+.form_box #submit:FOCUS {
+	background-color: #59b1c1;
+	}
+
+.form_box br {
+	clear: left;
+}
