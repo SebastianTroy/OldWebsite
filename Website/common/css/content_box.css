@@ -1,7 +1,7 @@
 .box {
 	margin: 1%;
 	border: 3px solid #798287;
-	background-color: white;
+	background-color: #f3f3f3;
 	border-radius: 0.4cm;
 }
 
@@ -28,6 +28,7 @@
 .box h1 {
 	background-color: #83c5d1;
 	color: white;
+	page-break-after: avoid;
 }
 
 .box h2 {
@@ -58,7 +59,7 @@
 	margin: 0.2em 0.5em;
 	font-size: 1.1em;
 	padding: 4px;
-	text-align: left;
+	text-align: justify;
 }
 
 .box ul {

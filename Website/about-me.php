@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Who am I?";
+$PageTitle = "About me";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
@@ -13,7 +13,7 @@ function customJavascriptHeader() {
 
 include_once ('common/header.php');
 
-include_once ('who-am-i/who-am-i.html');
+include_once ('about-me/about-me.html');
 
 include_once ('common/footer.php');
 ?>

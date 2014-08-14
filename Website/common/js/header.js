@@ -1,12 +1,12 @@
 $(document).ready(function() {
 	// Set header to fixed
 	$('#header_container').css("position", "fixed");
-	//
+	// Make sure header and menu buttons correct size
 	calculate_header_size();
 
-	// This function will be executed when the user resizes the page. (Not
-	// responding to changes in window size)
+	// This function will be executed when the user resizes the page.
 	$(window).on("resize", function() {
+		// Make sure header is correct size
 		calculate_header_size();
 	});
 	// This function will be executed when the user scrolls the page.
@@ -16,22 +16,27 @@ $(document).ready(function() {
 	// This code checks which tab is active and sets its background colour
 	var tab = $.cookie('tab');
 	$('.nav_menu_button').eq(Number(tab)).css('background-color', '#aaa271');
-	$.removeCookie('tab', { path: '/' });
-	
-	
+	$.removeCookie('tab', {
+		path : '/'
+	});
+
 	// When a menu button is pressed, highlight it & save its index in a cookie so it can be highlighted on the next page
 	$('.nav_menu_button').on("click", function() {
 		$(this).css('background-color', '#aaa271');
-		$.cookie('tab', $(this).index(), { path: '/' });
+		$.cookie('tab', $(this).index(), {
+			path : '/'
+		});
 	});
 });
 
+// Calculate size header should be based on screen width
 function calculate_header_size() {
 	var text_size = Math.min(($(window).width() / 10), 100) + "%";
 	$('#header_container').css("font-size", text_size);
 	adjust_page_padding();
 }
 
+// Make sure padding at top of page matches height of header
 function adjust_page_padding() {
 	$('#page_container').css("margin-top", function() {
 		return $('#header_container').outerHeight();

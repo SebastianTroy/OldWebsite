@@ -66,6 +66,7 @@
 
 #header_container .nav_menu_button {
 	width: 25%;
+	min-height: 35px;
 	display: inline-block;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;

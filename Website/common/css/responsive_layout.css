@@ -30,11 +30,17 @@
 	#header_container {
 		font-size: 90%;
 	}
+	.row {
+		width: 90%;
+	}
 }
 
 @media only screen and (max-width: 700px) {
 	#header_container {
 		font-size: 70%;
+	}
+		.row {
+		width: 100%;
 	}
 }
 

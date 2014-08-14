@@ -64,9 +64,9 @@ if (function_exists ( 'customJavascriptHeader' )) {
 				</div>Dev
 			</div>
 			<div class="nav_menu">
-				<a class="nav_menu_button home" href="index.php">Home</a><a class="nav_menu_button about"
-					href="who-am-i.php">About me</a><a class="nav_menu_button projects" href="projects.php">Projects</a><a
-					class="nav_menu_button contact" href="contact.php">Contact</a>
+				<a class="nav_menu_button font_fill home" href="index.php">Home</a><a class="nav_menu_button font_fill about"
+					href="about-me.php">About me</a><a class="nav_menu_button font_fill projects" href="projects.php">Projects</a><a
+					class="nav_menu_button font_fill contact" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
 		</div>
