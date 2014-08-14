@@ -2,14 +2,15 @@
 	width: 100%;
 	min-height: 100%;
 	position: absolute;
-	background-image: url("../img/hex_tile.png");
-	background-repeat: repeat;
+	background-color: #99e6f4;
+	/*background-image: url("../img/hex_tile.png");
+	background-repeat: repeat;*/
 }
 
 #header_container {
 	border: 0;
 	margin: 0;
-	background: #798287;
+	background: #C6C0A0;
 	width: 100%;
 }
 
@@ -30,19 +31,31 @@
 }
 
 #header_container .title {
-	padding-top: 7px;
+	padding: 7px 0px;
 	color: #132944;
 	text-align: center;
 	font-size: 6em;
 	font-family: 'Quattrocento', serif;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
 }
 
 #header_container .logo {
-	height: 0.5em;
+	padding-left: 0.5%;
+	display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	overflow: visible;
 }
 
 #header_container .nav_menu {
-	background: #798287;
+	background: #99e6f4;
 	z-index: 100;
 	width: 100%;
 	font-size: 200%;
@@ -52,16 +65,16 @@
 }
 
 #header_container .nav_menu_button {
-	width: 18%;
-	border-top: 3px solid #798287;
-	border-bottom: 3px solid #798287;
-	border-left: 2px solid #798287;
-	border-right: 2px solid #798287;
+	width: 25%;
 	display: inline-block;
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
-	background-color: #83c5d1;
+	background-color: #C6C0A0;
 	color: white;
 	text-decoration: none;
 	color: white;
+}
+
+#header_container .nav_menu_button:HOVER {
+	background-color: #aaa271;
 }

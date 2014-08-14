@@ -5,10 +5,10 @@
 		<?php
 		if (isset ( $_SERVER ['HTTP_USER_AGENT'] ) && (strpos ( $_SERVER ['HTTP_USER_AGENT'], 'MSIE' ) !== false))
 			header ( 'X-UA-Compatible: IE=edge,chrome=1' );
-			
+		
 			// This block makes sure that the $PageTitle variable is set
 		if (! isset ( $PageTitle ))
-			$PageTitle = "TrojanDev";
+			$PageTitle = "TroyDev";
 		?>
 <!-- This block deals with page details -->
 <title><?php echo $PageTitle; ?>
@@ -31,12 +31,13 @@
 <!-- If any of the web pages have custom css files, they will be included here -->
 <?php
 if (function_exists ( 'customCSSHeader' )) {
-	customCSSHeader();
+	customCSSHeader ();
 }
 ?>
 
 <!-- All javascript files used throughout page -->
 <script type="text/javascript" src="common/js/libs/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="common/js/libs/jquery.cookie-1.4.1.min.js"></script>
 <script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
 <script type="text/javascript" src="common/js/header.js"></script>
 <script type="text/javascript" src="common/js/content_box.js"></script>
@@ -44,7 +45,7 @@ if (function_exists ( 'customCSSHeader' )) {
 <!-- If any of the web pages have custom javascript files, they will be included here -->
 <?php
 if (function_exists ( 'customJavascriptHeader' )) {
-	customJavascriptHeader();
+	customJavascriptHeader ();
 }
 ?>
 
@@ -57,12 +58,15 @@ if (function_exists ( 'customJavascriptHeader' )) {
 	<div id="master_container">
 		<div id="header_container">
 			<div class="title">
-				Tr<img class="logo" src="common/img/logo_small.png"/>yDev
+				Troy<div class="logo">
+					<img src="common/img/logo.svg"
+						onerror="this.onerror = null; this.src=&quot;common/img/logo_small.png&quot;" />
+				</div>Dev
 			</div>
 			<div class="nav_menu">
-				<a class="nav_menu_button" href="index.php">Home</a><a class="nav_menu_button"
-					href="who-am-i.php">Who am I?</a><a class="nav_menu_button" href="projects.php">Projects</a><a
-					class="nav_menu_button" href="contact.php">Contact</a>
+				<a class="nav_menu_button home" href="index.php">Home</a><a class="nav_menu_button about"
+					href="who-am-i.php">About me</a><a class="nav_menu_button projects" href="projects.php">Projects</a><a
+					class="nav_menu_button contact" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
 		</div>

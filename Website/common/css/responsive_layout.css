@@ -1,17 +1,13 @@
 .row {
-	width: 100%;
+	width: 80%;
 	clear: both;
 	padding: 0px;
-	margin: 0px;
-	zoom: 1;
-}
-
-.row:before, .row:after {
-	content: "";
-	display: table;
+	margin: 0px auto;
 }
 
 .row:after {
+	content: "";
+	display: table;
 	clear: both;
 }
 

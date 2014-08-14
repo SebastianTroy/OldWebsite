@@ -54,7 +54,7 @@ function column_align() {
 		return;
 	}
 	$('.column').each(function() {
-		if ($(this).offset().left < 50) {
+		if ($(this).offset().left < 500) {
 			$(this).css("float", "left");
 		} else {
 			$(this).css("float", "right")
