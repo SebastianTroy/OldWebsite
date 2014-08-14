@@ -22,7 +22,8 @@ $(document).ready(function() {
 
 	// When a menu button is pressed, highlight it & save its index in a cookie so it can be highlighted on the next page
 	$('.nav_menu_button').on("click", function() {
-		$(this).css('background-color', '#aaa271');
+		$('.nav_menu_button').css('background-color', '#C6C0A0');
+		$(this).css('background-color', '#AAA271');
 		$.cookie('tab', $(this).index(), {
 			path : '/'
 		});

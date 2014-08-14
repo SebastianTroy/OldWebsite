@@ -71,11 +71,12 @@
 	padding: 0 0 0 0;
 	margin: 0 0 0 0;
 	background-color: #C6C0A0;
+	border-bottom: 2px solid #AAA271;
 	color: white;
 	text-decoration: none;
 	color: white;
 }
 
 #header_container .nav_menu_button:HOVER {
-	background-color: #aaa271;
+	background-color: #AAA271;
 }

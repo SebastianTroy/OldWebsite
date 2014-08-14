@@ -5,7 +5,7 @@
 	border-radius: 0.4cm;
 }
 
-.box h1, h2 {
+.box .box_heading {
 	border-top-left-radius: 0.3cm;
 	border-top-right-radius: 0.3cm;
 	font-family: "Quattrocento";
@@ -25,13 +25,13 @@
 	user-select: none;
 }
 
-.box h1 {
+.box h1.box_heading {
 	background-color: #83c5d1;
 	color: white;
 	page-break-after: avoid;
 }
 
-.box h2 {
+.box h2.box_heading {
 	background-color: #c3dcbf;
 	color: black;
 }

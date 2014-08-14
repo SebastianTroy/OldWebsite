@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Help running Java projects";
+$PageTitle = "Help running models and games by Sebastian Troy";
 function customCSSHeader() {
 	?>
 <link rel="stylesheet" type="text/css" href="java-help/css/terminals.css">

@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Projects";
+$PageTitle = "Games and models by Sebastian Troy";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->

@@ -14,7 +14,7 @@
 <title><?php echo $PageTitle; ?>
 		</title>
 
-<meta name="description" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <meta name="author" content="Sebastian Troy">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -50,7 +50,7 @@ if (function_exists ( 'customJavascriptHeader' )) {
 ?>
 
 <!-- Google analytics script -->
-<script type="text/javascript" src="common/js/libs/analytics.min.js"></script>
+<script type="text/javascript" src="common/js/libs/analytics.js"></script>
 </head>
 
 <!-- This block creates a floating/sticky menu bar at the top of the page -->

@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Contact";
+$PageTitle = "Contact Sebastian Troy, a game developer/software engineer";
 function customCSSHeader() {
 	?>
 <link rel="stylesheet" type="text/css" href="contact/css/forms.css">
