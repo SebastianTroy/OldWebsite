@@ -17,6 +17,8 @@
 <meta charset="UTF-8">
 <meta name="author" content="Sebastian Troy">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="googlebot" content="noindex">
 
 <!-- All css files used throughout page -->
 <link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
@@ -49,15 +51,18 @@ if (function_exists ( 'customJavascriptHeader' )) {
 }
 ?>
 <!-- Google analytics script -->
-<script>var _gaq = _gaq || [];
+<script>
+var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-43714244-1']);
+_gaq.push(['_setVar','dev_exclude']);
 _gaq.push(['_trackPageview']);
 
 (function() {
   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();</script>
+})();
+</script>
 </head>
 
 <body>
@@ -74,12 +79,21 @@ _gaq.push(['_trackPageview']);
 			</div>
 			<!-- Menu -->
 			<div class="nav_menu">
-				<a class="nav_menu_button home" href="index.php">Home</a><a
-					class="nav_menu_button about" href="about-me.php">About me</a><a
-					class="nav_menu_button projects" href="projects.php">Projects</a><a
+				<a class="nav_menu_button home" href="index.php">Home</a><a class="nav_menu_button about"
+					href="about-me.php">About me</a><a class="nav_menu_button projects" href="projects.php">Projects</a><a
 					class="nav_menu_button contact" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
 		</div>
 		<!-- close header_container -->
 		<div id="page_container">
+			<div>This page should only be used by the owner of the page as it prevents google analytics from
+				reporting the large numbers of page views caused by testing during development.</div>
+		</div>
+		<!-- close page_container -->
+		<footer id="footer_container"> Copyright&copy; Sebastian Troy 2013 </footer>
+		<!-- close footer_container -->
+	</div>
+	<!-- close master_container -->
+</body>
+</html>
