@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Games and models by Sebastian Troy";
+$PageTitle = "The making of this website";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
@@ -11,9 +11,9 @@ function customJavascriptHeader() {
 <?php
 }
 
-include_once ('common/header.php');
+include_once ('../../common/header.php');
 
-include_once ('projects/overview.html');
+include_once ('website.html');
 
-include_once ('common/footer.php');
+include_once ('../../common/footer.php');
 ?>

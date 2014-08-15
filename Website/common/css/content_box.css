@@ -1,7 +1,7 @@
 .box {
 	margin: 1%;
-	border: 3px solid #798287;
-	background-color: #f3f3f3;
+	border: 3px solid #132944;
+	background-color: #F8F9DD;
 	border-radius: 0.4cm;
 }
 
@@ -26,13 +26,13 @@
 }
 
 .box h1.box_heading {
-	background-color: #83c5d1;
+	background-color: #AAA271;
 	color: white;
 	page-break-after: avoid;
 }
 
 .box h2.box_heading {
-	background-color: #c3dcbf;
+	background-color: #E4DDB8;
 	color: black;
 }
 
@@ -46,7 +46,7 @@
 .box .content {
 	overflow: hidden;
 	font-family: "Vollkorn";
-	border-top: 3px solid #798287;
+	border-top: 3px solid #132944;
 	text-align: center;
 }
 
@@ -68,7 +68,7 @@
 }
 
 .box li {
-	list-style-image: url("../img/bullet_point.png");
+	list-style-image: url("http://trojandev.proggle.net/common/img/bullet_point.png");
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	padding-left: 0.25%;

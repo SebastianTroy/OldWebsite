@@ -2,7 +2,7 @@
 	width: 100%;
 	min-height: 100%;
 	position: absolute;
-	background-color: #99e6f4;
+	background-color: #F6F2EA;
 	/*background-image: url("../img/hex_tile.png");
 	background-repeat: repeat;*/
 }
@@ -21,7 +21,7 @@
 }
 
 #footer_container {
-	background: #798287;
+	background: #C6C0A0;
 	position: absolute;
 	bottom: 0;
 	width: 100%;

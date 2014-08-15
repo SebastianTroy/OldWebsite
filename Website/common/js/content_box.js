@@ -25,7 +25,7 @@ function min_max() {
 			},
 			// change the icon in the header to minimise
 			complete : function() {
-				$(this).siblings('.box_heading').find('img').attr('src', 'common/img/min.png');
+				$(this).siblings('.box_heading').find('img').attr('src', 'http://trojandev.proggle.net/common/img/min.png');
 			}
 		});
 	}
@@ -42,7 +42,7 @@ function min_max() {
 			complete : function() {
 				$(this).siblings('.box_heading').css("border-bottom-left-radius", "0.3cm");
 				$(this).siblings('.box_heading').css("border-bottom-right-radius", "0.3cm");
-				$(this).siblings('.box_heading').find('img').attr('src', 'common/img/max.png');
+				$(this).siblings('.box_heading').find('img').attr('src', 'http://trojandev.proggle.net/common/img/max.png');
 			}
 		});
 	}

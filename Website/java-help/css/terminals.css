@@ -6,6 +6,7 @@
 	margin: 1% 10%;
 	font-family: "Lucida Console";
 	color: #C0C0C0;
+	text-align: left;
 }
 
 .code_winCMD h1.titlebar {
@@ -14,9 +15,12 @@
 	border-bottom: 2px solid #B0B0B0;
 	background-color: #6666CC;
 	color: white;
-	text-align: left;
 	font-weight: normal;
 	font-size: 1.2em;
+}
+
+.code_winCMD p{
+	text-align: left;
 }
 
 .code_winCMD .caret {
@@ -51,6 +55,7 @@
 	margin: 1% 10%;
 	font-family: "Arial";
 	color: yellow;
+	text-align: left;
 }
 
 .code_linuxTerminal h1.titlebar {
@@ -58,9 +63,12 @@
 	margin: 0;
 	background-color: #464541;
 	color: white;
-	text-align: left;
 	font-weight: normal;
 	font-size: 1.2em;
+}
+
+.code_linuxTerminal p{
+	text-align: left;
 }
 
 .code_linuxTerminal .caret {
@@ -94,6 +102,7 @@
 	margin: 1% 10%;
 	font-family: "Trebuchet MS" Helvetica;
 	color: black;
+	text-align: left;
 }
 
 .code_macOSTermianl h1.titlebar {
@@ -101,9 +110,12 @@
 	margin: 0;
 	background-color: #bababa;
 	color: black;
-	text-align: left;
 	font-weight: normal;
 	font-size: 1.2em;
+}
+
+.code_macOSTermianl p{
+	text-align: left;
 }
 
 .code_macOSTermianl .caret {

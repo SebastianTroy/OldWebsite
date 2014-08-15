@@ -19,11 +19,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- All css files used throughout page -->
-<link rel="stylesheet" type="text/css" href="common/css/lightbox.css">
-<link rel="stylesheet" type="text/css" href="common/css/header_footer.css">
-<link rel="stylesheet" type="text/css" href="common/css/basic_style.css">
-<link rel="stylesheet" type="text/css" href="common/css/responsive_layout.css">
-<link rel="stylesheet" type="text/css" href="common/css/content_box.css">
+<link rel="stylesheet" type="text/css" href="http://trojandev.proggle.net/common/css/lightbox.css">
+<link rel="stylesheet" type="text/css" href="http://trojandev.proggle.net/common/css/header_footer.css">
+<link rel="stylesheet" type="text/css" href="http://trojandev.proggle.net/common/css/basic_style.css">
+<link rel="stylesheet" type="text/css" href="http://trojandev.proggle.net/common/css/responsive_layout.css">
+<link rel="stylesheet" type="text/css" href="http://trojandev.proggle.net/common/css/content_box.css">
 
 <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
 <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Quattrocento'>
@@ -36,11 +36,11 @@ if (function_exists ( 'customCSSHeader' )) {
 ?>
 
 <!-- All javascript files used throughout page -->
-<script type="text/javascript" src="common/js/libs/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="common/js/libs/jquery.cookie-1.4.1.min.js"></script>
-<script type="text/javascript" src="common/js/libs/lightbox.min.js"></script>
-<script type="text/javascript" src="common/js/header.js"></script>
-<script type="text/javascript" src="common/js/content_box.js"></script>
+<script type="text/javascript" src="http://trojandev.proggle.net/common/js/libs/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="http://trojandev.proggle.net/common/js/libs/jquery.cookie-1.4.1.min.js"></script>
+<script type="text/javascript" src="http://trojandev.proggle.net/common/js/libs/lightbox.min.js"></script>
+<script type="text/javascript" src="http://trojandev.proggle.net/common/js/header.js"></script>
+<script type="text/javascript" src="http://trojandev.proggle.net/common/js/content_box.js"></script>
 
 <!-- If any of the web pages have custom javascript files, they will be included here -->
 <?php
@@ -65,19 +65,17 @@ _gaq.push(['_trackPageview']);
 		<!-- Sticky header (Title minimised when user scrolls down, leaving only menu) -->
 		<div id="header_container">
 			<div class="title">
-				Troy
-				<div class="logo">
-					<img src="common/img/logo.svg"
+				Troy<div class="logo">
+					<img src="http://trojandev.proggle.net/common/img/logo.svg"
 						onerror="this.onerror = null; this.src=&quot;common/img/logo_small.png&quot;" />
-				</div>
-				Dev
+				</div>Dev
 			</div>
 			<!-- Menu -->
 			<div class="nav_menu">
-				<a class="nav_menu_button home" href="index.php">Home</a><a
-					class="nav_menu_button about" href="about-me.php">About me</a><a
-					class="nav_menu_button projects" href="projects.php">Projects</a><a
-					class="nav_menu_button contact" href="contact.php">Contact</a>
+				<a class="nav_menu_button home" href="http://trojandev.proggle.net/index.php">Home</a><a
+					class="nav_menu_button about" href="http://trojandev.proggle.net/about-me.php">About me</a><a
+					class="nav_menu_button projects" href="http://trojandev.proggle.net/projects.php">Projects</a><a
+					class="nav_menu_button contact" href="http://trojandev.proggle.net/contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
 		</div>
