@@ -5,7 +5,7 @@
 		<?php
 		if (isset ( $_SERVER ['HTTP_USER_AGENT'] ) && (strpos ( $_SERVER ['HTTP_USER_AGENT'], 'MSIE' ) !== false))
 			header ( 'X-UA-Compatible: IE=edge,chrome=1' );
-		
+			
 			// This block makes sure that the $PageTitle variable is set
 		if (! isset ( $PageTitle ))
 			$PageTitle = "TroyDev";
@@ -48,24 +48,32 @@ if (function_exists ( 'customJavascriptHeader' )) {
 	customJavascriptHeader ();
 }
 ?>
-
 <!-- Google analytics script -->
-<script type="text/javascript" src="common/js/libs/analytics.js"></script>
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-43714244-1', 'auto');
+ga('send', 'pageview');</script>
 </head>
 
-<!-- This block creates a floating/sticky menu bar at the top of the page -->
 <body>
 	<div id="master_container">
+		<!-- Sticky header (Title minimised when user scrolls down, leaving only menu) -->
 		<div id="header_container">
 			<div class="title">
-				Troy<div class="logo">
+				Troy
+				<div class="logo">
 					<img src="common/img/logo.svg"
 						onerror="this.onerror = null; this.src=&quot;common/img/logo_small.png&quot;" />
-				</div>Dev
+				</div>
+				Dev
 			</div>
+			<!-- Menu -->
 			<div class="nav_menu">
-				<a class="nav_menu_button font_fill home" href="index.php">Home</a><a class="nav_menu_button font_fill about"
-					href="about-me.php">About me</a><a class="nav_menu_button font_fill projects" href="projects.php">Projects</a><a
+				<a class="nav_menu_button font_fill home" href="index.php">Home</a><a
+					class="nav_menu_button font_fill about" href="about-me.php">About me</a><a
+					class="nav_menu_button font_fill projects" href="projects.php">Projects</a><a
 					class="nav_menu_button font_fill contact" href="contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
