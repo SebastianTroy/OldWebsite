@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Add resize icons to all box headers
-	$('.box_heading').append('<img src="common/img/min.png"/>');
+	$('.box_heading').append('<img src="http://trojandev.proggle.net/common/img/min.png"/>');
 	// Minimise the appropriate content at page load
 	$('.start_minimised').each(min_max);
 	// Make sure all content_boxes are floating the right way
