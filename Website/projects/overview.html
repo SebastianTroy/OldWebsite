@@ -20,7 +20,8 @@
 				<p>This website is both a platform through which to display my work and also an example in
 					itself. Apart from the inclusion of JQuery.js and lightbox.js, it is all my own work.</p>
 				<p>The website uses html and css for the content and style, javascript to add an interactive
-					element to the site and php for code reuse.</p>
+					element to the site and php, mainly for code reuse but also for a small quantity of serverside
+					logic.</p>
 				<p>
 					You can find more information and the development log <a href="projects/website/website.php">here.</a>
 				</p>
@@ -34,18 +35,13 @@
 		<div class="box">
 			<h1 class="box_heading">Fluid Dynamics ~ July 2014</h1>
 			<div class="content">
-				<p>This project is a spin-off from the modelling work I did for my undergraduate
-					dissertation. The model aims to represent an incompressible fluid, e.g. water, in a quick but
-					physically realistic manner.</p>
+				<p>This project represents the fluid portion of a marine plankton ecological model I worked
+					on for my dissertation. The project shows a 2D simulation of an incompressible fluid. This
+					fluid can be interacted with by the user, similar to putting your hand in water and sloshing it
+					about.</p>
 				<p>
-					The images on the right show a few of the possible ways that the fluid can be visualised. The
-					water is simulated using a <a href="http://en.wikipedia.org/wiki/Vector_field">vector field</a>,
-					the arrows represent the direction and speed of flow at a particular point in the simulation
-					and the particles act as tracers for individual molecules of the fluid.
-				</p>
-				<p>
-					The method I used is based on work done by Jos Stam, his original document can be found <a
-						href="http://www.intpowertechcorp.com/GDC03.pdf">here</a>.
+					You can find more help, information and the development log <a
+						href="projects/fluid-dynamics/fluid-dynamics.php">here.</a>
 				</p>
 				<p>
 					Download: <a
@@ -55,40 +51,11 @@
 					Source code (open source): <a
 						href="https://github.com/SebastianTroy/Particle-Model-Java/tree/2D-only">Github</a>
 				</p>
-				<p>
-					If you are having trouble running the program, please try <a href="../java-help.php">this
-						quick guide</a>.
-				</p>
 				<div class="box_break"></div>
-				<a href="projects/img/FluidApp_arrows.png" data-lightbox="FluidApp"
-					data-title="Each arrow represents the direction and speed of flow at a particular point in the model.">
-					<img src="projects/img/thumb/fluidapp_arrows.png" class="thumbnail" alt="View Image" />
-				</a> <a href="projects/img/FluidApp_lines.png" data-lightbox="FluidApp"
-					data-title="Here the arrowheads are not being drawn and every vector in the simulation is represented by a line.">
-					<img src="projects/img/thumb/fluidapp_lines.png" class="thumbnail" alt="View Image" />
-				</a> <a href="projects/img/FluidApp_particles.png" data-lightbox="FluidApp"
-					data-title="Particles can be used to visualise the movement of the fluid."> <img
-					src="projects/img/thumb/fluidapp_particles.png" class="thumbnail" alt="View Image" />
-				</a> <a href="projects/img/FluidApp_animation.gif" data-lightbox="FluidApp"
+				<a href="projects/img/FluidApp_animation.gif" data-lightbox="FluidApp"
 					data-title="Here both particles and vectors are displayed to demonstrate the model, though it is far more interesting to interact with it yourself!.">
 					<img src="projects/img/thumb/FluidApp_animation.gif" class="thumbnail" alt="View Image" />
 				</a>
-				<div class="box_break"></div>
-				<ul>
-					<li>To interact with the fluid, simply click and drag the mouse cursor through the model.</li>
-					<li>Vector line Density: This only controls how many of the vectors are drawn, it doesn't
-						change the number of vectors being modelled.</li>
-					<li>Time between Calculations (s): This adds a delay, in seconds, between each step of the
-						model, this slows the speed at which the model is calculated and drawn.</li>
-					<li>Iterations of linear solving: This variable is more complex. If your computer can
-						handle it, 6 is a good value. Anything below 6 results in unrealistic and less interesting
-						behaviour of the fluid however on older computers it might be necessary to turn it down as it
-						is a major bottleneck.</li>
-					<li>Particle diffusion: This value is used to determine the random movements of all of the
-						particles within the model. At 0 all particles act as perfect tracers however this can lead to
-						all of the particles getting stuck at the top and bottom edges of the model.</li>
-					<li>Particle brightness: Allows the choice of a particle colour between white and blue.</li>
-				</ul>
 			</div>
 		</div>
 	</div>
