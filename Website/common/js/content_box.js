@@ -5,6 +5,9 @@ $(document).ready(function() {
 	$('.start_minimised').each(min_max);
 	// Make sure all content_boxes are floating the right way
 	column_align();
+	$(window).on("resize", function() {
+		column_align();
+	});
 	// When the user clicks on the minimise button of a content box, hide the box's content
 	$('.box_heading').on('click', min_max);
 });

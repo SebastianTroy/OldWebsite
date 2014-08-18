@@ -3,7 +3,6 @@ $(document).ready(function() {
 	$('#header_container').css("position", "fixed");
 	// Make sure header and menu buttons correct size
 	calculate_header_size();
-
 	// This function will be executed when the user resizes the page.
 	$(window).on("resize", function() {
 		// Make sure header is correct size
@@ -32,7 +31,7 @@ $(document).ready(function() {
 
 // Calculate size header should be based on screen width
 function calculate_header_size() {
-	var text_size = Math.min(($(window).width() / 10), 100) + "%";
+	var text_size = Math.min(($(window).width() / 6), 100) + "%";
 	$('#header_container').css("font-size", text_size);
 	adjust_page_padding();
 }

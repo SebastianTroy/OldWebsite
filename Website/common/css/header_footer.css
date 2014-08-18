@@ -58,7 +58,7 @@
 	background: #99e6f4;
 	z-index: 100;
 	width: 100%;
-	font-size: 200%;
+	font-size: 2em;
 	color: #798287;
 	font-family: "Quattrocento";
 	text-align: center;
@@ -68,8 +68,8 @@
 	width: 25%;
 	min-height: 35px;
 	display: inline-block;
-	padding: 0 0 0 0;
-	margin: 0 0 0 0;
+	padding: 0px;
+	margin: 0px;
 	background-color: #C6C0A0;
 	border-bottom: 2px solid #AAA271;
 	color: white;

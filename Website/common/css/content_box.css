@@ -15,7 +15,7 @@
 	margin: 0px;
 	text-align: center;
 	cursor: pointer;
-	display: inline-table;
+	display: table;
 	width: 100.1%;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -62,13 +62,13 @@
 	text-align: justify;
 }
 
-.box ul {
+.box ul, .box ol {
 	font-size: 1.1em;
 	text-align: left;
 }
 
-.box li {
-	list-style-image: url("http://trojandev.proggle.net/common/img/bullet_point.png");
+.box ul li {
+	list-style-image: url("http://trojandev.proggle.net/common/img/bullet_point.svg");
 	background-repeat: no-repeat;
 	background-position: 0px 5px;
 	padding-left: 0.25%;

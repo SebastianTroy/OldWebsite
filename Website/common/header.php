@@ -50,7 +50,7 @@ if (function_exists ( 'customJavascriptHeader' )) {
 ?>
 <!-- Google analytics script -->
 <script>var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-43714244-1']);
+_gaq.push(['_setAccount', 'UA-53924810-1']);
 _gaq.push(['_trackPageview']);
 
 (function() {
