@@ -1,0 +1,126 @@
+<div class="row">
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Every RGB Image Evolver</h1>
+			<div class="content">
+				<p>This project combines the hiding of information in images alongside the encryption of information. I was
+					interested in creating an unbreakable and undetectable encryption, so I began by looking into 1) how information was
+					discerned from noise and 2) how codes were cracked.</p>
+				<p>Basically both of those problems are the same, codes are cracked by looking for patterns and this can be got
+					around by having many ways to represent each character of the alphabet. In this way, a long string of encoded "z"s would
+					not leave a repeating pattern which could be detected.</p>
+				<p>The information is encoded in images in a 4x4 pixel grid pattern, each pixel has a colour represented by an
+					integer which can be odd or even, binary! 4x4 means 16 bits of data, therefore 65536 different unique permutations, if
+					we only want to encode 26 letters of the alphabet, spaces and some character to signify the end of the message, that
+					leaves us with 2340 possible permutations per letter.</p>
+				<p>28 unique characters can be stored in only 5 bits of data, therefore the process of inflating number of bits to
+					store each character could be seen as a hash. To convert a message into string of hashes, a neural network and backwards
+					engineering is used. A random 16bit configuration is chosen, passed through the neural net and the character it
+					represents is inserted into the message, this process is repeated until each character in the message has a random 16
+					bit hash assigned. This makes decrypting the message easy, if you have the correct neural network, simply pass each hash
+					through the network and voila, your secret message!</p>
+				<p>Of course, if you don't have the neural network, all you'll see is an image, and even if you know there is a
+					message inside it, the chances of the message containing two identical 16 bit hashes is small. The network used to
+					create the hashes is highly sensitive to even small tweaks to its structure, so much so that even a single node with an
+					altered threshold will output gibberish, impossible to replicate without the original parameters.</p>
+				<div class="box_break"></div>
+				<p>
+					Try it yourself: <a href="https://github.com/SebastianTroy/SteganCryptoography/raw/master/Encryption/encrypt.jar">Encrypt.jar</a>
+				</p>
+				<p>
+					Source code (open source): <a href="https://github.com/SebastianTroy/SteganCryptoography">Github</a>
+				</p>
+				<div class="box_break"></div>
+				<a href="img/encrypt_message1.png" data-lightbox="steganography"
+					data-title="This image contains a hidden message, download this and encrypt.jar, place them on your desktop and run the program to read it!">
+					<img src="img/thumbs/encrypt_message1.png" class="thumbnail" alt="View Image" />
+				</a> <a href="img/encrypt_message2.png" data-lightbox="steganography"
+					data-title="This image has a message hidden too, however it has been locked using a password which is encrypted in the first image!">
+					<img src="img/thumbs/encrypt_message2.png" class="thumbnail" alt="View Image" />
+				</a> <a href="img/encrypt_graph.png" data-lightbox="steganography"
+					data-title="In graph mode, an image like this is produced, each point represents a random network with a random seed, created with a specific leeway value.">
+					<img src="img/thumbs/encrypt_graph.png" class="thumbnail" alt="View Image" />
+				</a>
+				<div class="box_break"></div>
+				<ul>
+					<li>Due to the nature of the encryption, any form of image compression will destroy the hidden message, therefore
+						sending an image with a secret message over Facebook will not work.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Help</h1>
+			<div class="content">
+				<p>
+					If you are having trouble running the program, please try <a href="../java-help.php">this quick guide</a>.
+				</p>
+				<div class="box">
+					<h2 class="box_heading start_minimised">Simple instructions</h2>
+					<div class="content">
+						<ul>
+							<li>Rename a .png or .jpg to a message that you want hidden inside it</li>
+							<li>Run the program (From the same directory as the image is the easiest way to locate your image file) Select
+								the image and click "OK"</li>
+							<li>Click "Cancel" to finish or select another file to encode it as well</li>
+							<li>You will find your image has been renamed, you can now change it to whatever you like and your secret message
+								is safe</li>
+							<li>To retrieve your message Run the program again Select the image and click "OK"</li>
+							<li>You will find your image has been renamed back to the original message that you encoded (minus punctuation or
+								capital letters).</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">Advanced instructions</h2>
+					<div class="content">
+						<p>To run the program from a command line or console, open the console to the location of the program and type
+							"java -jar Encrypto.jar" You can also add extra arguments to the JVM for extra features of the program, "java -jar
+							[add your arguments here] Encrypto.jar" these are:</p>
+						<ul>
+							<li>'-Dseed=integer' This allows you to specify your own seed, used to construct the Neural Network, messages
+								encoded with a seed can only be decoded with exactly the same seed allowing for "passkey" protected messages (default
+								value if unspecified == 1198662804)</li>
+							<li>'-Dleeway=float' This allows you to control the inner workings of the Network used to encode and decode
+								messages, again changing this value will change how the network translates information. This value is very sensitive
+								and it is recommended that you use some of the other modes in order to refine this variable if you intend to change
+								it. (default value if unspecified == 0.07)</li>
+							<li>'-Dmode=mode' This allows you to change what mode the program is run in which are:
+								<ul>
+									<li><b>dictionary</b>, this mode simply cycles through every combination 16 bits can represent and prints out
+										the character that the Network represents it as. This can be helpful in assessing how randomly our Network is
+										assigning characters to our 16 bit combinations</li>
+									<li><b>stats</b>, this mode calculates the frequency of combinations that represent each letter of the
+										alphabet, it then prints out the Standard Deviation of the frequencies and also an array representing the % of
+										combinations used for each letter. A pseudo random distribution of frequencies would result in a standard deviation
+										of roughly 100 though 400 is a good number to aim for when choosing a seed.</li>
+									<li><b>optimise</b>, this mode allows you to search for a seed with a low standard deviation for a particular
+										setup, you can specify the 'levels' used in the Network and the 'leeway' with the above parameters.</li>
+									<li><b>graph</b>, this mode draws a graph to an image and saves it to your desktop. This mode is most useful
+										for narrowing down an appropriate 'leeway' value. The graph shows the standard deviation for a range of Networks
+										with leeway set between:
+										<ul>
+											<li>'-Dminleeway' (default if unspecified == 0.0)</li>
+											<li>'-Dmaxleeway' (default if unspecified == 0.4)</li>
+										</ul></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Devlopment Log</h1>
+			<div class="content">
+				<div class="box">
+					<h2 class="box_heading">~ February 2014 ~</h2>
+					<div class="content"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
