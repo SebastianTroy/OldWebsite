@@ -13,11 +13,22 @@ $(document).ready(function() {
 		adjust_header();
 	});
 	// This code checks which tab is active and sets its background colour
-	var tab = $.cookie('tab');
-	$('.nav_menu_button').eq(Number(tab)).css('background-color', '#aaa271');
-	$.removeCookie('tab', {
-		path : '/'
-	});
+	var path = window.location.pathname.split("/").pop();
+	switch (path) {
+		case "" :
+		case "index.php" :
+			$('.nav_menu_button.home').css('background-color', '#aaa271');
+			break;
+		case "about-me.php" :
+			$('.nav_menu_button.about').css('background-color', '#aaa271');
+			break;
+		case "projects.php" :
+			$('.nav_menu_button.projects').css('background-color', '#aaa271');
+			break;
+		case "contact.php" :
+			$('.nav_menu_button.contact').css('background-color', '#aaa271');
+			break;
+	}
 
 	// When a menu button is pressed, highlight it & save its index in a cookie so it can be highlighted on the next page
 	$('.nav_menu_button').on("click", function() {

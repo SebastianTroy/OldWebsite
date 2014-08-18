@@ -3,26 +3,33 @@
 		<div class="box">
 			<h1 class="box_heading">Every RGB Image Evolver</h1>
 			<div class="content">
-				<p>This project combines the hiding of information in images alongside the encryption of information. I was
-					interested in creating an unbreakable and undetectable encryption, so I began by looking into 1) how information was
-					discerned from noise and 2) how codes were cracked.</p>
-				<p>Basically both of those problems are the same, codes are cracked by looking for patterns and this can be got
-					around by having many ways to represent each character of the alphabet. In this way, a long string of encoded "z"s would
-					not leave a repeating pattern which could be detected.</p>
-				<p>The information is encoded in images in a 4x4 pixel grid pattern, each pixel has a colour represented by an
-					integer which can be odd or even, binary! 4x4 means 16 bits of data, therefore 65536 different unique permutations, if
-					we only want to encode 26 letters of the alphabet, spaces and some character to signify the end of the message, that
-					leaves us with 2340 possible permutations per letter.</p>
-				<p>28 unique characters can be stored in only 5 bits of data, therefore the process of inflating number of bits to
-					store each character could be seen as a hash. To convert a message into string of hashes, a neural network and backwards
-					engineering is used. A random 16bit configuration is chosen, passed through the neural net and the character it
-					represents is inserted into the message, this process is repeated until each character in the message has a random 16
-					bit hash assigned. This makes decrypting the message easy, if you have the correct neural network, simply pass each hash
-					through the network and voila, your secret message!</p>
+				<p>
+					<a href="http://en.wikipedia.org/wiki/Steganography">Steganography</a> is the art of hiding information in images, <a
+						href="http://en.wikipedia.org/wiki/Cryptography">cryptography</a> is the practice of hiding information from
+					adversaries. I was interested in creating an unbreakable and undetectable encryption so I began by looking into 1) how
+					information was discerned from noise and 2) how codes were cracked.
+				</p>
+				<p>Basically both of those problems are the same, Hidden information is found and codes are cracked by finding for
+					patterns. This can be got around by having no pattern, or at least having so many ways to encode each letter of the
+					alphabet, each character is encoded in a unique hash. In this way, a long string of encoded Zs would not leave a
+					repeating pattern which could be detected.</p>
+				<p>The information is encoded 16 bits of data, therefore 65536 different unique characters can be encoded, if we only
+					want to encode 26 letters of the alphabet, spaces and some character to signify the end of the message, that leaves us
+					with 2340 possible permutations per letter. The information is then hidden in the images in a 4x4 pixel grid pattern.
+					Each pixel in the image is represented by an integer which can be odd or even, if you read even as 0 and odd as 1 you
+					have binary information.</p>
+				<p>28 unique characters can be stored using only 5 bits of data, therefore the process of increasing the number of
+					bits used to store each character could be seen as hashing. To convert a message into string of hashes, a neural network
+					and backwards engineering is used. A random 16bit configuration is chosen, passed through the neural net and the if it
+					is needed, the character it represents is inserted into the message, this process is repeated until each character in
+					the message has a random 16 bit hash assigned. This makes decrypting the message easy, if you have the correct neural
+					network, simply pass each hash through the network and voila, your secret message!</p>
 				<p>Of course, if you don't have the neural network, all you'll see is an image, and even if you know there is a
-					message inside it, the chances of the message containing two identical 16 bit hashes is small. The network used to
-					create the hashes is highly sensitive to even small tweaks to its structure, so much so that even a single node with an
-					altered threshold will output gibberish, impossible to replicate without the original parameters.</p>
+					message inside it, the chances of the message containing two identical 16 bit hashes is small. A message which is 3000
+					characters long would therefore look like it was written in a language which used 3000 letters in its alphabet. The
+					network used to create the hashes is highly sensitive to even small tweaks to its structure, so much so that even a
+					single node with an altered threshold will output gibberish that is impossible to replicate without the original
+					parameters.</p>
 				<div class="box_break"></div>
 				<p>
 					Try it yourself: <a href="https://github.com/SebastianTroy/SteganCryptoography/raw/master/Encryption/encrypt.jar">Encrypt.jar</a>
@@ -43,8 +50,10 @@
 				</a>
 				<div class="box_break"></div>
 				<ul>
-					<li>Due to the nature of the encryption, any form of image compression will destroy the hidden message, therefore
+					<li>Due to the nature of the encryption any form of image compression will destroy the hidden message therefore
 						sending an image with a secret message over Facebook will not work.</li>
+					<li>I have no idea how real security experts hide or encrypt data and can take no responsibility for your secrets
+						being exposed while using my encryption method.
 				</ul>
 			</div>
 		</div>
@@ -61,8 +70,8 @@
 					<div class="content">
 						<ul>
 							<li>Rename a .png or .jpg to a message that you want hidden inside it</li>
-							<li>Run the program (From the same directory as the image is the easiest way to locate your image file) Select
-								the image and click "OK"</li>
+							<li>For ease of use, move the image into the same folder as the program</li>
+							<li>Run the program, select the image and click "OK"</li>
 							<li>Click "Cancel" to finish or select another file to encode it as well</li>
 							<li>You will find your image has been renamed, you can now change it to whatever you like and your secret message
 								is safe</li>
@@ -124,7 +133,8 @@
 						<div class="box_break"></div>
 						<ul>
 							<li>This version doesn't have a GUI.</li>
-							<li>Messages can be encoded and decoded from images, through the rather clunky process of renaming them and running this program.</li>
+							<li>Messages can be encoded and decoded from images, through the rather clunky process of renaming them and
+								running this program.</li>
 						</ul>
 					</div>
 				</div>
