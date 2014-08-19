@@ -16,7 +16,8 @@
 }
 
 .form_box label {
-	clear: left; text-align : right;
+	clear: left;
+	text-align: right;
 	padding-right: 2%;
 	display: block;
 	width: 20%;
@@ -31,7 +32,7 @@
 }
 
 .form_box #submit {
-	margin: 0% 22% 5%;
+	margin: 3% 22% 5%;
 	background-color: #E4DDB8;
 	border: 2px solid #AAA271;
 	cursor: pointer;
@@ -41,7 +42,7 @@
 	background-color: #59b1c1;
 }
 
-.form_box .error{
+.form_box .error {
 	display: none;
 	width: 60%;
 	max-width: 60%;

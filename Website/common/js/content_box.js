@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Add resize icons to all box headers
-	$('.box_heading').append('<img src="http://trojandev.proggle.net/common/img/min.png"/>');
+	$('.box_heading').append('<img src="http://troydev.proggle.net/common/img/min.png"/>');
 	// Minimise the appropriate content at page load
 	$('.start_minimised').each(min_max);
 	// Make sure all content_boxes are floating the right way
@@ -28,7 +28,7 @@ function min_max() {
 			},
 			// change the icon in the header to minimise
 			complete : function() {
-				$(this).siblings('.box_heading').find('img').attr('src', 'http://trojandev.proggle.net/common/img/min.png');
+				$(this).siblings('.box_heading').find('img').attr('src', 'http://troydev.proggle.net/common/img/min.png');
 			}
 		});
 	}
@@ -45,7 +45,7 @@ function min_max() {
 			complete : function() {
 				$(this).siblings('.box_heading').css("border-bottom-left-radius", "0.3cm");
 				$(this).siblings('.box_heading').css("border-bottom-right-radius", "0.3cm");
-				$(this).siblings('.box_heading').find('img').attr('src', 'http://trojandev.proggle.net/common/img/max.png');
+				$(this).siblings('.box_heading').find('img').attr('src', 'http://troydev.proggle.net/common/img/max.png');
 			}
 		});
 	}
