@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Combining Steganography with Cryptography";
+$PageTitle = "Travelling Salesman Solver";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
@@ -13,7 +13,7 @@ function customJavascriptHeader() {
 
 include_once ('../../common/header.php');
 
-include_once ('steganography-and-cryptography.html');
+include_once ('salesman.html');
 
 include_once ('../../common/footer.php');
 ?>

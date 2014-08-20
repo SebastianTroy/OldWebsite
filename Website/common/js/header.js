@@ -57,7 +57,6 @@ function adjust_page_padding() {
 function adjust_header() {
 	// Once the user has scrolled down, hide the title of the header
 	if ($('.title').css('display') != 'none' && $(window).scrollTop() > 0) {
-		$(window).scrollTop(1);
 		$('.title').slideUp({
 			duration : 200,
 			step : function() {

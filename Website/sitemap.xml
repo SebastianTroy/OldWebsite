@@ -52,5 +52,10 @@
 		<changefreq>daily</changefreq>
 		<priority>0.90</priority>
 	</url>
+	<url>
+		<loc>http://troydev.proggle.net/projects/salesman/salesman.php</loc>
+		<changefreq>daily</changefreq>
+		<priority>0.90</priority>
+	</url>
 </urlset>
  

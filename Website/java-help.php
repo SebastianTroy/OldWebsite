@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Help running models and games by Sebastian Troy";
+$PageTitle = "How to run .jar files on Windows, MacOS and Linux";
 function customCSSHeader() {
 	?>
 <link rel="stylesheet" type="text/css" href="java-help/css/terminals.css">
