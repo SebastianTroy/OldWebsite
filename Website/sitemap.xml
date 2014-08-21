@@ -4,27 +4,27 @@
 	xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 	<url>
 		<loc>http://troydev.proggle.net/</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/index.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/about-me.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.85</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/projects.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>1.00</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/contact.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.60</priority>
 	</url>
 	<url>
@@ -34,26 +34,31 @@
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/projects/everyRGB/allRGB.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/projects/fluid-dynamics/fluid-dynamics.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/projects/steganography-and-cryptography/steganography-and-cryptography.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/projects/website/website.php</loc>
-		<changefreq>daily</changefreq>
+		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
 		<loc>http://troydev.proggle.net/projects/salesman/salesman.php</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.90</priority>
+	</url>
+	<url>
+		<loc>http://troydev.proggle.net/projects/evolving-plants/evolving-plants.php</loc>
 		<changefreq>daily</changefreq>
 		<priority>0.90</priority>
 	</url>

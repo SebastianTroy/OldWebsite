@@ -3,18 +3,30 @@
 		<div class="box">
 			<h1 class="box_heading">Evolving Plants Simulation</h1>
 			<div class="content">
-				<p></p>
+				<p>While not the most recent build, the following version is the most stable and most easily interacted with.</p>
+				<p>
+					The program is a complex genetic algorithm where the <a href="http://en.wikipedia.org/wiki/Fitness_function">fitness
+						function</a> is represented by how many offspring a plant can have in a simulated environment. The result is a dynamic
+					field of growing and reproducing plants that gradually evolve into forms which allow them to outcompete their
+					neighbours.
+				</p>
 				<div class="box_break"></div>
 				<p>
-					Try it yourself: <a download="Evolving-Plants.jar" href="jars/Evolving-Plants102013.jar">Evolving-Plants.jar</a>
+					Try it yourself: <a download="Evolving-Plants.jar" href="jars/plants2-052013.jar">Evolving-Plants.jar</a>
 				</p>
 				<p>
 					Source code (open source): <a href="https://github.com/SebastianTroy/Evolving-Plants-2.0">Github</a>
 				</p>
 				<div class="box_break"></div>
-				<a href="img/salesman-grid-unsolved.png" data-lightbox="salesman"
-					data-title="A grid of cities have been added to the tour, the route is random and hasn't been improved by the algorithm yet.">
-					<img src="img/salesman-grid-unsolved.png" class="thumbnail" alt="View Image" />
+				<a href="img/evolving-plants-2-editor-052015.png" data-lightbox="plants"
+					data-title="The gene editor, the plant updates as you type so you can see exactly how your genes would look in the simulation.">
+					<img src="img/evolving-plants-2-editor-052015.png" class="thumbnail" alt="View Image" />
+				</a> <a href="img/evolving-plants-2-unevolved-052013.png" data-lightbox="plants"
+					data-title="The dotted lines indicate the boundary of the plant size categories."> <img
+					src="img/evolving-plants-2-unevolved-052013.png" class="thumbnail" alt="View Image" />
+				</a><a href="img/evolving-plants-2-evolved-052013.png" data-lightbox="plants"
+					data-title="After a long time, so long as there is enough space between the plants, branching shapes begin to emerge.">
+					<img src="img/evolving-plants-2-evolved-052013.png" class="thumbnail" alt="View Image" />
 				</a>
 			</div>
 		</div>
@@ -24,7 +36,7 @@
 			<h1 class="box_heading">Help</h1>
 			<div class="content">
 				<p>
-					If you are having trouble running the program, please try <a href="../java-help.php">this quick guide</a>.
+					If you are having trouble running the program, please try <a href="../../java-help.php">this quick guide</a>.
 				</p>
 				<div class="box">
 					<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
@@ -57,21 +69,238 @@
 			<h1 class="box_heading">Development log</h1>
 			<div class="content">
 				<div class="box">
-					<h2 class="box_heading">~ February 2014 ~</h2>
+					<h2 class="box_heading">~ August 2014 ~</h2>
 					<div class="content">
-						<p></p>
+						<p>I've always thought that the older versions, while slow and full of unnecessary features, managed to capture
+							something that the newer program did not. The new program has to be run at ridiculously high speeds in order to
+							observe evolution happening and then it is usually very stochastic and leads to very boring shapes emerging.</p>
+						<p>For that reason I've revisited one of the older programs, the one that simulates recombination of genetic
+							material from two parents</p>
+						<p>So far the progress has mostly been updating it to use a newer version of my interface library and removing a
+							few features that don't add anything to the simulation.</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants-sexual082014.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-sexual082014.png" data-lightbox="plants082014"
+							data-title="The GUI has been updated to the latest version and some uneeded features have been cut out for performance gain.">
+							<img src="img/evolving-plants-sexual082014.png" class="thumbnail" alt="View Image" />
+						</a>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ February 2014 ~</h2>
+					<div class="content">
+						<p>I've been playing around with the way that genes work and the result is this new branch of the program. It is
+							based on 2.0 but completely changes the way that genes work. The genes still define the exact shape that the plant
+							will grow into but they are far more simple and complex at the same time.</p>
+						<p>The idea is that some characters in a gene stand for a whole load of others, perhaps even more of itself, this
+							means that when 'C' unpacks to 'aCa' if you unpack it again you get 'aaCaa'. If you were to unpack this genome 5
+							times, you'd end up with 'aaaaaCaaaaa' when the plant was only born with the Genome 'C'. This means that a small
+							mutation in a seeds genome can lead to a radically different unpacked genome, therefore a radically different plant.</p>
+						<p>As real plants use a similar mechanism as they grow, I hope that this will lead to more interesting plant shapes
+							evolving.</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants2recursive-022014.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-2-recursive-editor022014.png" data-lightbox="plants022014"
+							data-title="The new genes are quite hard to edit but can lead to very interesting shapes."> <img
+							src="img/evolving-plants-2-recursive-editor022014.png" class="thumbnail" alt="View Image" />
+						</a> <a href="img/evolving-plants-2-recursive-unevolved022014.png" data-lightbox="plants022014" data-title=""> <img
+							src="img/evolving-plants-2-recursive-unevolved022014.png" class="thumbnail" alt="View Image" />
+						</a><a href="img/evolving-plants-2-recursive-evolved022014.png" data-lightbox="plants022014" data-title=""> <img
+							src="img/evolving-plants-2-recursive-evolved022014.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>Recursive genes which 'unpack' themselves into a longer set of instructions.</li>
+							<li>Modified gene editor which allows you to edit the new genes.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ May 2013 ~</h2>
+					<div class="content">
+						<p>The shapes that plants evolve into still appear limited, though they simply take a long time to evolve.
+							Branching forms require a long genome, the standard genome length is 0 (grow up once). This means that it takes time
+							for longer genomes to evolve, and once they have, time for branching to appear.</p>
+						<p>The gene editor is finished, so you can now create a genome and see what it would grow into at the same time</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants2-052013.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-2-editor-052015.png" data-lightbox="plants052013"
+							data-title="The gene editor, the plant updates as you type so you can see exactly how your genes would look in the simulation.">
+							<img src="img/evolving-plants-2-editor-052015.png" class="thumbnail" alt="View Image" />
+						</a> <a href="img/evolving-plants-2-unevolved-052013.png" data-lightbox="plants052013"
+							data-title="The dotted lines indicate the boundary of the plant size categories."> <img
+							src="img/evolving-plants-2-unevolved-052013.png" class="thumbnail" alt="View Image" />
+						</a><a href="img/evolving-plants-2-evolved-052013.png" data-lightbox="plants052013"
+							data-title="After a long time, so long as there is enough space between the plants, branching shapes begin to emerge.">
+							<img src="img/evolving-plants-2-evolved-052013.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>Gene Editor implemented.</li>
+							<li>Markers to indicate plant size boundaries.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ April 2013 ~</h2>
+					<div class="content">
+						<p>Work on v2.0 is progressing, the gene editor is being implemented and the ability to save and load genes and
+							simulation settings has been implemented.</p>
+						<p>I've also implemented different size classes of plants, my hope is that it will encourage a larger variety of
+							forms, small bushy forms under the canopy and tall stemmed, branching forms making the canopy.</p>
+						<p>While interesting plant shapes are certainly possible, I've noticed that plants tend towards a tall, single
+							stemmed shape. This could be caused by a few things but the way the genes work is a likely culprit, it might require
+							too much order to maintain a branched structure, which is easily lost leading to far inferior offspring. In evolution
+							you can be as fit for the environment as you like, but if most of your children are unfit, your genes are likely to
+							die out.</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants2-042013.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-2-unevolved-042013.png" data-lightbox="plants042013"
+							data-title="The new Gene Save/Load menu on the left."> <img src="img/evolving-plants-2-unevolved-042013.png"
+							class="thumbnail" alt="View Image" />
+						</a> <a href="img/evolving-plants-2-evolved-042013.png" data-lightbox="plants042013"
+							data-title="Plants appear to simply evolve height despite very efficient branching structures being possible."> <img
+							src="img/evolving-plants-2-evolved-042013.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>A new Save/Load feature for plant genes.</li>
+							<li>A new Save/Load feature for simulation settings.</li>
+							<li>Plants can fall into one of three categories; large, medium or small. Plants from different categories do not
+								compete for space when germinating.</li>
+						</ul>
 					</div>
 				</div>
 				<div class="box">
 					<h2 class="box_heading start_minimised">~ March 2013 ~</h2>
 					<div class="content">
-						<p></p>
+						<p>After some tinkering with different ways to calculate lighting and also experimenting with set plant shape being
+							set exactly by the genetics, I have built a prototype for Evolving Plants 2.0.</p>
+						<p>So far it is very basic but it looks promising and leads to some interesting shapes emerging, which are
+							definitely plant like.</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants2-032013.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-2-032013.png" data-lightbox="plants032013"
+							data-title="The simulation has just begun so each plant has a small variation on the basic genes."> <img
+							src="img/evolving-plants-2-032013.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>Lighting is done using a buffer which stores shadow information, much more efficient than colliding hundreds
+								of photons every step.</li>
+							<li>Genes construct a plant's shape by directing a robot which can crawl up and down existing stems and grow new
+								ones from its current position.</li>
+							<li>Simulation width can be much bigger than 800 pixels allowing for a larger gene pool to develope and hopefully
+								therefore more variation.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ November 2012 ~</h2>
+					<div class="content">
+						<p>The efficiency of the program has been increased dramatically however I'm still not entirely pleased with the
+							result, I'm thinking about starting from scratch. If I do I'd like to experiment with exact genetics, i.e. the genes
+							that a plant inherit denote exactly what shape it will grow into.</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants112012.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-unevolved112012.png" data-lightbox="plants112012"
+							data-title="The simulation has just begun so each plant has a small variation on the basic genes."> <img
+							src="img/evolving-plants-unevolved112012.png" class="thumbnail" alt="View Image" />
+						</a> <a href="img/evolving-plants-evolved112012.png" data-lightbox="plants112012"
+							data-title="The simulation has been left to run for a while and larger, more treelike plants have evolved."> <img
+							src="img/evolving-plants-evolved112012.png" class="thumbnail" alt="View Image" />
+						</a> <a href="img/evolving-plants-graph112012.png" data-lightbox="plants112012"
+							data-title="A simple graph for the gene 'leaf transparency' is being displayed above the plants."> <img
+							src="img/evolving-plants-graph112012.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>Speed of the simulation can be increased by pressing the '+' key and slowed using the '-' key.</li>
+							<li>The interface has been tidied and more options have been added.</li>
+							<li>The idea of graphs, used to display how closely plants are related in the other version, have been borrowed
+								and applied to other traits.</li>
+							<li>Graphs of genetic traits now appear above plants, when they are being altered, to show how the gene compares
+								in the rest of the population.</li>
+							<li>All plants sharing a grandparent with the selected plant can be re-coloured to clearly show relationships
+								between different groups.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ June 2012 ~</h2>
+					<div class="content">
+						<p>I have copied the program and tweaked it slightly so that plants reproduce sexually, i.e. they exchange genetic
+							information and their offspring is based on both parents. Plants won't breed with each other unless they are vaguely
+							related allowing for speciation to occur.</p>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants-sexual062012.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants-sexual062012.png" data-lightbox="plants062012"
+							data-title="Here there are three clear species of plant, the graph at the top denotes how closely related all plants are to the one highlighted in white.">
+							<img src="img/evolving-plants-sexual062012.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>Plants reproduce sexually (if possible), with other members of their own species.</li>
+							<li>A plants species is kept track of using a string of digits, a member of the same species is counted as an
+								individual whose species digits only have a small number of differences.</li>
+						</ul>
 					</div>
 				</div>
 				<div class="box">
 					<h2 class="box_heading start_minimised">~ April 2012 ~</h2>
 					<div class="content">
-						<p></p>
+						<p>This project is my first published program, it models the growth and reproduction of plants. Each plant has a
+							set of genes which dictate how it will grow and it passes these onto its offspring, with a chance for mutations to
+							occur. It is a genetic algorithm where the fitness function isn't a direct calculation, instead the fitness of a plant
+							can be considered to be the number of descendants it has, much like real life.</p>
+						<p>The genes don't absolutely describe the shape that the plant will grow into, they're just a set of rules that
+							the plant follows as it grows, namely how long to grow stems and how many branches to grow at each level of the plant.</p>
+						<p>The plants compete for light, which falls from the sky as photons, and for space, a seed cannot germinate if it
+							is too close to another plant.</p>
+						<div class="box_break"></div>
+						<p>The runnable version and the image are slightly different versions.</p>
+						<p>
+							Try it yourself: <a download="Plants.jar" href="jars/plants042012.jar">Plants.jar</a>
+						</p>
+						<div class="box_break"></div>
+						<a href="img/evolving-plants042012.png" data-lightbox="plants042012"
+							data-title="This is the earliest version of the project I have a screenshot for."> <img
+							src="img/evolving-plants042012.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Key features of this build are:</p>
+						<ul>
+							<li>Simulation split into two halves in which parameters can be individually modified.</li>
+							<li>Plants grow and reproduce, competing for light and space.</li>
+							<li>Plants can be selected, their genes can be modified, they can be removed and seeds can be planted.</li>
+						</ul>
 					</div>
 				</div>
 			</div>

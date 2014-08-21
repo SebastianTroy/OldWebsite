@@ -1,4 +1,19 @@
 /* CODE SNIPPETS */
+/* All */
+.titlebar {
+	padding-left: 0.2em;
+	margin: 0;
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+.titlebar img {
+	display: inline;
+	float: left;
+	padding-right: 3px;
+}
+
+
 /* WINDOWS command prompt*/
 .code_winCMD {
 	border: 2px solid #B0B0B0;
@@ -9,14 +24,10 @@
 	text-align: left;
 }
 
-.code_winCMD h1.titlebar {
-	padding-left: 0.2em;
-	margin: 0;
+.code_winCMD .titlebar {
 	border-bottom: 2px solid #B0B0B0;
 	background-color: #6666CC;
 	color: white;
-	font-weight: normal;
-	font-size: 1.2em;
 }
 
 .code_winCMD p{
@@ -58,13 +69,11 @@
 	text-align: left;
 }
 
-.code_linuxTerminal h1.titlebar {
-	padding-left: 0.2em;
-	margin: 0;
+.code_linuxTerminal .titlebar {
 	background-color: #464541;
 	color: white;
-	font-weight: normal;
-	font-size: 1.2em;
+	text-align: center;
+	padding-right: 54px;
 }
 
 .code_linuxTerminal p{
@@ -105,13 +114,11 @@
 	text-align: left;
 }
 
-.code_macOSTermianl h1.titlebar {
-	padding-left: 0.2em;
-	margin: 0;
+.code_macOSTermianl .titlebar {
 	background-color: #bababa;
 	color: black;
-	font-weight: normal;
-	font-size: 1.2em;
+	text-align: center;
+	padding-right: 56px;
 }
 
 .code_macOSTermianl p{
