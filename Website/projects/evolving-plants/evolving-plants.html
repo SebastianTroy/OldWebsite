@@ -1,7 +1,7 @@
 <div class="row">
 	<div class="column">
 		<div class="box">
-			<h1 class="box_heading">Evolving Plants Simulation</h1>
+			<h1 class="box_heading">Plant Evolution Simulation</h1>
 			<div class="content">
 				<p>While not the most recent build, the following version is the most stable and most easily interacted with.</p>
 				<p>
@@ -10,6 +10,8 @@
 					field of growing and reproducing plants that gradually evolve into forms which allow them to outcompete their
 					neighbours.
 				</p>
+				<p>The more recent builds are experimental and may contain bugs but if you're interested they can be downloaded from
+					the 'Development Log' section.</p>
 				<div class="box_break"></div>
 				<p>
 					Try it yourself: <a download="Evolving-Plants.jar" href="jars/plants2-052013.jar">Evolving-Plants.jar</a>
@@ -41,13 +43,57 @@
 				<div class="box">
 					<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
 					<div class="content">
-						<p></p>
+						<p>Each plant is represented by lines and circles. Each line is a stem and the circle is a leaf. Light shines
+							directly down from the top of the simulation and if shown, casts shadows beneath the plant.</p>
+						<p>The light is coloured and depending on the colour of the leaf, only certain colours of light will be blocked by
+							the leaf. A red leaf casts a red shadow, meaning that it has absorbed all of the green and blue light, any plants
+							trying to grow in a red shadow need to be able to absorb red light to survive, as there is no blue or green light
+							left.
+						<p>Plants start as seeds, these will germinate if there is enough space for them and grow into a full grown plant.
+							Once fully grown, any excess energy a plant has goes into making more seeds, which it will drop from its leaves.</p>
+						<p>As plants age they use up more energy, their metabolism increases. This leaves less excess energy for creating
+							more seeds and eventually causes the plant to die, creating space in the simulation for new seeds to germinate.</p>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">The Genetics</h2>
+					<div class="content">
+						<p>
+							A plant's genes are represented by a string of characters, each of which is a single instruction. To decide the shape
+							of a plant each instruction is read in turn, these instructions create a <a
+								href="https://www.google.co.uk/search?q=node+tree&sourceid=ie7&rls=com.microsoft:en-GB:%7Breferrer:source%7D&ie=UTF-8&oe=&gws_rd=ssl">node
+								tree</a> which is 'crawled' by a 'robot'. The robot can crawl up and down the tree, from node to node, and each
+							instruction that is read out is applied to the node that the robot is currently at.
+						</p>
+						<p>At the end of the instructions, any nodes which don't have any children become leaves.</p>
+						<p>Each of the instructions is listed below:</p>
+						<ul>
+							<li><b>^</b> : Make the current node grow up one unit.</li>
+							<li><b>v</b> : Make the current node grow down one unit.</li>
+							<li><b>&lt;</b> : Make the current node grow left one unit</li>
+							<li><b>&gt;</b> : Make the current node grow right one unit.</li>
+							<li><b>N</b> : Create a new node, whose parent is the current node and crawl to it.</li>
+							<li><b>S</b> : Toggle whether the current node can produce seeds.</li>
+							<li><b>+</b> : Crawl up the node tree to the youngest child node.</li>
+							<li><b>-</b> : Crawl down the node tree to the parent node.</li>
+							<li><b>|</b> : Ignore all further instructions.</li>
+						</ul>
+						<p>For example, for the genes: '^ N - N >'</p>
+						<img src="img/demonstration.gif" />
+						<ol>
+							<li>Grow up, making the plant two units tall</li>
+							<li>Create a new node, which increases the height to three units and leaves a parent node one unit below it.</li>
+							<li>Crawl back down the tree to the parent node.</li>
+							<li>Create a new node, this will grow up a unit and overlap the other child node.</li>
+							<li>Grow right, this moves the newest node one unit to the right, leaving a plant that is three units high with
+								two leaves at the top, one in the centre and one to the right.</li>
+						</ol>
 					</div>
 				</div>
 				<div class="box">
 					<h2 class="box_heading start_minimised">The Interface</h2>
 					<div class="content">
-						<p>A quick run through of what each button does:</p>
+						<p>A run through of what each button does:</p>
 						<ul>
 							<li><b></b></li>
 						</ul>
@@ -183,6 +229,8 @@
 							<li>A new Save/Load feature for simulation settings.</li>
 							<li>Plants can fall into one of three categories; large, medium or small. Plants from different categories do not
 								compete for space when germinating.</li>
+							<li>The simulation width can be set between 800 and 5000, simulations wider than 800 have a scrollbar so the
+								whole simulation can be observed and interacted with..
 						</ul>
 					</div>
 				</div>
