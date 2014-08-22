@@ -18,10 +18,10 @@
 					<li>User loads an image.</li>
 					<li>The image is stretched to be exactly 4095x4095 pixels.</li>
 					<li>An image that contains one of every colour is created.</li>
-					<li>Two pixels in the allRGB image are chosen at random</li>
-					<li>Work out how closely they match the reference image</li>
-					<li>Work out how closely they would match the reference image if they were swapped around</li>
-					<li>If the swap incurs an improvement, swap them</li>
+					<li>Two pixels in the allRGB image are chosen at random.</li>
+					<li>Work out how closely they match the reference image.</li>
+					<li>Work out how closely they would match the reference image if they were swapped around.</li>
+					<li>If the swap incurs an improvement, swap them.</li>
 					<li>Repeat steps 4-7 until the user is happy with the result.</li>
 				</ol>
 				<p>Each time the program gets from step 4 to step 7 counts as a generation, each time the pixels are swapped counts
@@ -105,6 +105,24 @@
 										feature this allows you reload old allRGB images so you can continue to improve them.</li>
 								</ul></li>
 							<li><b>Right click: </b>Save the allRGB image.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">Can't load images?</h2>
+					<div class="content">
+						<p>
+							If you've followed the instructions above and have not been able to load your own image, it might be that Java's
+							security settings are blocking the program from loading images. To get around this you can try <a href="java-help.php">running
+								the program from the command line</a>, or on WIndows:
+						<ul>
+							<li>Right click in an empty part of the folder (or desktop) that you're running the program from.</li>
+							<li>Go to New and create a new .txt file.</li>
+							<li>Inside the .txt file write: java -jar "Encrypt.jar". (Where "Encrypt.jar" is the name of the file you are
+								trying to run).</li>
+							<li>Save the .txt and then rename it to "run.bat", when asked if you're sure you want to change the 'filename
+								extension' select yes.</li>
+							<li>Now when you run the 'run.bat' file it will run the program with permission to save, edit and load images.</li>
 						</ul>
 					</div>
 				</div>

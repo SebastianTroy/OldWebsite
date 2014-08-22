@@ -42,6 +42,10 @@
 					<li>Create custom genomes and save them for use in the simulation.</li>
 					<li>Select plants and view their genome, modify it, plant some of their offspring.</li>
 					<li>Leave it to run with different starting configurations and see how it affects the evolution of the plants.</li>
+					<li>Observe how small population sizes can lead to sub optimal design due to genetic drift.</li>
+					<li>Observe how niches can be formed by large plants, a thick canopy can lead to small plants that cannot survive
+						in direct light.</li>
+					<li>Observe how a high mutation rate leads to a population of mangled forms, ill suited for their environment.</li>
 				</ul>
 			</div>
 		</div>
@@ -91,11 +95,13 @@
 							<li><b>-</b> : Crawl down the node tree to the parent node.</li>
 							<li><b>|</b> : Ignore all further instructions.</li>
 						</ul>
-						<p>For example, for the genes: '^ N - N >'</p>
+						<p>For example, for the genes: '^ N &lt; - N >'</p>
 						<img src="projects/evolving-plants/img/demonstration.gif" />
 						<ol>
+							<li>All plants start as a one unit tall stem with a leaf.</li>
 							<li>Grow up, making the plant two units tall</li>
 							<li>Create a new node, which increases the height to three units and leaves a parent node one unit below it.</li>
+							<li>Grow Left, making the current node grow one to the left, note this doesn't move the node below it.</li>
 							<li>Crawl back down the tree to the parent node.</li>
 							<li>Create a new node, this will grow up a unit and overlap the other child node.</li>
 							<li>Grow right, this moves the newest node one unit to the right, leaving a plant that is three units high with
@@ -107,21 +113,101 @@
 					<h2 class="box_heading start_minimised">The Interface</h2>
 					<div class="content">
 						<p>A run through of what each button does:</p>
+						<div class="box_break"></div>
+						<p>Simulation Speed menu:</p>
 						<ul>
-							<li><b></b></li>
+							<li><b>Warp Speed: </b>This doesn't change how the simulation works, it simply causes multiple steps of the
+								simulation to be calculated between each time it is drawn. It greatly increases the speed at which the simulation
+								progresses.</li>
+							<li><b>Playback Speed: </b>The simulation works by knowing how many seconds have passed between each step, this
+								option allows you to tweak this number, telling the simulation that half, or twice as many seconds have gone past.
+								This information is used to calculate how much a plant should have grown since the last step, how far a seed should
+								have fallen. <strong>Warning: </strong>if your computer is very slow and this value is high, strange things can
+								happen in the simulation. A seed can germinate, grow and die in a single step, because the simulation thinks so much
+								time has passed. This can lead to extinction as plants do not have enough time to produce seeds before dying.</li>
+							<li><b>Reset Simulation: </b>Clears all plants and filters from the simulation, does not change simulation
+								settings.</li>
 						</ul>
 						<div class="box_break"></div>
+						<p>Interactions menu:</p>
 						<ul>
-						
-						TODO this, also replace the animated GIF and genes example with something clearer
-						
-						
-						
-							<li><b></b></li>
+							<li><b>Select Plants: </b>Allows the user to click on a leaf to select a plant, the plant is then highlighted. At
+								this time there is no further use for this feature.</li>
+							<li><b>Plant Seeds: </b>Allows the user to place seeds in the simulation. They are based on the current genes, or
+								the default genes if no other genes have been extracted or loaded.</li>
+							<li><b>Extract Genes: </b>Allows the user to get genes from a plant, by clicking on one of its leaves, which then
+								can be saved or used with the plant seeds option.</li>
+							<li><b>Kill Plants: </b>Allows the user to remove a plants from the simulation by clicking on a plant's leaf or
+								clicking and dragging through multiple plant leaves.</li>
+							<li><b>Move Filters: </b>Allows the user to move a light filter, by clicking and dragging on one of its handles.
+								(See Filter Options menu below)</li>
+							<li><b>Delete Filters: </b>Allows the user to remove a light filter, by clicking on one of its handles. (See
+								Filter Options menu below)</li>
 						</ul>
 						<div class="box_break"></div>
+						<p>Plant Options menu:</p>
 						<ul>
-							<li><b></b></li>
+							<li><b>Leaf Size: </b>Leaf size is set for a plant when it germinates, leaves will grow to be as large as this
+								setting.</li>
+							<li><b>Stalk Length: </b>This denotes the size of each growth unit. A plant that grows three units tall will be
+								three stalk lengths high. (See 'The Genetics' above for details on what a unit means.)</li>
+							<li><b>Chance of Mutant Offspring (%): </b>When a plant produces a seed the DNA it passes on is identical to its
+								own, unless it is mutated. This setting is the chance of a seed inheriting mutated DNA.</li>
+							<li><b>Damage to Mutant DNA (%): </b>This represents the proportion of DNA which will be affected by mutation.
+								DNA with 50 instructions exposed to a 10% mutation will on average gain 5 mutations.</li>
+
+							<li><b>Plant is [size] if Bigger Than: </b> These are shown by dotted lines across the screen, a plant's size
+								category is decided purely by its height. You can easily tell a plant's height category by seeing which line it is
+								growing above.</li>
+							<li><b>[size] plant Spacing: </b>For a seed to germinate it needs space. A large seed will only germinate if it
+								is far away enough from all other large plants. The distance a seed needs to be from other plants of its own size
+								category is decided here.</li>
+						</ul>
+						<div class="box_break"></div>
+						<p>Light Options menu:</p>
+						<ul>
+							<li><b>Show Light: </b> This option pauses the simulation and gives a graphical representation of the light
+								levels and colours in the simulation. Here you can observe shadows cast by plants and light filters.</li>
+							<li><b>Light Intensity: </b> These sliders allow you to control how much of each colour of light enters the
+								simulation. Removing all blue light from the simulation can tend to lead towards the evolution of blue leaved plants,
+								i.e. plants that absorb and use all colours except blue, however other factors can influence leaf colour.</li>
+							<li><b>Leaf Transparency: </b>When set to 0, leaves remove all light they can and cast a shadow of the same
+								colour as their leaves. At 100 the leaves still collect the same energy from the light they are receiving but they do
+								not cast shadows.</li>
+						</ul>
+						<div class="box_break"></div>
+						<p>Filter Options menu:</p>
+						<ul>
+							<li><b>Filter Width: </b>The width of a filter can be anywhere between 0 and the width of the entire simulation.</li>
+							<li><b>Colour Sliders: </b>The colour shadow that a filter will produce is decided by these sliders.</li>
+							<li><b>Create Filter: </b>Creates a filter with the settings denoted by the above sliders, the filter is placed
+								in the simulation at half the height starting at the leftmost point of the simulation currently being observed..</li>
+						</ul>
+						<div class="box_break"></div>
+						<p>Gene Options menu:</p>
+						<ul>
+							<li><b>Text Box: </b>Enter the name you'd like to use when saving genes.</li>
+							<li><b>Save Current Genes: </b>The genes currently loaded, or most recently extracted from a plant are saved
+								using the name denoted above.</li>
+							<li><b>Saved Genes: </b>A list of icons with names represents the genes that you currently have saved.</li>
+							<li><b>Load Genes: </b>When this option is selected, clicking on an existing set of saved genes, listed above,
+								will make them the current genes which then be used with the plant seeds option.</li>
+							<li><b>Delete Genes: </b>When this option is selected, clicking on an existing set of saved genes, listed above,
+								will delete them from your computer.</li>
+							<li><b>Open Folder: </b> This opens the folder in which all genes are being saved.</li>
+						</ul>
+						<div class="box_break"></div>
+						<p>Preset Options menu:</p>
+						<ul>
+							<li><b>Text Box: </b>Enter the name you'd like to use when saving presets.</li>
+							<li><b>Save Current Settings: </b>The position of all sliders, which denote things like stem length, light
+								intensity e.t.c are saved into a file.</li>
+							<li><b>Saved Presets: </b>A list of icons with names represents the settings that you currently have saved.</li>
+							<li><b>Load Presets: </b>When this option is selected each of the sliders are set to the positions that are in
+								the save file.</li>
+							<li><b>Delete Presets: </b>When this option is selected, clicking on an existing set of saved presets, listed
+								above, will delete them from your computer.</li>
+							<li><b>Open Folder: </b> This opens the folder in which all presets are being saved.</li>
 						</ul>
 					</div>
 				</div>
@@ -173,10 +259,12 @@
 						<a href="projects/evolving-plants/img/evolving-plants-2-recursive-editor022014.png" data-lightbox="plants022014"
 							data-title="The new genes are quite hard to edit but can lead to very interesting shapes."> <img
 							src="projects/evolving-plants/img/evolving-plants-2-recursive-editor022014.png" class="thumbnail" alt="View Image" />
-						</a> <a href="projects/evolving-plants/img/evolving-plants-2-recursive-unevolved022014.png" data-lightbox="plants022014" data-title=""> <img
-							src="projects/evolving-plants/img/evolving-plants-2-recursive-unevolved022014.png" class="thumbnail" alt="View Image" />
-						</a><a href="projects/evolving-plants/img/evolving-plants-2-recursive-evolved022014.png" data-lightbox="plants022014" data-title=""> <img
-							src="projects/evolving-plants/img/evolving-plants-2-recursive-evolved022014.png" class="thumbnail" alt="View Image" />
+						</a> <a href="projects/evolving-plants/img/evolving-plants-2-recursive-unevolved022014.png" data-lightbox="plants022014"
+							data-title=""> <img src="projects/evolving-plants/img/evolving-plants-2-recursive-unevolved022014.png"
+							class="thumbnail" alt="View Image" />
+						</a><a href="projects/evolving-plants/img/evolving-plants-2-recursive-evolved022014.png" data-lightbox="plants022014"
+							data-title=""> <img src="projects/evolving-plants/img/evolving-plants-2-recursive-evolved022014.png"
+							class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -234,8 +322,8 @@
 						</p>
 						<div class="box_break"></div>
 						<a href="projects/evolving-plants/img/evolving-plants-2-unevolved-042013.png" data-lightbox="plants042013"
-							data-title="The new Gene Save/Load menu on the left."> <img src="projects/evolving-plants/img/evolving-plants-2-unevolved-042013.png"
-							class="thumbnail" alt="View Image" />
+							data-title="The new Gene Save/Load menu on the left."> <img
+							src="projects/evolving-plants/img/evolving-plants-2-unevolved-042013.png" class="thumbnail" alt="View Image" />
 						</a> <a href="projects/evolving-plants/img/evolving-plants-2-evolved-042013.png" data-lightbox="plants042013"
 							data-title="Plants appear to simply evolve height despite very efficient branching structures being possible."> <img
 							src="projects/evolving-plants/img/evolving-plants-2-evolved-042013.png" class="thumbnail" alt="View Image" />

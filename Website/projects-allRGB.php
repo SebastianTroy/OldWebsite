@@ -13,7 +13,7 @@ function customJavascriptHeader() {
 
 include_once ('common/header.php');
 
-include_once ('projects/everyRGB/allRGB.html');
+include_once ('projects/allRGB/allRGB.html');
 
 include_once ('common/footer.php');
 ?>

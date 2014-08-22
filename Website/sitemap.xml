@@ -33,34 +33,33 @@
 		<priority>0.80</priority>
 	</url>
 	<url>
-		<loc>http://troydev.proggle.net/projects/everyRGB/allRGB.php</loc>
+		<loc>http://troydev.proggle.net/projects-allRGB.php</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>http://troydev.proggle.net/projects/fluid-dynamics/fluid-dynamics.php</loc>
+		<loc>http://troydev.proggle.net/projects-fluid-dynamics.php</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>http://troydev.proggle.net/projects/steganography-and-cryptography/steganography-and-cryptography.php</loc>
+		<loc>http://troydev.proggle.net/projects-steganography-and-cryptography.php</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>http://troydev.proggle.net/projects/website/website.php</loc>
+		<loc>http://troydev.proggle.net/projects-website.php</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>http://troydev.proggle.net/projects/salesman/salesman.php</loc>
+		<loc>http://troydev.proggle.net/projects-salesman.php</loc>
 		<changefreq>weekly</changefreq>
 		<priority>0.90</priority>
 	</url>
 	<url>
-		<loc>http://troydev.proggle.net/projects/evolving-plants/evolving-plants.php</loc>
+		<loc>http://troydev.proggle.net/projects-evolving-plants.php</loc>
 		<changefreq>daily</changefreq>
 		<priority>0.90</priority>
 	</url>
 </urlset>
- 
