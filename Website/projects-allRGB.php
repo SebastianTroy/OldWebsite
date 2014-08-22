@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Evolving Plants Simulation";
+$PageTitle = "Evolving an image which contains every RGB combination";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
@@ -11,9 +11,9 @@ function customJavascriptHeader() {
 <?php
 }
 
-include_once ('../../common/header.php');
+include_once ('common/header.php');
 
-include_once ('evolving-plants.html');
+include_once ('projects/everyRGB/allRGB.html');
 
-include_once ('../../common/footer.php');
+include_once ('common/footer.php');
 ?>

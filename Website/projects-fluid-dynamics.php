@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Travelling Salesman Solver";
+$PageTitle = "Modelling an incompressible fluid";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
@@ -11,9 +11,9 @@ function customJavascriptHeader() {
 <?php
 }
 
-include_once ('../../common/header.php');
+include_once ('common/header.php');
 
-include_once ('salesman.html');
+include_once ('projects/fluid-dynamics/fluid-dynamics.html');
 
-include_once ('../../common/footer.php');
+include_once ('common/footer.php');
 ?>

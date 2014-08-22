@@ -3,33 +3,46 @@
 		<div class="box">
 			<h1 class="box_heading">Plant Evolution Simulation</h1>
 			<div class="content">
-				<p>While not the most recent build, the following version is the most stable and most easily interacted with.</p>
-				<p>
-					The program is a complex genetic algorithm where the <a href="http://en.wikipedia.org/wiki/Fitness_function">fitness
-						function</a> is represented by how many offspring a plant can have in a simulated environment. The result is a dynamic
-					field of growing and reproducing plants that gradually evolve into forms which allow them to outcompete their
-					neighbours.
-				</p>
-				<p>The more recent builds are experimental and may contain bugs but if you're interested they can be downloaded from
-					the 'Development Log' section.</p>
+				<p>This projects aims to model plant evolution through natural selection. It does this by simulating an environment
+					in which plant like entities grow and reproduce, while competing for light and space.</p>
+				<p>In normal genetic algorithms there are distinct stages or generations:</p>
+				<ol>
+					<li>Generate a random population.</li>
+					<li>Test them all using a <a href="http://en.wikipedia.org/wiki/Fitness_function">fitness function</a>.
+					</li>
+					<li>Select a fit portion of the population, based on the fitness function.</li>
+					<li>Create the next generation from the fit individuals, usually by copying them and adding small mutations to
+						some.</li>
+				</ol>
+				<p>In this program however there is no fitness function and there are no set generations. Instead the fitness of an
+					individual can be considered to be how many offspring it manages to have. There is no equivalent to generations because,
+					as in real life, some plants will outlive others and successfully have offspring before or after each other.</p>
+				<p>In any situation where you have variation in a population, inheritable traits, mutation and variable survival you
+					will get evolution, it is unavoidable and can be applied in any situation in which those traits all exist together.</p>
 				<div class="box_break"></div>
 				<p>
-					Try it yourself: <a download="Evolving-Plants.jar" href="jars/plants2-052013.jar">Evolving-Plants.jar</a>
+					Try it yourself: <a download="Evolving-Plants.jar" href="projects/evolving-plants/jars/plants2-052013.jar">Evolving-Plants.jar</a>
 				</p>
 				<p>
 					Source code (open source): <a href="https://github.com/SebastianTroy/Evolving-Plants-2.0">Github</a>
 				</p>
 				<div class="box_break"></div>
-				<a href="img/evolving-plants-2-editor-052015.png" data-lightbox="plants"
+				<a href="projects/evolving-plants/img/evolving-plants-2-editor-052015.png" data-lightbox="plants"
 					data-title="The gene editor, the plant updates as you type so you can see exactly how your genes would look in the simulation.">
-					<img src="img/evolving-plants-2-editor-052015.png" class="thumbnail" alt="View Image" />
-				</a> <a href="img/evolving-plants-2-unevolved-052013.png" data-lightbox="plants"
+					<img src="projects/evolving-plants/img/evolving-plants-2-editor-052015.png" class="thumbnail" alt="View Image" />
+				</a> <a href="projects/evolving-plants/img/evolving-plants-2-unevolved-052013.png" data-lightbox="plants"
 					data-title="The dotted lines indicate the boundary of the plant size categories."> <img
-					src="img/evolving-plants-2-unevolved-052013.png" class="thumbnail" alt="View Image" />
-				</a><a href="img/evolving-plants-2-evolved-052013.png" data-lightbox="plants"
+					src="projects/evolving-plants/img/evolving-plants-2-unevolved-052013.png" class="thumbnail" alt="View Image" />
+				</a><a href="projects/evolving-plants/img/evolving-plants-2-evolved-052013.png" data-lightbox="plants"
 					data-title="After a long time, so long as there is enough space between the plants, branching shapes begin to emerge.">
-					<img src="img/evolving-plants-2-evolved-052013.png" class="thumbnail" alt="View Image" />
+					<img src="projects/evolving-plants/img/evolving-plants-2-evolved-052013.png" class="thumbnail" alt="View Image" />
 				</a>
+				<div class="box_break"></div>
+				<ul>
+					<li>Create custom genomes and save them for use in the simulation.</li>
+					<li>Select plants and view their genome, modify it, plant some of their offspring.</li>
+					<li>Leave it to run with different starting configurations and see how it affects the evolution of the plants.</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -38,7 +51,7 @@
 			<h1 class="box_heading">Help</h1>
 			<div class="content">
 				<p>
-					If you are having trouble running the program, please try <a href="../../java-help.php">this quick guide</a>.
+					If you are having trouble running the program, please try <a href="java-help.php">this quick guide</a>.
 				</p>
 				<div class="box">
 					<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
@@ -79,7 +92,7 @@
 							<li><b>|</b> : Ignore all further instructions.</li>
 						</ul>
 						<p>For example, for the genes: '^ N - N >'</p>
-						<img src="img/demonstration.gif" />
+						<img src="projects/evolving-plants/img/demonstration.gif" />
 						<ol>
 							<li>Grow up, making the plant two units tall</li>
 							<li>Create a new node, which increases the height to three units and leaves a parent node one unit below it.</li>
@@ -99,6 +112,11 @@
 						</ul>
 						<div class="box_break"></div>
 						<ul>
+						
+						TODO this, also replace the animated GIF and genes example with something clearer
+						
+						
+						
 							<li><b></b></li>
 						</ul>
 						<div class="box_break"></div>
@@ -126,12 +144,12 @@
 							few features that don't add anything to the simulation.</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants-sexual082014.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants-sexual082014.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-sexual082014.png" data-lightbox="plants082014"
+						<a href="projects/evolving-plants/img/evolving-plants-sexual082014.png" data-lightbox="plants082014"
 							data-title="The GUI has been updated to the latest version and some uneeded features have been cut out for performance gain.">
-							<img src="img/evolving-plants-sexual082014.png" class="thumbnail" alt="View Image" />
+							<img src="projects/evolving-plants/img/evolving-plants-sexual082014.png" class="thumbnail" alt="View Image" />
 						</a>
 					</div>
 				</div>
@@ -149,16 +167,16 @@
 							evolving.</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants2recursive-022014.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants2recursive-022014.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-2-recursive-editor022014.png" data-lightbox="plants022014"
+						<a href="projects/evolving-plants/img/evolving-plants-2-recursive-editor022014.png" data-lightbox="plants022014"
 							data-title="The new genes are quite hard to edit but can lead to very interesting shapes."> <img
-							src="img/evolving-plants-2-recursive-editor022014.png" class="thumbnail" alt="View Image" />
-						</a> <a href="img/evolving-plants-2-recursive-unevolved022014.png" data-lightbox="plants022014" data-title=""> <img
-							src="img/evolving-plants-2-recursive-unevolved022014.png" class="thumbnail" alt="View Image" />
-						</a><a href="img/evolving-plants-2-recursive-evolved022014.png" data-lightbox="plants022014" data-title=""> <img
-							src="img/evolving-plants-2-recursive-evolved022014.png" class="thumbnail" alt="View Image" />
+							src="projects/evolving-plants/img/evolving-plants-2-recursive-editor022014.png" class="thumbnail" alt="View Image" />
+						</a> <a href="projects/evolving-plants/img/evolving-plants-2-recursive-unevolved022014.png" data-lightbox="plants022014" data-title=""> <img
+							src="projects/evolving-plants/img/evolving-plants-2-recursive-unevolved022014.png" class="thumbnail" alt="View Image" />
+						</a><a href="projects/evolving-plants/img/evolving-plants-2-recursive-evolved022014.png" data-lightbox="plants022014" data-title=""> <img
+							src="projects/evolving-plants/img/evolving-plants-2-recursive-evolved022014.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -177,18 +195,18 @@
 						<p>The gene editor is finished, so you can now create a genome and see what it would grow into at the same time</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants2-052013.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants2-052013.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-2-editor-052015.png" data-lightbox="plants052013"
+						<a href="projects/evolving-plants/img/evolving-plants-2-editor-052015.png" data-lightbox="plants052013"
 							data-title="The gene editor, the plant updates as you type so you can see exactly how your genes would look in the simulation.">
-							<img src="img/evolving-plants-2-editor-052015.png" class="thumbnail" alt="View Image" />
-						</a> <a href="img/evolving-plants-2-unevolved-052013.png" data-lightbox="plants052013"
+							<img src="projects/evolving-plants/img/evolving-plants-2-editor-052015.png" class="thumbnail" alt="View Image" />
+						</a> <a href="projects/evolving-plants/img/evolving-plants-2-unevolved-052013.png" data-lightbox="plants052013"
 							data-title="The dotted lines indicate the boundary of the plant size categories."> <img
-							src="img/evolving-plants-2-unevolved-052013.png" class="thumbnail" alt="View Image" />
-						</a><a href="img/evolving-plants-2-evolved-052013.png" data-lightbox="plants052013"
+							src="projects/evolving-plants/img/evolving-plants-2-unevolved-052013.png" class="thumbnail" alt="View Image" />
+						</a><a href="projects/evolving-plants/img/evolving-plants-2-evolved-052013.png" data-lightbox="plants052013"
 							data-title="After a long time, so long as there is enough space between the plants, branching shapes begin to emerge.">
-							<img src="img/evolving-plants-2-evolved-052013.png" class="thumbnail" alt="View Image" />
+							<img src="projects/evolving-plants/img/evolving-plants-2-evolved-052013.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -212,15 +230,15 @@
 							die out.</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants2-042013.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants2-042013.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-2-unevolved-042013.png" data-lightbox="plants042013"
-							data-title="The new Gene Save/Load menu on the left."> <img src="img/evolving-plants-2-unevolved-042013.png"
+						<a href="projects/evolving-plants/img/evolving-plants-2-unevolved-042013.png" data-lightbox="plants042013"
+							data-title="The new Gene Save/Load menu on the left."> <img src="projects/evolving-plants/img/evolving-plants-2-unevolved-042013.png"
 							class="thumbnail" alt="View Image" />
-						</a> <a href="img/evolving-plants-2-evolved-042013.png" data-lightbox="plants042013"
+						</a> <a href="projects/evolving-plants/img/evolving-plants-2-evolved-042013.png" data-lightbox="plants042013"
 							data-title="Plants appear to simply evolve height despite very efficient branching structures being possible."> <img
-							src="img/evolving-plants-2-evolved-042013.png" class="thumbnail" alt="View Image" />
+							src="projects/evolving-plants/img/evolving-plants-2-evolved-042013.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -243,12 +261,12 @@
 							definitely plant like.</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants2-032013.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants2-032013.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-2-032013.png" data-lightbox="plants032013"
+						<a href="projects/evolving-plants/img/evolving-plants-2-032013.png" data-lightbox="plants032013"
 							data-title="The simulation has just begun so each plant has a small variation on the basic genes."> <img
-							src="img/evolving-plants-2-032013.png" class="thumbnail" alt="View Image" />
+							src="projects/evolving-plants/img/evolving-plants-2-032013.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -270,18 +288,18 @@
 							that a plant inherit denote exactly what shape it will grow into.</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants112012.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants112012.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-unevolved112012.png" data-lightbox="plants112012"
+						<a href="projects/evolving-plants/img/evolving-plants-unevolved112012.png" data-lightbox="plants112012"
 							data-title="The simulation has just begun so each plant has a small variation on the basic genes."> <img
-							src="img/evolving-plants-unevolved112012.png" class="thumbnail" alt="View Image" />
-						</a> <a href="img/evolving-plants-evolved112012.png" data-lightbox="plants112012"
+							src="projects/evolving-plants/img/evolving-plants-unevolved112012.png" class="thumbnail" alt="View Image" />
+						</a> <a href="projects/evolving-plants/img/evolving-plants-evolved112012.png" data-lightbox="plants112012"
 							data-title="The simulation has been left to run for a while and larger, more treelike plants have evolved."> <img
-							src="img/evolving-plants-evolved112012.png" class="thumbnail" alt="View Image" />
-						</a> <a href="img/evolving-plants-graph112012.png" data-lightbox="plants112012"
+							src="projects/evolving-plants/img/evolving-plants-evolved112012.png" class="thumbnail" alt="View Image" />
+						</a> <a href="projects/evolving-plants/img/evolving-plants-graph112012.png" data-lightbox="plants112012"
 							data-title="A simple graph for the gene 'leaf transparency' is being displayed above the plants."> <img
-							src="img/evolving-plants-graph112012.png" class="thumbnail" alt="View Image" />
+							src="projects/evolving-plants/img/evolving-plants-graph112012.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -305,12 +323,12 @@
 							related allowing for speciation to occur.</p>
 						<div class="box_break"></div>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants-sexual062012.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants-sexual062012.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants-sexual062012.png" data-lightbox="plants062012"
+						<a href="projects/evolving-plants/img/evolving-plants-sexual062012.png" data-lightbox="plants062012"
 							data-title="Here there are three clear species of plant, the graph at the top denotes how closely related all plants are to the one highlighted in white.">
-							<img src="img/evolving-plants-sexual062012.png" class="thumbnail" alt="View Image" />
+							<img src="projects/evolving-plants/img/evolving-plants-sexual062012.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>
@@ -335,12 +353,12 @@
 						<div class="box_break"></div>
 						<p>The runnable version and the image are slightly different versions.</p>
 						<p>
-							Try it yourself: <a download="Plants.jar" href="jars/plants042012.jar">Plants.jar</a>
+							Try it yourself: <a download="Plants.jar" href="projects/evolving-plants/jars/plants042012.jar">Plants.jar</a>
 						</p>
 						<div class="box_break"></div>
-						<a href="img/evolving-plants042012.png" data-lightbox="plants042012"
+						<a href="projects/evolving-plants/img/evolving-plants042012.png" data-lightbox="plants042012"
 							data-title="This is the earliest version of the project I have a screenshot for."> <img
-							src="img/evolving-plants042012.png" class="thumbnail" alt="View Image" />
+							src="projects/evolving-plants/img/evolving-plants042012.png" class="thumbnail" alt="View Image" />
 						</a>
 						<div class="box_break"></div>
 						<p>Key features of this build are:</p>

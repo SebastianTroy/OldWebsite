@@ -1,5 +1,5 @@
 <?php
-$PageTitle = "Evolving an image which contains every RGB combination";
+$PageTitle = "Combining Steganography with Cryptography";
 function customCSSHeader() {
 	?>
 <!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
@@ -11,9 +11,9 @@ function customJavascriptHeader() {
 <?php
 }
 
-include_once ('../../common/header.php');
+include_once ('common/header.php');
 
-include_once ('allRGB.html');
+include_once ('projects/steganography-and-cryptography/steganography-and-cryptography.html');
 
-include_once ('../../common/footer.php');
+include_once ('common/footer.php');
 ?>
