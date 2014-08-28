@@ -11,6 +11,7 @@
 .form_box input, .form_box textarea, .form_box select, .form_box #submit {
 	display: block;
 	width: 60%;
+	min-width: 60%;
 	max-width: 60%;
 	float: left;
 }
@@ -27,7 +28,6 @@
 }
 
 .form_box textarea {
-	min-width: 60%;
 	min-height: 100px;
 }
 

@@ -7,7 +7,7 @@ function customCSSHeader() {
 }
 function customJavascriptHeader() {
 	?>
-<!-- include css here, e.g. <link rel="stylesheet" type="text/css" href="css/stylesheet.css"> -->
+<!-- include javascript here, e.g. <script type="text/javascript" src="js/script.js"></script> -->
 <?php
 }
 
