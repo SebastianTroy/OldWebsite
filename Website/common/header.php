@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+<meta charset="UTF-8"/>
+<meta name="author" content="Sebastian Troy"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
 <!-- This block optimises the rendering of the page on IE browsers -->
 		<?php
 		if (isset ( $_SERVER ['HTTP_USER_AGENT'] ) && (strpos ( $_SERVER ['HTTP_USER_AGENT'], 'MSIE' ) !== false))
@@ -11,12 +16,7 @@
 			$PageTitle = "TroyDev";
 		?>
 <!-- This block deals with page details -->
-<title><?php echo $PageTitle; ?>
-		</title>
-
-<meta charset="UTF-8"/>
-<meta name="author" content="Sebastian Troy"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title><?php echo $PageTitle; ?></title>
 
 <!-- All css files used throughout page -->
 <link rel="stylesheet" type="text/css" href="http://troydev.proggle.net/common/css/lightbox.css">

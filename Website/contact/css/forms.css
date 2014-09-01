@@ -1,6 +1,5 @@
 .content {
-	padding: 0% 10%;
-	font-size: 1.2em;
+	padding: 0% 8%;
 }
 
 .form_box {
@@ -36,6 +35,12 @@
 	background-color: #E4DDB8;
 	border: 2px solid #AAA271;
 	cursor: pointer;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .form_box #submit:ACTIVE {
