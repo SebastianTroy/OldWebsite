@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// Set header to fixed
-	$('#header_container').css("position", "fixed");
+	$('.nav_menu').css("position", "fixed");
 	// Make sure header and menu buttons correct size
 	calculate_header_size();
 	// This function will be executed when the user resizes the page.
@@ -50,27 +50,17 @@ function calculate_header_size() {
 // Make sure padding at top of page matches height of header
 function adjust_page_padding() {
 	$('#page_container').css("margin-top", function() {
-		return $('#header_container').outerHeight();
+		return $('.nav_menu').outerHeight();
 	});
 }
 
 function adjust_header() {
 	// Once the user has scrolled down, hide the title of the header
-	if ($('.title').css('display') != 'none' && $(window).scrollTop() > 0) {
-		$('.title').slideUp({
-			duration : 200,
-			step : function() {
-				adjust_page_padding();
-			}
+	if ($(window).scrollTop() < $('.title').position().top + $('.title').outerHeight()) {
+		$('.nav_menu').css("top", function() {
+			return $('.title').position().top + $('.title').outerHeight() - $(window).scrollTop();
 		});
-		// If the user has scrolled back to the top, and the page is still
-		// taller than the screen
-	} else if ($(window).scrollTop() == 0 && $('#master_container').height() > $(window).height()) {
-		$('.title').slideDown({
-			duration : 200,
-			step : function() {
-				adjust_page_padding();
-			}
-		});
+	} else {
+		$('.nav_menu').css("top", "0px");
 	}
 }
