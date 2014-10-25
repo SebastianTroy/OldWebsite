@@ -30,6 +30,10 @@
 	color: white;
 }
 
+.code_winCMD .titlebar img {
+	padding-top: 3px;
+}
+
 .code_winCMD p{
 	text-align: left;
 }
