@@ -1,0 +1,174 @@
+<div class="row">
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Animal Evolution Simulation</h1>
+			<div class="content">
+				<p>This projects aims to model animal evolution through natural selection. It does this by simulating an environment
+					in which animal like entities grow and reproduce, while competing for food.</p>
+				<p>In normal genetic algorithms there are distinct stages or generations:</p>
+				<ol>
+					<li>Generate a random population.</li>
+					<li>Test them all using a <a href="http://en.wikipedia.org/wiki/Fitness_function">fitness function</a>.
+					</li>
+					<li>Select a fit portion of the population, based on the fitness function.</li>
+					<li>Create the next generation from the fit individuals, usually by copying them and adding small mutations to
+						some.</li>
+				</ol>
+				<p>In this program however there is no fitness function and there are no set generations. Instead the fitness of an
+					individual can be considered to be how many offspring it manages to have. There is no equivalent to generations because,
+					as in real life, some creatures will outlive others and successfully have offspring before or after each other.</p>
+				<p>In any situation where you have variation in a population, inheritable traits, mutation and variable survival you
+					will get evolution, it is unavoidable and can be applied in any situation in which those traits all exist together.</p>
+				<div class="box_break"></div>
+				<p>
+					Source code: <a href="http://troydev.proggle.net/projects-EoBE.php">Github</a>
+				</p>
+				<div class="box_break"></div>
+				<a href="http://troydev.proggle.net/projects/eobe/img/EarlyExampleWithDebug-102020.png" data-lightbox="about"
+					data-title="Shows a number of swimmers, with a graph on the right (rotated 90 degrees clockwise) and a snapshot of a swimmers 'brain' state">
+					<img src="http://troydev.proggle.net/projects/eobe/img/EarlyExampleWithDebug-102020.png" class="thumbnail"
+					alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/eobe/img/StaticDistantViewOfSwimmers-102020.gif" data-lightbox="about"
+					data-title="A zoomed out view showing two large food spawning areas with many living swimmers."> <img
+					src="http://troydev.proggle.net/projects/eobe/img/ZoomedOutThumb-102020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/eobe/img/StaticViewOfSwimmers-102020.gif" data-lightbox="about"
+					data-title="A close up of some swimmers, towards the end a swimmer lays an egg."> <img
+					src="http://troydev.proggle.net/projects/eobe/img/ZoomedInThumb-102020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/eobe/img/FollowingSwimmer-102020.gif" data-lightbox="about"
+					data-title="A close up of a selected swimmer, following it as it eats food."> <img
+					src="http://troydev.proggle.net/projects/eobe/img/FollowingThumb-102020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/eobe/img/NeuralNetworkUpdatingLive-102020.gif" data-lightbox="about"
+					data-title="Shows the brain of a swimmer updating live, as it swims around the simulation. The random node triggers the most, however the other senses also trigger periodically.">
+					<img src="http://troydev.proggle.net/projects/eobe/img/NetworkThumb-102020.png" class="thumbnail" alt="View Image" />
+				</a>
+				<div class="box_break"></div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Help</h1>
+			<div class="content">
+				<div class="box">
+					<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
+					<div class="content">
+						<p>Each organism, or 'swimmer', is represented by a coloured circle. The open circles represent senses that detect
+							other entities within their area. The straight line points directly forwards and detects a single entity touching it,
+							the closest to the swimmer. Food particles are represented by green circles.</p>
+						<p>Each swimmer can only detect items within the range of its senses.</p>
+						<p>The right hand column contains a graph. The axis are rotated 90 degrees clockwise, which means the (0, 0) is the
+							top left, the y-axis runs along the top, and the x-axis runs down the left edge. The green line represents the energy
+							contained by all existing food pellets, the blue line represents the energy held by all existing swimmers. There is no
+							fixed quantity of energy however there is a limited spawn rate for food pellets. As swimmers become more efficient at
+							finding food, they should eat the pellets more quickly, and waste less energy, shifting the balance of energy further
+							from green to blue.</p>
+						<p>The bottom panel contains an inspector, this allows a selected entity to be analysed. The boxes along the top
+							represent each of the sensory inputs a swimmer has, the middle big box is its brain, and the box along the bottom is
+							its tail (or tails if it has evolved more than one!). The colour of a node represents its value, red is negative, blue
+							is positive, the transparency denotes the size of the value. The values are usually between -1 (opaque red) to 1
+							(opaque blue), however if a value is bigger the node gets drawn larger. The connections can also be positive or
+							negative. The width represents the size of the connection and the transparency represents the current usage of the
+							connection.</p>
+
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">The Genetics</h2>
+					<div class="content">
+						<p>
+							A swimmer's genetics are quite complex. A genome can contain one or more chromosomes, which in turn can contain one or
+							more genes. Chromosomes exist in pairs, like in real life <a href="https://en.wikipedia.org/wiki/Eukaryote">eukaryotes</a>.
+							When combining genomes, each swimmer parent contributes a single chromosome from each pair, so that a child recieves
+							two copies of each gene (for a-sexual reproduction, the single parent's genome is copied and treated like two genomes
+							from seperate parents).
+						</p>
+						<p>Currently the following genes exist:</p>
+						<ul>
+							<li>GenePigment: Contributes to the final colour of the swimmer,</li>
+							<li>GeneBrain: Contains the complete description of the main neural network for the swimmer,</li>
+							<li>GeneSenseTraitsInArea: Adds a circular sense that detects all other entities within an area,</li>
+							<li>GeneSenseTraitsRaycast: Adds a line sense that detects the single nearest entity that is colliding with the
+								line,</li>
+							<li>GeneSenseTraitsSelf: Adds a sense that measures certain aspects of the swimmers own state,</li>
+							<li>GeneSenseTraitsTouching: Adds a sense that detects all entities colliding with a single point,</li>
+							<li>GeneSenseMagneticField: Adds a sense that indicates the angle to (0, 0) and the distance to it,</li>
+							<li>GeneSenseRandom: Adds a sense that detects a <a href="https://en.wikipedia.org/wiki/Low-pass_filter">low
+									pass filter</a>ed number. The filter helps the value to change more gradually,
+							</li>
+							<li>GeneSenseSine: Adds a sense that detects a constantly oscillating number, based on a <a
+								href="https://en.wikipedia.org/wiki/Sine_wave">sine wave</a></li>
+							<li>GeneEffectorTail: Adds an effector that allows the entity to move forwards, and turn left or right.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">The Interface</h2>
+					<div class="content">
+						<p>The interface is currently very simple, left click & drag to move, scroll to zoom. All simulation options are
+							listed in the top left:</p>
+						<div class="box_break"></div>
+						<ul>
+							<li><b>Entities: </b>The total number of entities in the simulation (food pellets, swimmers & swimmer eggs),</li>
+							<li><b>Swimmers: </b>The total number currently living swimmers,</li>
+							<li><b>Paused (space): </b>The sim can be paused and resumed by pressing the 'space' key,</li>
+							<li><b>Spawn Food (F): </b>The food spawners can be toggled on and off py pressing the 'f' key,</li>
+							<li><b>Respawn (R): </b>If all swimmers die, 'r' can be pressed to spawn 15 new swimmers, with default genetics,</li>
+							<li><b>Reset Graph (G)): </b>Removes all points currently plotted on the graph,</li>
+							<li><b>Select Fittest (K): </b>Selects the swimmer with the most living offspring,</li>
+							<li><b>Auto Select Fittest (A): </b>Each tick, the fittest swimmer is selected automatically, toggling this also
+								toggles 'Track Selected',</li>
+							<li><b>Track Selected (T): </b>The view is updated to constantly follow the currently selected swimmer,</li>
+							<li><b> - N ticks old: </b>The Number of simulated ticks that the selected swimmer has been alive (Note that dead
+								swimmers can remain selected and will not age once dead),</li>
+							<li><b> - Laid N eggs: </b>The number of eggs the currently selected swimmer has laid,</li>
+							<li><b> - Descendants N/M: </b>The number of currently alive descendants of the currently selected swimmer / the
+								total number of descendants the currently selected swimmer has ever had (stops updating once the swimmer has died),</li>
+							<li><b> - Energy N mj: </b>The energy level of the currently selected swimmer, if this falls below zero the
+								swimmer will die.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Development log</h1>
+			<div class="content">
+				<div class="box">
+					<h2 class="box_heading">~ October 2020 ~</h2>
+					<div class="content">
+						<p>While this is the first build that has been documented on this website, it is actually roughly the fourth major
+							iteration of this project. I may retroactively document some older versions, however the pipeline for new features is
+							quite big, so there should be plenty of future content.</p>
+						<div class="box_break"></div>
+						<a href="http://troydev.proggle.net/projects/eobe/img/EarlyExampleWithDebug-102020.png" data-lightbox="eobe102020"
+							data-title="Shows a number of swimmers, with a graph on the right (rotated 90 degrees clockwise) and a snapshot of a swimmers 'brain' state">
+							<img src="http://troydev.proggle.net/projects/eobe/img/EarlyExampleWithDebug-102020.png" class="thumbnail"
+							alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Major features:</p>
+						<ul>
+							<li>Each swimmer has a fully simulated genome. Genes add abilities to the swimmer, like senses, pigments or
+								limbs,</li>
+							<li>Swimmers can combine their genomes to reproduce sexually, or they can reproduce a-sexually,</li>
+							<li>A graph documents the total energy contained within all food pellets (green line) and all swimmers (blue
+								line),</li>
+							<li>The inner workings of a swimmer's neural network can be observed live, including all of the sensory inputs
+								and all of the effector outputs,</li>
+							<li>Swimmers can be followed, and the most fit swimmer can automatically be selected each time it changes.</li>
+						</ul>
+						<p>This build is also notably lacking many things, next priorities include:</p>
+						<ul>
+							<li>An executable! So far the only way to run this is to build it yourself,</li>
+							<li>Buttons! The GUI needs fleshing out, especially if I start distributing an executable,</li>
+							<li>The ability for swimmers to eat each other,</li>
+							<li>Entities need to be movable and create-able,</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

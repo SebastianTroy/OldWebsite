@@ -71,7 +71,7 @@ _gaq.push(['_trackPageview']);
 			<!-- Menu -->
 			<div class="nav_menu">
 				<a class="nav_menu_button home" href="http://troydev.proggle.net/index.php">Home</a><a class="nav_menu_button about"
-					href="http://troydev.proggle.net/about-me.php">About me</a><a class="nav_menu_button projects"
+					href="http://troydev.proggle.net/about-me.php">About Me</a><a class="nav_menu_button projects"
 					href="http://troydev.proggle.net/projects.php">Projects</a><a class="nav_menu_button contact"
 					href="http://troydev.proggle.net/contact.php">Contact</a>
 			</div>
