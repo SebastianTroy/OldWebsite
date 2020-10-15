@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8"/>
-<meta name="author" content="Sebastian Troy"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta charset="UTF-8" />
+<meta name="author" content="Sebastian Troy" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- This block optimises the rendering of the page on IE browsers -->
 		<?php
@@ -70,10 +70,9 @@ _gaq.push(['_trackPageview']);
 			</div>
 			<!-- Menu -->
 			<div class="nav_menu">
-				<a class="nav_menu_button home" href="http://troydev.proggle.net/index.php">Home</a><a class="nav_menu_button about"
-					href="http://troydev.proggle.net/about-me.php">About Me</a><a class="nav_menu_button projects"
-					href="http://troydev.proggle.net/projects.php">Projects</a><a class="nav_menu_button contact"
-					href="http://troydev.proggle.net/contact.php">Contact</a>
+				<a class="nav_menu_button about" href="http://troydev.proggle.net/about-me.php">About Me</a><a
+					class="nav_menu_button projects" href="http://troydev.proggle.net/projects.php">Projects</a><a
+					class="nav_menu_button contact" href="http://troydev.proggle.net/contact.php">Contact</a>
 			</div>
 			<!-- close nav_menu -->
 		</div>
