@@ -23,14 +23,24 @@
 				<p>
 					Source code: <a href="http://troydev.proggle.net/projects-EoBE.php">Github</a>
 				</p>
+				<p>
+					Try it yourself: <a download="EoBE-Alpha-Release-002.7z"
+						href="http://troydev.proggle.net/projects/eobe/zips/EoBE-Alpha-Release-002.7z">EoBE-Alpha-Release-002.7z</a>
+				</p>
+				<ol>
+					<li>Download and unzip the folder,</li>
+					<li>Double click on "EoBE.exe".</li>
+				</ol>
 				<div class="box_break"></div>
 				<a href="http://troydev.proggle.net/projects/eobe/img/GuiUpdate-102020.png" data-lightbox="about"
 					data-title="Shows off the new GUI, graphs have swapped places with the inspector view."> <img
 					src="http://troydev.proggle.net/projects/eobe/img/GuiUpdate-102020.png" class="thumbnail" alt="View Image" />
-				</a> <a href="http://troydev.proggle.net/projects/eobe/img/GuiUpdateInspector-102020.png"
-					data-lightbox="about"
+				</a> <a href="http://troydev.proggle.net/projects/eobe/img/GuiUpdateInspector-102020.png" data-lightbox="about"
 					data-title="Shows off the new GUI, graphs have swapped places with the inspector view."> <img
 					src="http://troydev.proggle.net/projects/eobe/img/GuiUpdateInspector-102020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/eobe/img/spikes-122020.png" data-lightbox="eobe122020"
+					data-title="Shows the new spikes, guarding some food pellets, with the remains of careless swimmers littered about">
+					<img src="http://troydev.proggle.net/projects/eobe/img/spikes-122020.png" class="thumbnail" alt="View Image" />
 				</a> <a href="http://troydev.proggle.net/projects/eobe/img/GuiUpdateCloseup-102020.png" data-lightbox="about"
 					data-title="This shows some swimmers early on in the simulation, note the high colour variety and the dark swimmer that is aimlessly swimming backwards.">
 					<img src="http://troydev.proggle.net/projects/eobe/img/GuiUpdateCloseupThumb-102020.png" class="thumbnail"
@@ -166,7 +176,47 @@
 			<h1 class="box_heading">Development log</h1>
 			<div class="content">
 				<div class="box">
-					<h2 class="box_heading">~ Late October 2020 ~</h2>
+					<h2 class="box_heading">~ December 2020 ~</h2>
+					<div class="content">
+						<p>Under the hood there have been a lot of tweaks to the genetics, improving the scope of what can mutate and
+							evolve. Swimmers also now have "health" which can if completely lost, cause a swimmer to die. A swimmer that died from
+							lack of health will transmute any remaining energy into a collection of "MeatChunks", and while there isn't anything
+							that interactes with them yet, the intent is to allow predation to be a viable survival strategy in future updates.</p>
+						<div class="box_break"></div>
+						<a href="http://troydev.proggle.net/projects/eobe/img/spikes-122020.png" data-lightbox="eobe122020"
+							data-title="Shows the new spikes, guarding some food pellets, with the remains of careless swimmers littered about">
+							<img src="http://troydev.proggle.net/projects/eobe/img/spikes-122020.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="EoBE-Alpha-Release-002.7z"
+								href="http://troydev.proggle.net/projects/eobe/zips/EoBE-Alpha-Release-002.7z">EoBE-Alpha-Release-002.7z</a>
+						</p>
+						<ol>
+							<li>Download and unzip the folder,</li>
+							<li>Double click on "EoBE.exe".</li>
+						</ol>
+						<div class="box_break"></div>
+						<p>Major features:</p>
+						<ul>
+							<li>Networks can now mutate their width and height, allowing senses and effectors more flexibility in their
+								possible mutations,</li>
+							<li>Swimmers now have a notion of their health, when below 100% they will expend energy to heal, when it reaches
+								0% they die,</li>
+							<li>If a swimmer dies with more than 0 energy, the energy is converted into meat chunks, which slowly decay if
+								uneaten,</li>
+							<li>Lunar cycle, as yet unused but will be an available sense going forward, hopefully allowing disparate
+								swimmers to coordinate behaviour,</li>
+							<li>Base metabolism, swimmers now have a variable basic energy usage per tick, based on the size and complexity
+								of their senses and effectors,</li>
+							<li>Graphs are now configurable,</li>
+							<li>New graphs, showing lunar cycle stage, average health, average metabolism, swimmer generation number and
+								simulation tick performance,</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ Late October 2020 ~</h2>
 					<div class="content">
 						<p>The next stage of the project was to create a distributable release. Once this had been achieved, it was evident
 							that a more polished set of controls were needed. This update therefore not only allows you to download and tinker
