@@ -1,0 +1,366 @@
+<div class="row">
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Animal Evolution Simulation</h1>
+			<div class="content">
+				<p>This projects aims to model animal evolution through natural selection. It does this by simulating an environment
+					in which animal like entities grow and reproduce, while competing for food.</p>
+				<p>In normal genetic algorithms there are distinct stages or generations:</p>
+				<ol>
+					<li>Generate a random population.</li>
+					<li>Test them all using a <a href="http://en.wikipedia.org/wiki/Fitness_function">fitness function</a>.
+					</li>
+					<li>Select a fit portion of the population, based on the fitness function.</li>
+					<li>Create the next generation from the fit individuals, usually by copying them and adding small mutations to
+						some.</li>
+				</ol>
+				<p>In this program however there is no fitness function and there are no set generations. Instead the fitness of an
+					individual can be considered to be how many offspring it manages to have. There is no equivalent to generations because,
+					as in real life, some creatures will outlive others and successfully have offspring before or after each other.</p>
+				<p>In any situation where you have variation in a population, inheritable traits, mutation and variable survival you
+					will get evolution, it is unavoidable and can be applied in any situation in which those traits all exist together.</p>
+				<div class="box_break"></div>
+				<p>
+					Source code: <a href="http://troydev.proggle.net/projects-trilobytes.php">Github</a>
+				</p>
+				<p>
+					Try it yourself: <a download="Trilobytes-Alpha-Release-002.7z"
+						href="http://troydev.proggle.net/projects/trilobytes/zips/Trilobytes-Alpha-Release-002.7z">Trilobytes-Alpha-Release-002.7z</a>
+				</p>
+				<ol>
+					<li>Download and unzip the folder,</li>
+					<li>Double click on "Trilobytes.exe".</li>
+				</ol>
+				<div class="box_break"></div>
+				<a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdate-102020.png" data-lightbox="about"
+					data-title="Shows off the new GUI, graphs have swapped places with the inspector view."> <img
+					src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdate-102020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateInspector-102020.png" data-lightbox="about"
+					data-title="Shows off the new GUI, graphs have swapped places with the inspector view."> <img
+					src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateInspector-102020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/spikes-122020.png" data-lightbox="about"
+					data-title="Shows the new spikes, guarding some food pellets, with the remains of careless swimmers littered about">
+					<img src="http://troydev.proggle.net/projects/trilobytes/img/spikes-122020.png" class="thumbnail" alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateCloseup-102020.png" data-lightbox="about"
+					data-title="This shows some swimmers early on in the simulation, note the high colour variety and the dark swimmer that is aimlessly swimming backwards.">
+					<img src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateCloseupThumb-102020.png" class="thumbnail"
+					alt="View Image" />
+				</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateUnlimited-102020.png" data-lightbox="about"
+					data-title="Shows simulation time passing quickly, here the tick speed has been unlimited and the framerate lowered to 20.">
+					<img src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateUnlimitedThumb-102020.png" class="thumbnail"
+					alt="View Image" />
+				</a>
+				<div class="box_break"></div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Help</h1>
+			<div class="content">
+				<div class="box">
+					<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
+					<div class="content">
+						<p>Each organism, or 'swimmer', is represented by a coloured circle. The open circles represent senses that detect
+							other entities within their area. The straight line points directly forwards and detects a single entity touching it,
+							the closest to the swimmer. Food particles are represented by green circles.</p>
+						<p>Each swimmer can only detect items within the range of its senses.</p>
+						<p>The right hand column contains a graph. The axis are rotated 90 degrees clockwise, which means the (0, 0) is the
+							top left, the y-axis runs along the top, and the x-axis runs down the left edge. The green line represents the energy
+							contained by all existing food pellets, the blue line represents the energy held by all existing swimmers. There is no
+							fixed quantity of energy however there is a limited spawn rate for food pellets. As swimmers become more efficient at
+							finding food, they should eat the pellets more quickly, and waste less energy, shifting the balance of energy further
+							from green to blue.</p>
+						<p>The bottom panel contains an inspector, this allows a selected entity to be analysed. The boxes along the top
+							represent each of the sensory inputs a swimmer has, the middle big box is its brain, and the box along the bottom is
+							its tail (or tails if it has evolved more than one!). The colour of a node represents its value, red is negative, blue
+							is positive, the transparency denotes the size of the value. The values are usually between -1 (opaque red) to 1
+							(opaque blue), however if a value is bigger the node gets drawn larger. The connections can also be positive or
+							negative. The width represents the size of the connection and the transparency represents the current usage of the
+							connection.</p>
+
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">The Genetics</h2>
+					<div class="content">
+						<p>
+							A swimmer's genetics are quite complex. A genome can contain one or more chromosomes, which in turn can contain one or
+							more genes. Chromosomes exist in pairs, like in real life <a href="https://en.wikipedia.org/wiki/Eukaryote">eukaryotes</a>.
+							When combining genomes, each swimmer parent contributes a single chromosome from each pair, so that a child recieves
+							two copies of each gene (for a-sexual reproduction, the single parent's genome is copied and treated like two genomes
+							from separate parents).
+						</p>
+						<p>Currently the following genes exist:</p>
+						<ul>
+							<li>GenePigment: Contributes to the final colour of the swimmer,</li>
+							<li>GeneBrain: Contains the complete description of the main neural network for the swimmer,</li>
+							<li>GeneSenseTraitsInArea: Adds a circular sense that detects all other entities within an area,</li>
+							<li>GeneSenseTraitsRaycast: Adds a line sense that detects the single nearest entity that is colliding with the
+								line,</li>
+							<li>GeneSenseTraitsSelf: Adds a sense that measures certain aspects of the swimmers own state,</li>
+							<li>GeneSenseTraitsTouching: Adds a sense that detects all entities colliding with a single point,</li>
+							<li>GeneSenseMagneticField: Adds a sense that indicates the angle to (0, 0) and the distance to it,</li>
+							<li>GeneSenseRandom: Adds a sense that detects a <a href="https://en.wikipedia.org/wiki/Low-pass_filter">low
+									pass filter</a>ed number. The filter helps the value to change more gradually,
+							</li>
+							<li>GeneSenseSine: Adds a sense that detects a constantly oscillating number, based on a <a
+								href="https://en.wikipedia.org/wiki/Sine_wave">sine wave</a></li>
+							<li>GeneEffectorTail: Adds an effector that allows the entity to move forwards, and turn left or right.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">The Interface</h2>
+					<div class="content">
+						<p>The interface is currently very simple, left click & drag to move, scroll to zoom. You can also right click on a
+							swimmer to select it. When a swimmer is selected, the "Brain Inspector" view on the right will populate, and some
+							details about the swimmer will be displayed.</p>
+						<p>Note that there are invisible handles between each section that can be used to adjust the sizes of the panels,
+							this is a bug in Qt, there is a plan to work around it by drawing a custom handle. For now the mouse will change from
+							a pointer to a resize arrow when it is over the handle.</p>
+						<div class="box_break"></div>
+						<ul>
+							<li>Settings:
+								<ul>
+									<li>Reset: Removes all entities, sets time to 0 and respawns the default feeders and a number of default
+										swimmers.</li>
+									<li>Spawn Food: A toggle switch, when pressed down (default) food will spawn in the simulation. When lifted,
+										food will stop spawning.</li>
+									<li>Select Fittest: Searches the simulation for the swimmer with the most living descendants and selects it.</li>
+									<li>Follow: Each tick the Universe's view is adjusted so the selected swimmer is always in the centre.</li>
+								</ul>
+							</li>
+							<li>Simulation:
+								<ul>
+									<li>The mouse can be used to pan (left mouse button, click and drag), zoom (scroll wheel), and select a swimmer
+										(right mouse button).</li>
+									<li>Pause: A toggle switch, the simulation will not progressed when this button is down.</li>
+									<li>Limit: A toggle switch, when pressed down, the simulation will not delay between ticks (default).</li>
+									<li>TPS: "Ticks per Second" The value in this box is the maximum number of simulation ticks to be computed per
+										second. The limit is only applied if "Limit" (button to the left) is pressed down.</li>
+									<li>FPS: "Frames per Second" The value in this box is the number of times the simulation draws itself each
+										second. A higher value will result in smoother animation. A lower value will allow ticks to be computed more
+										rapidly.</li>
+								</ul>
+							</li>
+							<li>Brain Inspector:
+								<ul>
+									<li>The mouse can be used to pan (left mouse button, click and drag), zoom (scroll wheel).</li>
+									<li>Reset View: Re-centres the view of the neural network, and scales it to fit the entire network in the area.</li>
+									<li>UpdateLive: When checked, this option will calculate what the selected swimmer is sensing and re-draw the
+										swimmers brain each tick. Blue nodes have a positive value, red nodes have a negative value. Connections can also
+										be positive or negative, wider connections have a larger value, transparent connections are not currently in use.
+										Sometimes a node will grow larger than normal, this implies it has a value > 1.
+								</ul>
+							</li>
+							<li>Graphs:
+								<ul>
+									<li>Energy: The combined ammount of energy contained by all of a particular entity type. Currently the green
+										line represents food pellet energy, and the blue line represents swimmer energy.</li>
+									<li>Mean Age: The average age (in ticks) of a particular energy type. Again green for food pellets, blue for
+										swimmers.</li>
+									<li>Oldest: Tracks the age of the oldest entity for each type. An increasing diagonal line represents the
+										continued aging of the current oldest entity. A drop implies that the oldest entity died and the age of the next
+										oldest entity is lower.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="box">
+			<h1 class="box_heading">Development log</h1>
+			<div class="content">
+				<div class="box">
+					<h2 class="box_heading">~ December 2020 ~</h2>
+					<div class="content">
+						<p>Under the hood there have been a lot of tweaks to the genetics, improving the scope of what can mutate and
+							evolve. Swimmers also now have "health" which can if completely lost, cause a swimmer to die. A swimmer that died from
+							lack of health will transmute any remaining energy into a collection of "MeatChunks", and while there isn't anything
+							that interactes with them yet, the intent is to allow predation to be a viable survival strategy in future updates.</p>
+						<div class="box_break"></div>
+						<a href="http://troydev.proggle.net/projects/trilobytes/img/spikes-122020.png" data-lightbox="tril122020"
+							data-title="Shows the new spikes, guarding some food pellets, with the remains of careless swimmers littered about">
+							<img src="http://troydev.proggle.net/projects/trilobytes/img/spikes-122020.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Trilobytes-Alpha-Release-002.7z"
+								href="http://troydev.proggle.net/projects/trilobytes/zips/Trilobytes-Alpha-Release-002.7z">Trilobytes-Alpha-Release-002.7z</a>
+						</p>
+						<ol>
+							<li>Download and unzip the folder,</li>
+							<li>Double click on "Trilobytes.exe".</li>
+						</ol>
+						<div class="box_break"></div>
+						<p>Major features:</p>
+						<ul>
+							<li>Networks can now mutate their width and height, allowing senses and effectors more flexibility in their
+								possible mutations,</li>
+							<li>Swimmers now have a notion of their health, when below 100% they will expend energy to heal, when it reaches
+								0% they die,</li>
+							<li>If a swimmer dies with more than 0 energy, the energy is converted into meat chunks, which slowly decay if
+								uneaten,</li>
+							<li>Lunar cycle, as yet unused but will be an available sense going forward, hopefully allowing disparate
+								swimmers to coordinate behaviour,</li>
+							<li>Base metabolism, swimmers now have a variable basic energy usage per tick, based on the size and complexity
+								of their senses and effectors,</li>
+							<li>Graphs are now configurable,</li>
+							<li>New graphs, showing lunar cycle stage, average health, average metabolism, swimmer generation number and
+								simulation tick performance,</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ Late October 2020 ~</h2>
+					<div class="content">
+						<p>The next stage of the project was to create a distributable release. Once this had been achieved, it was evident
+							that a more polished set of controls were needed. This update therefore not only allows you to download and tinker
+							with the simulation yourself, but it also contains a big update to the user interface.</p>
+						<div class="box_break"></div>
+						<a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdate-102020.png" data-lightbox="tril102020-guiupdate"
+							data-title="Shows off the new GUI, graphs have swapped places with the inspector view."> <img
+							src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdate-102020.png" class="thumbnail" alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateInspector-102020.png"
+							data-lightbox="tril102020-guiupdate"
+							data-title="Shows off the new GUI, graphs have swapped places with the inspector view."> <img
+							src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateInspector-102020.png" class="thumbnail" alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateCloseup-102020.png"
+							data-lightbox="tril102020-guiupdate"
+							data-title="This shows some swimmers early on in the simulation, note the high colour variety and the dark swimmer that is aimlessly swimming backwards.">
+							<img src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateCloseupThumb-102020.png" class="thumbnail"
+							alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateUnlimited-102020.png"
+							data-lightbox="tril102020-guiupdate"
+							data-title="Shows simulation time passing quickly, here the tick speed has been unlimited and the framerate lowered to 20.">
+							<img src="http://troydev.proggle.net/projects/trilobytes/img/GuiUpdateUnlimitedThumb-102020.png" class="thumbnail"
+							alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>
+							Try it yourself: <a download="Trilobytes-Alpha-Release-001.7z"
+								href="http://troydev.proggle.net/projects/trilobytes/zips/Trilobytes-Alpha-Release-001.7z">Trilobytes-Alpha-Release-001.7z</a>
+						</p>
+						<ol>
+							<li>Download and unzip the folder,</li>
+							<li>Double click on "Trilobytes.exe".</li>
+						</ol>
+						<div class="box_break"></div>
+						<p>Major features:</p>
+						<ul>
+							<li>Distributable release (Windows only for now),</li>
+							<li>More graphs, with more conventional axes and better labelling,</li>
+							<li>Controllable simulation speed & framerate,</li>
+							<li>Buttons! Settings now more intuitive and easier to use,</li>
+							<li>Brain Inspector improvements and view options.</li>
+						</ul>
+						<p>There are still a few major items planned:</p>
+						<ul>
+							<li>The ability for swimmers to eat each other,</li>
+							<li>Entities need to be movable and createable,</li>
+							<li>Rendering options, to enable/disable senses, the quad-tree, and food spawners,</li>
+							<li>Food spawners need to me movable, creatable and adjustable.</li>
+						</ul>
+						<div class="box_break"></div>
+						<ul>
+							<li>Settings:
+								<ul>
+									<li>Reset: Removes all entities, sets time to 0 and respawns the default feeders and a number of default
+										swimmers.</li>
+									<li>Spawn Food: A toggle switch, when pressed down (default) food will spawn in the simulation. When lifted,
+										food will stop spawning.</li>
+									<li>Select Fittest: Searches the simulation for the swimmer with the most living descendants and selects it.</li>
+									<li>Follow: Each tick the Universe's view is adjusted so the selected swimmer is always in the centre.</li>
+								</ul>
+							</li>
+							<li>Simulation:
+								<ul>
+									<li>The mouse can be used to pan (left mouse button, click and drag), zoom (scroll wheel), and select a swimmer
+										(right mouse button).</li>
+									<li>Pause: A toggle switch, the simulation will not progressed when this button is down.</li>
+									<li>Limit: A toggle switch, when pressed down, the simulation will not delay between ticks (default).</li>
+									<li>TPS: "Ticks per Second" The value in this box is the maximum number of simulation ticks to be computed per
+										second. The limit is only applied if "Limit" (button to the left) is pressed down.</li>
+									<li>FPS: "Frames per Second" The value in this box is the number of times the simulation draws itself each
+										second. A higher value will result in smoother animation. A lower value will allow ticks to be computed more
+										rapidly.</li>
+								</ul>
+							</li>
+							<li>Brain Inspector:
+								<ul>
+									<li>The mouse can be used to pan (left mouse button, click and drag), zoom (scroll wheel).</li>
+									<li>Reset View: Re-centres the view of the neural network, and scales it to fit the entire network in the area.</li>
+									<li>UpdateLive: When checked, this option will calculate what the selected swimmer is sensing and re-draw the
+										swimmers brain each tick. Blue nodes have a positive value, red nodes have a negative value. Connections can also
+										be positive or negative, wider connections have a larger value, transparent connections are not currently in use.
+										Sometimes a node will grow larger than normal, this implies it has a value > 1.
+								</ul>
+							</li>
+							<li>Graphs:
+								<ul>
+									<li>Energy: The combined ammount of energy contained by all of a particular entity type. Currently the green
+										line represents food pellet energy, and the blue line represents swimmer energy.</li>
+									<li>Mean Age: The average age (in ticks) of a particular energy type. Again green for food pellets, blue for
+										swimmers.</li>
+									<li>Oldest: Tracks the age of the oldest entity for each type. An increasing diagonal line represents the
+										continued aging of the current oldest entity. A drop implies that the oldest entity died and the age of the next
+										oldest entity is lower.</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box">
+					<h2 class="box_heading start_minimised">~ Early October 2020 ~</h2>
+					<div class="content">
+						<p>While this is the first build that has been documented on this website, it is actually roughly the fourth major
+							iteration of this project. I may retroactively document some older versions, however the pipeline for new features is
+							quite big, so there should be plenty of future content.</p>
+						<div class="box_break"></div>
+						<a href="http://troydev.proggle.net/projects/trilobytes/img/EarlyExampleWithDebug-102020.png" data-lightbox="tril102020"
+							data-title="Shows a number of swimmers, with a graph on the right (rotated 90 degrees clockwise) and a snapshot of a swimmers 'brain' state">
+							<img src="http://troydev.proggle.net/projects/trilobytes/img/EarlyExampleWithDebug-102020.png" class="thumbnail"
+							alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/StaticDistantViewOfSwimmers-102020.gif"
+							data-lightbox="tril102020"
+							data-title="A zoomed out view showing two large food spawning areas with many living swimmers."> <img
+							src="http://troydev.proggle.net/projects/trilobytes/img/ZoomedOutThumb-102020.png" class="thumbnail" alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/StaticViewOfSwimmers-102020.gif" data-lightbox="tril102020"
+							data-title="A close up of some swimmers, towards the end a swimmer lays an egg."> <img
+							src="http://troydev.proggle.net/projects/trilobytes/img/ZoomedInThumb-102020.png" class="thumbnail" alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/FollowingSwimmer-102020.gif" data-lightbox="tril102020"
+							data-title="A close up of a selected swimmer, following it as it eats food."> <img
+							src="http://troydev.proggle.net/projects/trilobytes/img/FollowingThumb-102020.png" class="thumbnail" alt="View Image" />
+						</a> <a href="http://troydev.proggle.net/projects/trilobytes/img/NeuralNetworkUpdatingLive-102020.gif" data-lightbox="tril102020"
+							data-title="Shows the brain of a swimmer updating live, as it swims around the simulation. The random node triggers the most, however the other senses also trigger periodically.">
+							<img src="http://troydev.proggle.net/projects/trilobytes/img/NetworkThumb-102020.png" class="thumbnail" alt="View Image" />
+						</a>
+						<div class="box_break"></div>
+						<p>Major features:</p>
+						<ul>
+							<li>Each swimmer has a fully simulated genome. Genes add abilities to the swimmer, like senses, pigments or
+								limbs,</li>
+							<li>Swimmers can combine their genomes to reproduce sexually, or they can reproduce a-sexually,</li>
+							<li>A graph documents the total energy contained within all food pellets (green line) and all swimmers (blue
+								line),</li>
+							<li>The inner workings of a swimmer's neural network can be observed live, including all of the sensory inputs
+								and all of the effector outputs,</li>
+							<li>Swimmers can be followed, and the most fit swimmer can automatically be selected each time it changes.</li>
+						</ul>
+						<p>This build is also notably lacking many things, next priorities include:</p>
+						<ul>
+							<li>An executable! So far the only way to run this is to build it yourself,</li>
+							<li>Buttons! The GUI needs fleshing out, especially if I start distributing an executable,</li>
+							<li>The ability for swimmers to eat each other,</li>
+							<li>Entities need to be movable and create-able,</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
