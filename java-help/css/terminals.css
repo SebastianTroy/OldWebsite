@@ -1,0 +1,163 @@
+/* CODE SNIPPETS */
+/* All */
+.titlebar {
+	padding-left: 0.2em;
+	margin: 0;
+	font-weight: normal;
+	font-size: 1.2em;
+}
+
+.titlebar img {
+	display: inline;
+	float: left;
+	padding-right: 3px;
+}
+
+
+/* WINDOWS command prompt*/
+.code_winCMD {
+	border: 2px solid #B0B0B0;
+	background-color: black;
+	margin: 1% 10%;
+	font-family: "Lucida Console";
+	color: #C0C0C0;
+	text-align: left;
+}
+
+.code_winCMD .titlebar {
+	border-bottom: 2px solid #B0B0B0;
+	background-color: #6666CC;
+	color: white;
+}
+
+.code_winCMD .titlebar img {
+	padding-top: 3px;
+}
+
+.code_winCMD p{
+	text-align: left;
+}
+
+.code_winCMD .caret {
+	-webkit-animation: win_caret 1.2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: cubic-bezier(0, 1, 0, 1);
+	animation: win_caret 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+
+@-webkit-keyframes win_caret { 
+	0%{	color: #C0C0C0;}
+	50%{color:#C0C0C0;}
+	51%{color:black;}
+	100%{color:black;}
+	}
+	
+@keyframes win_caret { 
+	0%{	color: #C0C0C0;}
+	50%{color:#C0C0C0;}
+	51%{color:black;}
+	100%{color:black;}
+	}
+
+/* LINUX command line*/
+.code_linuxTerminal {
+	border: 1px solid #464541;
+	background-color: black;
+	margin: 1% 10%;
+	font-family: "Arial";
+	color: yellow;
+	text-align: left;
+}
+
+.code_linuxTerminal .titlebar {
+	background-color: #464541;
+	color: white;
+	text-align: center;
+	padding-right: 54px;
+}
+
+.code_linuxTerminal p{
+	text-align: left;
+}
+
+.code_linuxTerminal .caret {
+	-webkit-animation: linux_caret 1.2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: cubic-bezier(0, 1, 0, 1);
+	animation: linux_caret 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+
+@-webkit-keyframes linux_caret { 
+	0%{	color: yellow;}
+	50%{color:yellow;}
+	51%{color:black;}
+	100%{color:black;}
+}
+@keyframes linux_caret { 
+	0%{	color: yellow;}
+	50%{color:yellow;}
+	51%{color:black;}
+	100%{color:black;}
+}
+
+/* MacOS command line */
+.code_macOSTermianl {
+	border: 1px solid #dddddd;
+	background-color: white;
+	margin: 1% 10%;
+	font-family: "Trebuchet MS" Helvetica;
+	color: black;
+	text-align: left;
+}
+
+.code_macOSTermianl .titlebar {
+	background-color: #bababa;
+	color: black;
+	text-align: center;
+	padding-right: 56px;
+}
+
+.code_macOSTermianl p{
+	text-align: left;
+}
+
+.code_macOSTermianl .caret {
+	-webkit-animation: macos_caret 1.2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: cubic-bezier(0, 1, 0, 1);
+	animation: macos_caret 1.2s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(0, 1, 0, 1);
+}
+
+@-webkit-keyframes macos_caret { 
+	0%{	background-color: #bababa;
+		color: #bababa;}
+	50%{background-color: #bababa;
+		color: #bababa;}
+	51%{background-color: white;
+		color: white;}
+	100%{background-color: white;
+		color: white;}
+	}
+	
+@keyframes macos_caret { 
+	0%{	background-color: #bababa;
+		color: #bababa;}
+	50%{background-color: #bababa;
+		color: #bababa;}
+	51%{background-color: white;
+		color: white;}
+	100%{background-color: white;
+		color: white;}
+}

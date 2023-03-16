@@ -1,0 +1,39 @@
+.row {
+	width: 80%;
+	clear: both;
+	padding: 0px;
+	margin: 0px auto;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	display: block;
+	float: left;
+	width: 50%;
+	margin: 0% 0% 0% 0%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+@media only screen and (max-width: 1100px) {
+	.column {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.row {
+		width: 90%;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	.row {
+		width: 100%;
+	}
+}

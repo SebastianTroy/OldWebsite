@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Sebastian Troy" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- This block deals with page details -->
+		<title>Travelling Salesman Solver</title>
+
+		<!-- All css files used throughout page -->
+		<link rel="stylesheet" type="text/css" href="/common/css/lightbox.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/header_footer.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/basic_style.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/responsive_layout.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/content_box.css">
+
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Quattrocento'>
+
+		<!-- All javascript files used throughout page -->
+		<script type="text/javascript" src="/common/js/libs/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/common/js/libs/jquery.cookie-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/common/js/libs/lightbox.min.js"></script>
+		<script type="text/javascript" src="/common/js/header.js"></script>
+		<script type="text/javascript" src="/common/js/content_box.js"></script>
+	</head>
+	<body>
+		<div id="master_container">
+			<!-- Sticky header (Title minimised when user scrolls down, leaving only menu) -->
+			<div id="header_container">
+				<div class="title">
+					Troy<img class="logo" src="/common/img/logo.svg"/>Dev
+				</div>
+				<!-- Menu -->
+				<div class="nav_menu">
+					<a class="nav_menu_button about" href="/index.html">About Me</a><a
+						class="nav_menu_button projects" href="/projects.html">Projects</a><a
+						class="nav_menu_button contact" href="/contact.html">Contact</a>
+				</div>
+				<!-- close nav_menu -->
+			</div>
+			<!-- close header_container -->
+			<div id="page_container">
+				<div class="row">
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Travelling Salesman Solving Genetic Algorithm</h1>
+							<div class="content">
+								<p>
+									The <a href="http://en.wikipedia.org/wiki/Travelling_salesman_problem">travelling salesman
+										problem</a> is basically: how
+									to visit every city once, taking the shortest route between them. This problem has a lot of
+									relevance still today, for
+									example, postal routes and rubbish disposal routes e.t.c.
+								</p>
+								<p>
+									This project uses a <a href="http://en.wikipedia.org/wiki/Hill_climbing">hill climber</a> algorithm
+									to approximate the
+									solution, this is much faster than using brute force to check every possible route for the shortest
+									solution. The basic
+									premise of a hill climber algorithm is that you start with a sub optimal solution, usually a random
+									one, then you mutate
+									it, if the mutated solution is better you keep it, if not, you undo the mutation and try again. This
+									leads to a
+									ratcheting effect where the solution can only ever get better. Due to the introduction of random
+									mutation which are
+									selected on, leading to an improvement over time, the hill climber is considered a genetic
+									algorithm, albeit a very
+									simple one.
+								</p>
+								<p>Once the website is completed this project is a prime candidate for my first "Javascript + HTML5
+									Canvas" project,
+									that would mean you could try it out on this website, instead of needing to download it.</p>
+								<div class="box_break"></div>
+								<p>
+									Try it yourself: <a download="Salesman.jar"
+										href="/projects/salesman/jars/salesman082014.jar">Salesman.jar</a>
+								</p>
+								<p>
+									Source code (<a href="http://opensource.org/licenses/MIT">MIT License</a>): <a
+										href="https://github.com/SebastianTroy/salesman">Github</a>
+								</p>
+								<div class="box_break"></div>
+								<a href="/projects/salesman/img/salesman-grid-unsolved.png" data-lightbox="salesman"
+									data-title="A grid of cities have been added to the tour, the route is random and hasn't been improved by the algorithm yet.">
+									<img src="/projects/salesman/img/salesman-grid-unsolved.png" class="thumbnail" alt="View Image" />
+								</a> <a href="/projects/salesman/img/salesman-grid-solved.png" data-lightbox="salesman"
+									data-title="Symetric patterns are notoriously tricky for genetic algorithms so they are the perfect challenge to prove a concept.">
+									<img src="/projects/salesman/img/salesman-grid-solved.png" class="thumbnail" alt="View Image" />
+								</a> <a href="/projects/salesman/img/salesman-random-solved.png" data-lightbox="salesman"
+									data-title="Custom arrangements of 'cities' are possible, perhaps you could map out your daily route!">
+									<img src="/projects/salesman/img/salesman-random-solved.png" class="thumbnail" alt="View Image" />
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Help</h1>
+							<div class="content">
+								<p>
+									If you are having trouble running the program, please try <a href="/java-help.html">this
+										quick guide</a>.
+								</p>
+								<div class="box">
+									<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
+									<div class="content">
+										<p>Each blue circle on the screen represents a city. The white arrows that form a path between
+											the cities are the
+											'tour'.</p>
+										<p>Whenever a city is added, it is added to the tour, meaning all cities are linked by the tour
+											at all times. To
+											start with the tour will follow a random path between all of the cities, the program will be
+											constantly looking for a
+											shorter path and will update the tour whenever it finds one.</p>
+										<p>At the top of the screen are some numbers:</p>
+										<ul>
+											<li><b>Improved [x] seconds ago</b>This counts how many seconds it has been since the last
+												improvement to the
+												tour was found.</li>
+											<li><b>Generation: </b>This is the number of 'generations' i.e. the number of times the
+												genetic algorithm has
+												been run on the current tour, this is reset every time the user modifies the number or
+												location of the cities.</li>
+											<li><b>Improvements: </b>This is the number of generations in which the mutation to the tour
+												has shortened it. As
+												time goes by and more improvements are made, it becomes harder to find a beneficial
+												mutation and therefore the rate
+												at which improvements are made will decrease.</li>
+										</ul>
+										<p>At the bottom of the screen, next to the "Next Method" button, there is a box. The writing in
+											the box describes
+											the current type of mutation being used by the genetic algorithm.</p>
+									</div>
+								</div>
+								<div class="box">
+									<h2 class="box_heading start_minimised">Types of Mutation</h2>
+									<div class="content">
+										<p>How the different types of mutation work can be a little confusing, so here are two
+											explanations of how they
+											work:</p>
+										<p>A technical description of the process:</p>
+										<ul>
+											<li><b>Randomise city position: </b>A single city is chosen at random, the cities before and
+												after it in the tour
+												are joined and it is reinserted into the tour between another two cities.</li>
+											<li><b>Randomise city positions: </b>The above mutation is performed between 2 and n times,
+												where n is the length
+												of the entire tour.</li>
+											<li><b>Reverse direction of tour section: </b>This method takes a small section of the tour
+												and 'untwists' it.
+												Analogous to having a rubber band in a figure 8 and untwisting one side to make it a
+												figure 0. This method is great
+												at removing crossed paths.</li>
+											<li><b>Move one end of tour: </b>This method cuts a random number of cities off the end of a
+												tour, reverses the
+												order of the route between them and then sticks the old end into the tour where the cut
+												was made.</li>
+											<li><b>Swap two cities: </b>This method chooses two random cities and then the cities before
+												each of them in the
+												tour are swapped round and the cities after them in the tour are swapped.</li>
+										</ul>
+										<p>An abstract representation of the changes, ABC means a tour from city A to city B to City C:
+										</p>
+										<ul>
+											<li><b>Randomise city position: </b>A<b>B</b>CDE -> ACD<b>B</b>E</li>
+											<li><b>Randomise city positions: </b>A<b>B</b>C<b>DE</b> -> A<b>E</b>C<b>BD</b></li>
+											<li><b>Reverse direction of tour section: </b>A<b>BCD</b>E -> A<b>DCB</b>E</li>
+											<li><b>Move one end of tour: </b>AB<b>CDE</b> -> AB<b>EDC</b></li>
+											<li><b>Swap two cities: </b>A<b>B</b>C<b>D</b>E -> A<b>D</b>C<b>B</b>E</li>
+										</ul>
+									</div>
+								</div>
+								<div class="box">
+									<h2 class="box_heading start_minimised">The Interface</h2>
+									<div class="content">
+										<p>A quick run through of what each button does:</p>
+										<ul>
+											<li><b>Remove All Cities: </b>This button resets the entire program.</li>
+											<li><b>Reset Solution: </b>This button leaves all cities in the same place but resets the
+												route the tour takes to
+												a random one.</li>
+											<li><b>Add Random City: </b>This button adds a city at a random location on the screen and
+												adds it into the tour
+												at a random location. <i>This will reset the Generations and Improvements counters.</i>
+											</li>
+											<li><b>Add 10 Random Cities: </b>This button is equivalent to pressing the previous button
+												10 times in
+												succession.</li>
+											<li><b>Add 6 * 6 Grid: </b>This button adds 36 cities, evenly spaced to form a grid. It will
+												not remove any
+												cities that are already present. <i>This will reset the Generations and Improvements
+													counters.</i></li>
+											<li><b>Add 10 * 10 Grid: </b>This button adds 100 cities, evenly spaced to form a grid. It
+												will not remove any
+												cities that are already present. <i>This will reset the Generations and Improvements
+													counters.</i></li>
+											<li><b>Loop Tour: </b>This checkbox allows the user to toggle whether the first and last
+												cities in the tour are
+												joined.</li>
+										</ul>
+										<div class="box_break"></div>
+										<ul>
+											<li><b>New City: </b>When this option is selected, a new city is placed wherever the user
+												clicks. <i>This
+													will reset the Generations and Improvements counters.</i></li>
+											<li><b>Move City: </b>When this option is selected, The user can click on and then drag
+												existing cities around,
+												if a city is dragged off screen it is removed from the tour. <i>This will reset the
+													Generations and Improvements
+													counters.</i></li>
+											<li><b>Delete City: </b>When this option is selected, any city that the user clicks on will
+												be removed from the
+												tour. <i>This will reset the Generations and Improvements counters.</i></li>
+										</ul>
+										<div class="box_break"></div>
+										<ul>
+											<li><b>Pause: </b>When selected, the algorithm is not run. The user can still interact with
+												the cities, placing,
+												deleting and moving them, however the tour will not be changed and the type of mutation
+												currently being used will not
+												cycle automatically.</li>
+											<li><b>Automatic?: </b>When selected, they type of mutation being used by the algorithm will
+												cycle through a list
+												of possible mutations. When set to automatic, the type of mutation will change every
+												2000 generations.</li>
+											<li><b>Next Method: </b>This button allows the user to manually cycle through the current
+												type of mutation being
+												used by the algorithm.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Development log</h1>
+							<div class="content">
+								<div class="box">
+									<h2 class="box_heading">~ February 2014 ~</h2>
+									<div class="content">
+										<p>Before publishing this project on my website I wanted to make sure that it was completely bug
+											free and easy to
+											use. I also noticed that most TSP solvers work with a complete circuit, so I added the
+											option to seamlessly toggle
+											between a tour which loops back to the starting city, and one which does not.</p>
+										<div class="box_break"></div>
+										<a href="/projects/salesman/img/salesman-random-solved.png" data-lightbox="salesman082014"
+											data-title="The layout of the menus is much tidier, making them more accesable."> <img
+												src="/projects/salesman/img/salesman-random-solved.png" class="thumbnail"
+												alt="View Image" />
+										</a>
+										<div class="box_break"></div>
+										<p>The major features added in this build are:</p>
+										<ul>
+											<li>The menu has been split up to make it easier to use on thinner screens.</li>
+											<li>An option to loop the tour has been added.</li>
+											<li>The number of generations and improvements are displayed.</li>
+											<li>The method being used to mutate the tour is visible and can be controlled.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="box">
+									<h2 class="box_heading start_minimised">~ March 2013 ~</h2>
+									<div class="content">
+										<p>This update represents a large improvement in terms of the front and back end of the program.
+										</p>
+										<p>The user interface has been made much simpler, instead of pressing keys it is now possible to
+											interact with the
+											mouse.</p>
+										<p>
+											The structure of the program has also been significantly cleaned up, improving efficiency
+											massively and allowing for
+											the genetic algorithm to apply more intricate mutations to the tour. This means that there
+											are no longer any local
+											optima in the <a href="http://en.wikipedia.org/wiki/Fitness_landscape">fitness landscape</a>
+											and the algorithm can
+											never get stuck with a sub-optimal solution forever.
+										</p>
+										<p>
+											While technically possible to evolve a perfect solution in every situation, if there are
+											100s of cities in a tour, it
+											might take a <b>very</b> long time to untangle particular sub-optimal sections of a route.
+										</p>
+										<div class="box_break"></div>
+										<p>
+											Try it yourself: <a download="Salesman.jar"
+												href="/projects/salesman/jars/salesman-032013.jar">salesman-032013.jar</a>
+										</p>
+										<div class="box_break"></div>
+										<a href="/projects/salesman/img/salesman-random-solved032013.png" data-lightbox="salesman032013"
+											data-title="The layout of the menus is much tidier, making them more accesable."> <img
+												src="/projects/salesman/img/salesman-random-solved032013.png" class="thumbnail"
+												alt="View Image" />
+										</a>
+										<div class="box_break"></div>
+										<p>The major features added in this build are:</p>
+										<ul>
+											<li>The user can now interact more easily, using the mouse instead of keys.</li>
+											<li>Performance improvement by removing the need for multiple tours on which to run the
+												algorithm.</li>
+										</ul>
+									</div>
+								</div>
+								<div class="box">
+									<h2 class="box_heading start_minimised">~ April 2012 ~</h2>
+									<div class="content">
+										<p>
+											This program creates 50 random tours, it improves all of them using a <a
+												href="http://en.wikipedia.org/wiki/Hill_climbing">hill climber algorithm</a>. It
+											displays the best or worst solution,
+											decided by the user. The reason for having so many tours at the same time is that my current
+											algorithm can get stuck
+											in a <a href="http://en.wikipedia.org/wiki/Fitness_landscape">fitness landscape</a> valley.
+										</p>
+										<div class="box_break"></div>
+										<p>
+											Try it yourself: <a download="Salesman.jar"
+												href="/projects/salesman/jars/salesman-042012.jar">salesman-042012.jar</a>
+										</p>
+										<div class="box_break"></div>
+										<a href="/projects/salesman/img/salesman-random-unsolved042012.png"
+											data-lightbox="salesman042012"
+											data-title="The bar down the side represents the Improvements:Generations ratio, the bigger it is the more frequently improvements are being made.">
+											<img src="/projects/salesman/img/salesman-random-unsolved042012.png" class="thumbnail"
+												alt="View Image" />
+										</a>
+										<div class="box_break"></div>
+										<p>The major features added in this build are:</p>
+										<ul>
+											<li>A grid of cities can be added to the tour.</li>
+											<li>The user can add randomly placed cities to the tour.</li>
+											<li>There is a help screen which lists the keys used to place and remove cities.</li>
+											<li>A red bar indicates how frequently new improvements are being made.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- close page_container -->
+			<footer id="footer_container"> Copyright&copy; Sebastian Troy 2023 </footer>
+			<!-- close footer_container -->
+		</div>
+		<!-- close master_container -->
+	</body>
+</html>

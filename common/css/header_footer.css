@@ -1,0 +1,82 @@
+#master_container {
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	background-color: #F6F2EA;
+	/*background-image: url("../img/hex_tile.png");
+	background-repeat: repeat;*/
+}
+
+#header_container {
+	border: 0;
+	margin: 0;
+	background: #C6C0A0;
+	width: 100%;
+}
+
+#page_container {
+	margin-top: 0.8em;
+	font-size: 0.9em;
+	margin-bottom: 1.25em; /* Height of the footer */
+}
+
+#footer_container {
+	background: #C6C0A0;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: right;
+	color: black;
+	height: 1.25em; /* Height of the footer */
+}
+
+#header_container .title {
+	padding: 7px 0px;
+	color: #132944;
+	text-align: center;
+	font-size: 6em;
+	font-family: 'Quattrocento', serif;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
+
+#header_container .logo {
+	padding-left: 0.5%;
+	display: inline-block;
+	width: 0.8em;
+	height: 0.8em;
+	overflow: visible;
+}
+
+#header_container .nav_menu {
+	background: #99e6f4;
+	z-index: 100;
+	width: 100%;
+	font-size: 2em;
+	color: #798287;
+	font-family: "Quattrocento";
+	text-align: center;
+}
+
+#header_container .nav_menu_button {
+	width: 33.333%;
+	min-height: 35px;
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	background-color: #C6C0A0;
+	border-bottom: 2px solid #AAA271;
+	color: white;
+	text-decoration: none;
+	color: white;
+}
+
+#header_container .nav_menu_button:HOVER {
+	background-color: #AAA271;
+}

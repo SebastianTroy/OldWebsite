@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8" />
+		<meta name="author" content="Sebastian Troy" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- This block deals with page details -->
+		<title>Evolving an image which contains every RGB combination</title>
+
+		<!-- All css files used throughout page -->
+		<link rel="stylesheet" type="text/css" href="/common/css/lightbox.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/header_footer.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/basic_style.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/responsive_layout.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/content_box.css">
+
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Quattrocento'>
+
+		<!-- All javascript files used throughout page -->
+		<script type="text/javascript" src="/common/js/libs/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/common/js/libs/jquery.cookie-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/common/js/libs/lightbox.min.js"></script>
+		<script type="text/javascript" src="/common/js/header.js"></script>
+		<script type="text/javascript" src="/common/js/content_box.js"></script>
+
+	</head>
+	<body>
+		<div id="master_container">
+			<!-- Sticky header (Title minimised when user scrolls down, leaving only menu) -->
+			<div id="header_container">
+				<div class="title">Troy<img class="logo" src="/common/img/logo.svg"/>Dev
+				</div>
+				<!-- Menu -->
+				<div class="nav_menu">
+					<a class="nav_menu_button about" href="/index.html">About Me</a><a
+						class="nav_menu_button projects" href="/projects.html">Projects</a><a
+						class="nav_menu_button contact" href="/contact.html">Contact</a>
+				</div>
+				<!-- close nav_menu -->
+			</div>
+			<!-- close header_container -->
+			<div id="page_container">
+				<div class="row">
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Every RGB Image Evolver</h1>
+							<div class="content">
+								<p>
+									This project was inspired by <a href="http://allrgb.com/">allRGB.com</a> and by my previous work
+									with <a href="http:/en.wikipedia.org/wiki/Genetic_algorithm">genetic algorithms</a>.
+								</p>
+								<p>There are 16,777,216 8 bit RGB colours. If you made an image that contained each colour exactly once
+									it would be a
+									4096 by 4096 pixel square. This program takes an image of your choice and then tries to generate an
+									image that uses only
+									one of each colour that matches it. This is a huge feat as the image size is so large, finding the
+									best match for the
+									entire image would require millions of operations performed upon millions of pixels. Rather than
+									taking a long time to
+									find an exact answer, this program uses a genetic algorithm to work towards an acceptable solution
+									in a much shorter
+									period of time.</p>
+								<p>The general flow of the program is:</p>
+								<ol>
+									<li>User loads an image.</li>
+									<li>The image is stretched to be exactly 4095x4095 pixels.</li>
+									<li>An image that contains one of every colour is created.</li>
+									<li>Two pixels in the allRGB image are chosen at random.</li>
+									<li>Work out how closely they match the reference image.</li>
+									<li>Work out how closely they would match the reference image if they were swapped around.</li>
+									<li>If the swap incurs an improvement, swap them.</li>
+									<li>Repeat steps 4-7 until the user is happy with the result.</li>
+								</ol>
+								<p>Each time the program gets from step 4 to step 7 counts as a generation, each time the pixels are
+									swapped counts
+									as an improvement.</p>
+								<p>The simplicity of the algorithm means that many thousands of checks and swaps can be made every
+									second. This,
+									combined with the random coverage of the image, quickly leads to the visible improvement of the
+									solution.</p>
+								<div class="box_break"></div>
+								<p>
+									Try it yourself: <a download="allRGB.jar"
+										href="/projects/allRGB/jars/allRGB042014.jar">allRGB.jar</a>
+									<p>
+										Source code (<a href="http://opensource.org/licenses/MIT">MIT License</a>): <a
+											href="https:/github.com/SebastianTroy/allRGB">Github</a>
+									</p>
+									<div class="box_break"></div>
+									<a href="/projects/allRGB/img/allrgb_new.png" data-lightbox="allrgb"
+										data-title="This is the image that the algorithm starts with, it contains exactly one of every colour possible. (not full size)">
+										<img src="/projects/allRGB/img/allrgb_new.png" class="thumbnail" alt="View Image" />
+									</a> <a href="/projects/allRGB/img/allrgb_original.png" data-lightbox="allrgb"
+										data-title="This is the image that the algorithm is trying to find the best match for. (not full size)">
+										<img src="/projects/allRGB/img/thumbs/allrgb_original.png" class="thumbnail" alt="View Image" />
+									</a><a href="/projects/allRGB/img/allrgb_evolved.png" data-lightbox="allrgb"
+										data-title="Here is an image, that has been evolved to be a close match, after 6 billion generations. It took about an hour on my PC. (not full size)">
+										<img src="/projects/allRGB/img/thumbs/allrgb_evolved.png" class="thumbnail" alt="View Image" />
+									</a><a href="/projects/allRGB/img/allrgb_negative.png" data-lightbox="allrgb"
+										data-title="Here is an image, that has been evolved to be a negative, after 6 billion generations. It took about an hour on my PC. (not full size)">
+										<img src="/projects/allRGB/img/thumbs/allrgb_negative.png" class="thumbnail" alt="View Image" />
+									</a>
+									<div class="box_break"></div>
+									<ul>
+										<li>Resize the window until only the generation and number of improvements are visible to speed up
+											the program.</li>
+										<li>The images shown in the program often seem much worse quality than they are in reality, save the
+											image and view
+											in another program for a better look.</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="column">
+							<div class="box">
+								<h1 class="box_heading">Help</h1>
+								<div class="content">
+									<p>
+										If you are having trouble running the program, please try <a href="/java-help.html">this
+											quick guide</a>.
+									</p>
+									<div class="box">
+										<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
+										<div class="content">
+											<p>When you run the program you should see two images. The image on the left is the 'reference
+												image' this is the
+												image which the algorithm attempts to copy using exactly 1 of each colour. The image on the
+												right is the 'allRGB
+												image' this is the image which the algorithm works on, it will keep on evolving the image in
+												an attempt to make it
+												match the reference image.</p>
+											<p>Neither of the images will be shown full size on your screen because they are huge, this
+												means that Java scales
+												them down to make them fit. This scaling reduces the quality of the image which means saving
+												the image to your
+												computer and opening it in a photo viewer is the only way to really see the result of the
+												algorithm.</p>
+											<p>At the top of the screen are some numbers:</p>
+											<ul>
+												<li><b>Gen: </b>This is the number of 'generations' i.e. the number of times the genetic
+													algorithm has been run.</li>
+												<li><b>Improvements: </b>This is the number of generations in which the mutation has been
+													positive. When a new
+													image is first loaded, this number should be close to the number of generations however
+													as time goes by and more
+													improvements are made, it becomes harder to find a beneficial mutation and therefore the
+													rate at which improvements
+													are made will decrease.</li>
+												<li><b>FPS: </b>This is the number of 'frames per second' which is the number of times the
+													entire program runs
+													each second.</li>
+											</ul>
+										</div>
+									</div>
+									<div class="box">
+										<h2 class="box_heading start_minimised">The Interface</h2>
+										<div class="content">
+											<p>Unfortunately in this version the user interface is very basic.</p>
+											<p>Image on the left:</p>
+											<ul>
+												<li><b>Left click: </b>Load a reference image, the image will be scaled to 4096x4096 pixels.
+												</li>
+												<li><b>Right click: </b>Save the reference image.</li>
+											</ul>
+											<p>Image on the Right:</p>
+											<ul>
+												<li><b>Left click: </b>
+													<ul>
+														<li>You are given the option to reset the allRGB image, this will wipe all progress.
+														</li>
+														<li>If you decline the first option, you are asked if you'd like to load an image,
+															combined with the save
+															feature this allows you reload old allRGB images so you can continue to improve
+															them.</li>
+													</ul>
+												</li>
+												<li><b>Right click: </b>Save the allRGB image.</li>
+											</ul>
+										</div>
+									</div>
+									<div class="box">
+										<h2 class="box_heading start_minimised">Can't load images?</h2>
+										<div class="content">
+											<p>
+												If you've followed the instructions above and have not been able to load your own image, it
+												might be that Java's
+												security settings are blocking the program from loading images. To get around this you can
+												try <a href="/java-help.html">running the program from the command line</a>, or on WIndows:
+												<ul>
+													<li>Right click in an empty part of the folder (or desktop) that you're running the program
+														from.</li>
+													<li>Go to New and create a new .txt file.</li>
+													<li>Inside the .txt file write: java -jar "Encrypt.jar". (Where "Encrypt.jar" is the name of
+														the file you are
+														trying to run).</li>
+													<li>Save the .txt and then rename it to "run.bat", when asked if you're sure you want to
+														change the 'filename
+														extension' select yes.</li>
+													<li>Now when you run the 'run.bat' file it will run the program with permission to save,
+														edit and load images.</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="column">
+								<div class="box">
+									<h1 class="box_heading">Devlopment Log</h1>
+									<div class="content">
+										<div class="box">
+											<h2 class="box_heading">~ May 2014 ~</h2>
+											<div class="content">
+												<p>While not enough progress has been made to publish an interactive version, I've been working
+													on a better
+													interface and a few slightly modified versions of the algorithm.</p>
+												<p>
+													The easiest modification is simply to look for the worst match for each pixel rather than
+													the best, this results in a
+													negative of the image being produced. I'm also working on an <i>exact</i> version of the
+													algorithm that looks for the
+													closest match for a pixel out of all the remaining colours, however due to the very large
+													number of comparisons that
+													need to be made, it is extremely slow.
+												</p>
+												<div class="box_break"></div>
+												<a href="/projects/allRGB/img/allrgb_negative.png" data-lightbox="allrgb052014"
+													data-title="Here is an image, that has been evolved to be a negative, after 6 billion generations. It took about an hour on my PC. (not full size)">
+													<img src="/projects/allRGB/img/thumbs/allrgb_negative.png" class="thumbnail"
+														alt="View Image" />
+												</a>
+												<div class="box_break"></div>
+												<p>Features of this version:</p>
+												<ul>
+													<li>Choose from a selection of algorithms, which will yield different results from the same
+														start point.</li>
+												</ul>
+											</div>
+										</div>
+										<div class="box">
+											<h2 class="box_heading start_minimised">~ April 2014 ~</h2>
+											<div class="content">
+												<p>This first version of the program is very basic, the genetic algorithm is very optimised
+													however it has been
+													little more than a toy for me to play with and the user interface is rather basic.</p>
+												<div class="box_break"></div>
+												<a href="/projects/allRGB/img/allrgb_new.png" data-lightbox="allrgb042014"
+													data-title="This is the image that the algorithm starts with, it contains exactly one of every colour possible. (not full size)">
+													<img src="/projects/allRGB/img/allrgb_new.png" class="thumbnail" alt="View Image" />
+												</a> <a href="/projects/allRGB/img/allrgb_original.png" data-lightbox="allrgb042014"
+													data-title="This is the image that the algorithm is trying to find the best match for. (not full size)">
+													<img src="/projects/allRGB/img/thumbs/allrgb_original.png" class="thumbnail"
+														alt="View Image" />
+												</a><a href="/projects/allRGB/img/allrgb_evolved.png" data-lightbox="allrgb042014"
+													data-title="Here is an image, that has been evolved to be a close match, after 6 billion generations. It took about an hour on my PC. (not full size)">
+													<img src="/projects/allRGB/img/thumbs/allrgb_evolved.png" class="thumbnail"
+														alt="View Image" />
+												</a>
+												<div class="box_break"></div>
+												<p>
+													Try it yourself: <a download="allRGB.jar"
+														href="/projects/allRGB/jars/allRGB042014.jar">allRGB.jar</a>
+													<p>
+														<div class="box_break"></div>
+														<p>Features of this version:</p>
+														<ul>
+															<li>Load your own image and save the resulting allRGB version.</li>
+															<li>Reload an old allRGB image to continue improving it.</li>
+															<li>Load your own colour set, in place of the allRGB image.</li>
+															<li>Displays the number of generations the algorithm has undergone and the number of
+																generations which have
+																resulted in an improvement.</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- close page_container -->
+							<footer id="footer_container"> Copyright&copy; Sebastian Troy 2023 </footer>
+							<!-- close footer_container -->
+						</div>
+						<!-- close master_container -->
+					</body>
+				</html>
