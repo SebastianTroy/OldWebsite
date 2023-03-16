@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="author" content="Sebastian Troy" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- This block deals with page details -->
+		<title>Modelling an incompressible fluid</title>
+
+		<!-- All css files used throughout page -->
+		<link rel="stylesheet" type="text/css" href="/common/css/lightbox.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/header_footer.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/basic_style.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/responsive_layout.css">
+		<link rel="stylesheet" type="text/css" href="/common/css/content_box.css">
+
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Vollkorn'>
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Quattrocento'>
+
+		<!-- All javascript files used throughout page -->
+		<script type="text/javascript" src="/common/js/libs/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="/common/js/libs/jquery.cookie-1.4.1.min.js"></script>
+		<script type="text/javascript" src="/common/js/libs/lightbox.min.js"></script>
+		<script type="text/javascript" src="/common/js/header.js"></script>
+		<script type="text/javascript" src="/common/js/content_box.js"></script>
+	</head>
+	<body>
+		<div id="master_container">
+			<!-- Sticky header (Title minimised when user scrolls down, leaving only menu) -->
+			<div id="header_container">
+				<div class="title">
+					Troy<img class="logo" src="/common/img/logo.svg"/>Dev
+				</div>
+				<!-- Menu -->
+				<div class="nav_menu">
+					<a class="nav_menu_button about" href="/index.html">About Me</a><a
+						class="nav_menu_button projects" href="/projects.html">Projects</a><a
+						class="nav_menu_button contact" href="/contact.html">Contact</a>
+				</div>
+				<!-- close nav_menu -->
+			</div>
+			<!-- close header_container -->
+			<div id="page_container">
+				<div class="row">
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Model of an Incompressible Fluid</h1>
+							<div class="content">
+								<p>
+									This project is a spin-off from the modelling work I did for my undergraduate dissertation. The
+									model aims to represent
+									an <a href="http://en.wikipedia.org/wiki/Incompressible_flow">incompressible fluid</a>, in a
+									computationally quick but
+									physically realistic manner.
+								</p>
+								<p>
+									The water is simulated using a <a href="http://en.wikipedia.org/wiki/Vector_field">vector field</a>,
+									the arrows
+									represent the direction and speed of flow at a particular point in the simulation and the particles
+									act as tracers for
+									individual molecules of the fluid.
+								</p>
+								<p>
+									The method I used is based on work done by Jos Stam, his original document can be found <a
+										href="http://www.intpowertechcorp.com/GDC03.pdf">here</a>.
+								</p>
+								<p>
+									Try it yourself: <a download="FluidApp.jar"
+										href="/projects/fluid-dynamics/jars/FluidApp082014.jar">FluidApp.jar</a>
+								</p>
+								<p>
+									Source code (<a href="http://opensource.org/licenses/MIT">MIT License</a>): <a
+										href="https://github.com/SebastianTroy/Particle-Model-Java/tree/2D-only">Github</a>
+								</p>
+								<div class="box_break"></div>
+								<a href="/projects/fluid-dynamics/img/FluidApp_arrows.png" data-lightbox="FluidApp"
+									data-title="Each arrow represents the direction and speed of flow at a particular point in the model.">
+									<img src="/projects/fluid-dynamics/img/FluidApp_arrows.png" class="thumbnail" alt="View Image" />
+								</a> <a href="/projects/fluid-dynamics/img/FluidApp_lines.png" data-lightbox="FluidApp"
+									data-title="Here the arrowheads are not being drawn and every vector in the simulation is represented by a line.">
+									<img src="/projects/fluid-dynamics/img/FluidApp_lines.png" class="thumbnail" alt="View Image" />
+								</a> <a href="/projects/fluid-dynamics/img/FluidApp_particles.png" data-lightbox="FluidApp"
+									data-title="Particles can be used to visualise the movement of the fluid."> <img
+										src="/projects/fluid-dynamics/img/FluidApp_particles.png" class="thumbnail" alt="View Image" />
+								</a> <a href="/projects/fluid-dynamics/img/FluidApp_animation.gif" data-lightbox="FluidApp"
+									data-title="Here both particles and vectors are displayed to demonstrate the model, though it is far more interesting to interact with it yourself!.">
+									<img src="/projects/fluid-dynamics/img/FluidApp_animation.gif" class="thumbnail" alt="View Image" />
+								</a>
+								<div class="box_break"></div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Help</h1>
+							<div class="content">
+								<p>
+									If you are having trouble running the program, please try <a href="/java-help.html">this
+										quick guide</a>.
+								</p>
+								<div class="box">
+									<h2 class="box_heading start_minimised">What Am I Looking At?</h2>
+									<div class="content">
+										<p>An example of an almost incompressible fluid is water. This program is only in two dimensions
+											so imagine you are
+											looking through the side of a very thin tank of water, the blue dots are like small beads
+											which neither float or sink
+											in the water, they only move when the water around them moves. The arrows are like threads
+											stuck to the glass, when
+											the water flows over them, they point in the direction of the flow, the stronger the flow,
+											the bigger the arrows get.</p>
+										<p>There are a set number of particles (blue dots) in the water, however they don't take up any
+											space, they can be
+											on top of each other, so if they are all in the same place, they fill only a single pixel of
+											the screen and can be
+											very hard to see.</p>
+									</div>
+								</div>
+								<div class="box">
+									<h2 class="box_heading start_minimised">The Interface</h2>
+									<div class="content">
+										<p>A quick run through of what each button and slider does:</p>
+										<ul>
+											<li>To interact with the fluid, simply click and drag the mouse cursor through the model.
+											</li>
+											<li><b>Vector line Density</b>: This only controls how many of the vectors are drawn, it
+												doesn't change the
+												number of vectors being modelled.</li>
+											<li><b>Time between Calculations (s)</b>: This adds a delay, in seconds, between each step
+												of the model, this
+												slows the speed at which the model is calculated and drawn.</li>
+											<li><b>Iterations of linear solving</b>: This variable is more complex. If your computer can
+												handle it, 6 is a
+												good value. Anything below 6 results in unrealistic and less interesting behaviour of
+												the fluid however on older
+												computers it might be necessary to turn it down as it is a major bottleneck.</li>
+											<li><b>Particle diffusion</b>: If the fluid is completely still, the particles (blue dots)
+												wouldn't move
+												anywhere, also sometimes they can all bunch up on top of each other. To prevent this we
+												can give them a small amount
+												of random movement each step of the simulation. This variable represents the maximum
+												number of pixels a particle
+												might move in the x and y dimension each step.</li>
+											<li><b>Particle brightness</b>: Allows the choice of a particle colour between white and
+												blue.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<div class="box">
+							<h1 class="box_heading">Devlopment Log</h1>
+							<div class="content">
+								<div class="box">
+									<h2 class="box_heading">~ July 2014 ~</h2>
+									<div class="content">
+										<p>While I logged a lot of my progress alongside my dissertation, it was actually based on
+											marine plankton ecology.
+											This means that fluid dynamics was a small part of the project and the majority of the
+											information in my log book is
+											irrelevant to this application.</p>
+										<p>I did my main model in 3D but to help me implement the fluid dynamics a I used 2D testing
+											environment which I
+											extracted and made more user friendly, the result of which is this project.</p>
+										<p>I intend to clean the project up further, adding options to make all of the edges solid, or
+											wrap them all, and
+											also to allow the user to specify how good their machine is, and adjust the size of the
+											matrix and the number of
+											particles accordingly.</p>
+										<div class="box_break"></div>
+										<p>
+											Try it yourself: <a download="FluidApp.jar"
+												href="/projects/fluid-dynamics/jars/FluidApp082014.jar">FluidApp.jar</a>
+										</p>
+										<div class="box_break"></div>
+										<a href="/projects/fluid-dynamics/img/FluidApp_arrows.png" data-lightbox="fluidApp072014"
+											data-title="Each arrow represents the direction and speed of flow at a particular point in the model.">
+											<img src="/projects/fluid-dynamics/img/FluidApp_arrows.png" class="thumbnail"
+												alt="View Image" />
+										</a><a href="/projects/fluid-dynamics/img/FluidApp_particles.png" data-lightbox="fluidApp072014"
+											data-title="Particles can be used to visualise the movement of the fluid."> <img
+												src="/projects/fluid-dynamics/img/FluidApp_particles.png" class="thumbnail"
+												alt="View Image" />
+										</a>
+										<div class="box_break"></div>
+										<ul>
+											<li>In this version the horizontal axis wraps around, that is the left side is directly
+												connected to the right
+												one.</li>
+											<li>The vertical axis doesn't wrap the flow but it does wrap the particles.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- close page_container -->
+			<footer id="footer_container"> Copyright&copy; Sebastian Troy 2023 </footer>
+			<!-- close footer_container -->
+		</div>
+		<!-- close master_container -->
+	</body>
+</html>
